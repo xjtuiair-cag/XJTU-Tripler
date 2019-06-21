@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="fifo_data_synth_1" LaunchDir="/home/zbr/work/DNNv2/zcu102_v3/hpu_reg_version/fpga/hpu_reg_version/hpu_reg_version.runs/fifo_data_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="sdp_w512x64_r512x64_synth_1" LaunchDir="/home/zbr/work/DNNv2/zcu102_v3/hpu_reg_version/fpga/hpu_reg_version/hpu_reg_version.runs/sdp_w512x64_r512x64_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="vputy_mul_8_8_synth_1" LaunchDir="/home/zbr/work/DNNv2/zcu102_v3/hpu_reg_version/fpga/hpu_reg_version/hpu_reg_version.runs/vputy_mul_8_8_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="mpu_mac_1x_accumulator_synth_1" LaunchDir="/home/zbr/work/DNNv2/zcu102_v3/hpu_reg_version/fpga/hpu_reg_version/hpu_reg_version.runs/mpu_mac_1x_accumulator_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="xbip_dsp48_macro_0_synth_1" LaunchDir="/home/zbr/work/DNNv2/zcu102_v3/hpu_reg_version/fpga/hpu_reg_version/hpu_reg_version.runs/xbip_dsp48_macro_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="fifo_cmd_synth_1" LaunchDir="/home/zbr/work/DNNv2/zcu102_v3/hpu_reg_version/fpga/hpu_reg_version/hpu_reg_version.runs/fifo_cmd_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="fifo_data_513b_synth_1" LaunchDir="/home/zbr/work/DNNv2/zcu102_v3/hpu_reg_version/fpga/hpu_reg_version/hpu_reg_version.runs/fifo_data_513b_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="reorder_w1280x64_r160x512_synth_1" LaunchDir="/home/zbr/work/DNNv2/zcu102_v3/hpu_reg_version/fpga/hpu_reg_version/hpu_reg_version.runs/reorder_w1280x64_r160x512_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+</Runs>
+

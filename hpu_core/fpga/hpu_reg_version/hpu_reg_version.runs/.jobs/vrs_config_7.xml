@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="fifo_64to32_synth_1" LaunchDir="E:/DAC2019/a_prj_on_board/zu3_sim/hpu_reg_version/fpga/hpu_reg_version/hpu_reg_version.runs/fifo_64to32_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="fifo_cmd_synth_1" LaunchDir="E:/DAC2019/a_prj_on_board/zu3_sim/hpu_reg_version/fpga/hpu_reg_version/hpu_reg_version.runs/fifo_cmd_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="fifo_cmd_1_synth_1" LaunchDir="E:/DAC2019/a_prj_on_board/zu3_sim/hpu_reg_version/fpga/hpu_reg_version/hpu_reg_version.runs/fifo_cmd_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="fifo_data_synth_1" LaunchDir="E:/DAC2019/a_prj_on_board/zu3_sim/hpu_reg_version/fpga/hpu_reg_version/hpu_reg_version.runs/fifo_data_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="fifo_data_513b_synth_1" LaunchDir="E:/DAC2019/a_prj_on_board/zu3_sim/hpu_reg_version/fpga/hpu_reg_version/hpu_reg_version.runs/fifo_data_513b_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="mpu_mac_1x_accumulator_synth_1" LaunchDir="E:/DAC2019/a_prj_on_board/zu3_sim/hpu_reg_version/fpga/hpu_reg_version/hpu_reg_version.runs/mpu_mac_1x_accumulator_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="mpu_mac_accumulator_synth_1" LaunchDir="E:/DAC2019/a_prj_on_board/zu3_sim/hpu_reg_version/fpga/hpu_reg_version/hpu_reg_version.runs/mpu_mac_accumulator_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="pll_synth_1" LaunchDir="E:/DAC2019/a_prj_on_board/zu3_sim/hpu_reg_version/fpga/hpu_reg_version/hpu_reg_version.runs/pll_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="reorder_w1280x64_r160x512_synth_1" LaunchDir="E:/DAC2019/a_prj_on_board/zu3_sim/hpu_reg_version/fpga/hpu_reg_version/hpu_reg_version.runs/reorder_w1280x64_r160x512_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="sdp_w512x64_r512x64_synth_1" LaunchDir="E:/DAC2019/a_prj_on_board/zu3_sim/hpu_reg_version/fpga/hpu_reg_version/hpu_reg_version.runs/sdp_w512x64_r512x64_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="sdp_w512x8_r512x8_synth_1" LaunchDir="E:/DAC2019/a_prj_on_board/zu3_sim/hpu_reg_version/fpga/hpu_reg_version/hpu_reg_version.runs/sdp_w512x8_r512x8_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="vio_0_synth_1" LaunchDir="E:/DAC2019/a_prj_on_board/zu3_sim/hpu_reg_version/fpga/hpu_reg_version/hpu_reg_version.runs/vio_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="vputy_mul_8_8_synth_1" LaunchDir="E:/DAC2019/a_prj_on_board/zu3_sim/hpu_reg_version/fpga/hpu_reg_version/hpu_reg_version.runs/vputy_mul_8_8_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="wcmd2axi_asyn_fifo_synth_1" LaunchDir="E:/DAC2019/a_prj_on_board/zu3_sim/hpu_reg_version/fpga/hpu_reg_version/hpu_reg_version.runs/wcmd2axi_asyn_fifo_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="wdata2axi_asyn_fifo_synth_1" LaunchDir="E:/DAC2019/a_prj_on_board/zu3_sim/hpu_reg_version/fpga/hpu_reg_version/hpu_reg_version.runs/wdata2axi_asyn_fifo_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="xbip_dsp48_macro_0_synth_1" LaunchDir="E:/DAC2019/a_prj_on_board/zu3_sim/hpu_reg_version/fpga/hpu_reg_version/hpu_reg_version.runs/xbip_dsp48_macro_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="xbip_dsp48_no_pcin_synth_1" LaunchDir="E:/DAC2019/a_prj_on_board/zu3_sim/hpu_reg_version/fpga/hpu_reg_version/hpu_reg_version.runs/xbip_dsp48_no_pcin_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+</Runs>
+

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="ps_block_axi_bram_ctrl_0_0_synth_1" LaunchDir="E:/DAC2019/a_prj_on_board/zu3_sim_bram_ctrl_only/hpu_reg_version/fpga/hpu_reg_version/hpu_reg_version.runs/ps_block_axi_bram_ctrl_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="ps_block_zynq_ultra_ps_e_0_0_synth_1" LaunchDir="E:/DAC2019/a_prj_on_board/zu3_sim_bram_ctrl_only/hpu_reg_version/fpga/hpu_reg_version/hpu_reg_version.runs/ps_block_zynq_ultra_ps_e_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="E:/DAC2019/a_prj_on_board/zu3_sim_bram_ctrl_only/hpu_reg_version/fpga/hpu_reg_version/hpu_reg_version.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="ps_block_axi_bram_ctrl_0_0_synth_1"/>
+		<Parent Id="ps_block_zynq_ultra_ps_e_0_0_synth_1"/>
+	</Run>
+</Runs>
+

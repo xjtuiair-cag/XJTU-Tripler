@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="fifo_64to32_synth_1" LaunchDir="E:/zu3/hpu_reg_version/fpga/hpu_reg_version/hpu_reg_version.runs/fifo_64to32_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="E:/zu3/hpu_reg_version/fpga/hpu_reg_version/hpu_reg_version.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="fifo_64to32_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="E:/zu3/hpu_reg_version/fpga/hpu_reg_version/hpu_reg_version.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_1"/>
+		<Parent Id="fifo_64to32_synth_1"/>
+	</Run>
+</Runs>
+

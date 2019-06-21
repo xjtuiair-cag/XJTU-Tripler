@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="ps_block_zynq_ultra_ps_e_0_0_synth_1" LaunchDir="/home/cf/2019_working/hpu_reg_version_pico_200m/fpga/hpu_reg_version/hpu_reg_version.runs/ps_block_zynq_ultra_ps_e_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="ps_block_rst_ps8_0_100M_0_synth_1" LaunchDir="/home/cf/2019_working/hpu_reg_version_pico_200m/fpga/hpu_reg_version/hpu_reg_version.runs/ps_block_rst_ps8_0_100M_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="ps_block_axi_bram_ctrl_0_0_synth_1" LaunchDir="/home/cf/2019_working/hpu_reg_version_pico_200m/fpga/hpu_reg_version/hpu_reg_version.runs/ps_block_axi_bram_ctrl_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+</Runs>
+

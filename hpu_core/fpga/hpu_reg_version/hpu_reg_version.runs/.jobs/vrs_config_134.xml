@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="vputy_mul_8_8_clk1x_synth_1" LaunchDir="/home/wenzhe/Projects/git/hpu_reg_version_pico_200m/fpga/hpu_reg_version/hpu_reg_version.runs/vputy_mul_8_8_clk1x_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+</Runs>
+

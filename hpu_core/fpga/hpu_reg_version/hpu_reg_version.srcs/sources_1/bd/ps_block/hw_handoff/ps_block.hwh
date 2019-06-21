@@ -1,0 +1,2854 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu May 30 15:37:04 2019" VIVADOVERSION="2018.2">
+
+  <SYSTEMINFO ARCH="zynquplus" BOARD="em.avnet.com:ultra96:part0:1.0" DEVICE="xczu3eg" NAME="ps_block" PACKAGE="sbva484" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="O" LEFT="11" NAME="ps_rvram_addr" RIGHT="0" SIGIS="undef"/>
+    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="ps_rvram_clk" SIGIS="clk"/>
+    <PORT DIR="O" LEFT="31" NAME="ps_rvram_din" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" LEFT="31" NAME="ps_rvram_dout" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="O" NAME="ps_rvram_en" SIGIS="undef"/>
+    <PORT DIR="O" NAME="ps_rvram_rst" SIGIS="rst"/>
+    <PORT DIR="O" LEFT="3" NAME="ps_rvram_we" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" LEFT="48" NAME="axi_ddr_araddr" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" LEFT="1" NAME="axi_ddr_arburst" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" LEFT="3" NAME="axi_ddr_arcache" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" LEFT="5" NAME="axi_ddr_arid" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" LEFT="7" NAME="axi_ddr_arlen" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" NAME="axi_ddr_arlock" SIGIS="undef"/>
+    <PORT DIR="I" LEFT="2" NAME="axi_ddr_arprot" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" LEFT="3" NAME="axi_ddr_arqos" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="O" NAME="axi_ddr_arready" SIGIS="undef"/>
+    <PORT DIR="I" LEFT="2" NAME="axi_ddr_arsize" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" NAME="axi_ddr_aruser" SIGIS="undef"/>
+    <PORT DIR="I" NAME="axi_ddr_arvalid" SIGIS="undef"/>
+    <PORT DIR="I" LEFT="48" NAME="axi_ddr_awaddr" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" LEFT="1" NAME="axi_ddr_awburst" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" LEFT="3" NAME="axi_ddr_awcache" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" LEFT="5" NAME="axi_ddr_awid" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" LEFT="7" NAME="axi_ddr_awlen" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" NAME="axi_ddr_awlock" SIGIS="undef"/>
+    <PORT DIR="I" LEFT="2" NAME="axi_ddr_awprot" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" LEFT="3" NAME="axi_ddr_awqos" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="O" NAME="axi_ddr_awready" SIGIS="undef"/>
+    <PORT DIR="I" LEFT="2" NAME="axi_ddr_awsize" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" NAME="axi_ddr_awuser" SIGIS="undef"/>
+    <PORT DIR="I" NAME="axi_ddr_awvalid" SIGIS="undef"/>
+    <PORT DIR="O" LEFT="5" NAME="axi_ddr_bid" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" NAME="axi_ddr_bready" SIGIS="undef"/>
+    <PORT DIR="O" LEFT="1" NAME="axi_ddr_bresp" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="O" NAME="axi_ddr_bvalid" SIGIS="undef"/>
+    <PORT DIR="O" LEFT="127" NAME="axi_ddr_rdata" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="O" LEFT="5" NAME="axi_ddr_rid" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="O" NAME="axi_ddr_rlast" SIGIS="undef"/>
+    <PORT DIR="I" NAME="axi_ddr_rready" SIGIS="undef"/>
+    <PORT DIR="O" LEFT="1" NAME="axi_ddr_rresp" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="O" NAME="axi_ddr_rvalid" SIGIS="undef"/>
+    <PORT DIR="I" LEFT="127" NAME="axi_ddr_wdata" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" NAME="axi_ddr_wlast" SIGIS="undef"/>
+    <PORT DIR="O" NAME="axi_ddr_wready" SIGIS="undef"/>
+    <PORT DIR="I" LEFT="15" NAME="axi_ddr_wstrb" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" NAME="axi_ddr_wvalid" SIGIS="undef"/>
+    <PORT CLKFREQUENCY="233333338" DIR="O" NAME="clk_100m" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="rst_n" SIGIS="rst" SIGNAME="zynq_ultra_ps_e_0_pl_resetn0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_resetn0"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES>
+    <BUSINTERFACE BUSNAME="bram_ctrl_BRAM_PORTA" NAME="ps_rvram" TYPE="INITIATOR">
+      <PARAMETER NAME="MEM_SIZE" VALUE="4096"/>
+      <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
+      <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>
+      <PARAMETER NAME="MASTER_TYPE" VALUE="BRAM_CTRL"/>
+      <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
+      <PORTMAPS>
+        <PORTMAP LOGICAL="ADDR" PHYSICAL="ps_rvram_addr"/>
+        <PORTMAP LOGICAL="CLK" PHYSICAL="ps_rvram_clk"/>
+        <PORTMAP LOGICAL="DIN" PHYSICAL="ps_rvram_din"/>
+        <PORTMAP LOGICAL="DOUT" PHYSICAL="ps_rvram_dout"/>
+        <PORTMAP LOGICAL="EN" PHYSICAL="ps_rvram_en"/>
+        <PORTMAP LOGICAL="RST" PHYSICAL="ps_rvram_rst"/>
+        <PORTMAP LOGICAL="WE" PHYSICAL="ps_rvram_we"/>
+      </PORTMAPS>
+    </BUSINTERFACE>
+    <BUSINTERFACE BUSNAME="External_Interface_axi_ddr" DATAWIDTH="128" NAME="axi_ddr" TYPE="SLAVE">
+      <PARAMETER NAME="DATA_WIDTH" VALUE="128"/>
+      <PARAMETER NAME="PROTOCOL" VALUE="AXI4"/>
+      <PARAMETER NAME="FREQ_HZ" VALUE="233333338"/>
+      <PARAMETER NAME="ID_WIDTH" VALUE="6"/>
+      <PARAMETER NAME="ADDR_WIDTH" VALUE="49"/>
+      <PARAMETER NAME="AWUSER_WIDTH" VALUE="1"/>
+      <PARAMETER NAME="ARUSER_WIDTH" VALUE="1"/>
+      <PARAMETER NAME="WUSER_WIDTH" VALUE="0"/>
+      <PARAMETER NAME="RUSER_WIDTH" VALUE="0"/>
+      <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
+      <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
+      <PARAMETER NAME="HAS_BURST" VALUE="1"/>
+      <PARAMETER NAME="HAS_LOCK" VALUE="1"/>
+      <PARAMETER NAME="HAS_PROT" VALUE="1"/>
+      <PARAMETER NAME="HAS_CACHE" VALUE="1"/>
+      <PARAMETER NAME="HAS_QOS" VALUE="1"/>
+      <PARAMETER NAME="HAS_REGION" VALUE="0"/>
+      <PARAMETER NAME="HAS_WSTRB" VALUE="1"/>
+      <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
+      <PARAMETER NAME="HAS_RRESP" VALUE="1"/>
+      <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="1"/>
+      <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="16"/>
+      <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="16"/>
+      <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="256"/>
+      <PARAMETER NAME="PHASE" VALUE="0.000"/>
+      <PARAMETER NAME="CLK_DOMAIN" VALUE="ps_block_zynq_ultra_ps_e_0_0_pl_clk0"/>
+      <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
+      <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
+      <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
+      <PARAMETER NAME="WUSER_BITS_PER_BYTE" VALUE="0"/>
+      <PORTMAPS>
+        <PORTMAP LOGICAL="ARADDR" PHYSICAL="axi_ddr_araddr"/>
+        <PORTMAP LOGICAL="ARBURST" PHYSICAL="axi_ddr_arburst"/>
+        <PORTMAP LOGICAL="ARCACHE" PHYSICAL="axi_ddr_arcache"/>
+        <PORTMAP LOGICAL="ARID" PHYSICAL="axi_ddr_arid"/>
+        <PORTMAP LOGICAL="ARLEN" PHYSICAL="axi_ddr_arlen"/>
+        <PORTMAP LOGICAL="ARLOCK" PHYSICAL="axi_ddr_arlock"/>
+        <PORTMAP LOGICAL="ARPROT" PHYSICAL="axi_ddr_arprot"/>
+        <PORTMAP LOGICAL="ARQOS" PHYSICAL="axi_ddr_arqos"/>
+        <PORTMAP LOGICAL="ARREADY" PHYSICAL="axi_ddr_arready"/>
+        <PORTMAP LOGICAL="ARSIZE" PHYSICAL="axi_ddr_arsize"/>
+        <PORTMAP LOGICAL="ARUSER" PHYSICAL="axi_ddr_aruser"/>
+        <PORTMAP LOGICAL="ARVALID" PHYSICAL="axi_ddr_arvalid"/>
+        <PORTMAP LOGICAL="AWADDR" PHYSICAL="axi_ddr_awaddr"/>
+        <PORTMAP LOGICAL="AWBURST" PHYSICAL="axi_ddr_awburst"/>
+        <PORTMAP LOGICAL="AWCACHE" PHYSICAL="axi_ddr_awcache"/>
+        <PORTMAP LOGICAL="AWID" PHYSICAL="axi_ddr_awid"/>
+        <PORTMAP LOGICAL="AWLEN" PHYSICAL="axi_ddr_awlen"/>
+        <PORTMAP LOGICAL="AWLOCK" PHYSICAL="axi_ddr_awlock"/>
+        <PORTMAP LOGICAL="AWPROT" PHYSICAL="axi_ddr_awprot"/>
+        <PORTMAP LOGICAL="AWQOS" PHYSICAL="axi_ddr_awqos"/>
+        <PORTMAP LOGICAL="AWREADY" PHYSICAL="axi_ddr_awready"/>
+        <PORTMAP LOGICAL="AWSIZE" PHYSICAL="axi_ddr_awsize"/>
+        <PORTMAP LOGICAL="AWUSER" PHYSICAL="axi_ddr_awuser"/>
+        <PORTMAP LOGICAL="AWVALID" PHYSICAL="axi_ddr_awvalid"/>
+        <PORTMAP LOGICAL="BID" PHYSICAL="axi_ddr_bid"/>
+        <PORTMAP LOGICAL="BREADY" PHYSICAL="axi_ddr_bready"/>
+        <PORTMAP LOGICAL="BRESP" PHYSICAL="axi_ddr_bresp"/>
+        <PORTMAP LOGICAL="BVALID" PHYSICAL="axi_ddr_bvalid"/>
+        <PORTMAP LOGICAL="RDATA" PHYSICAL="axi_ddr_rdata"/>
+        <PORTMAP LOGICAL="RID" PHYSICAL="axi_ddr_rid"/>
+        <PORTMAP LOGICAL="RLAST" PHYSICAL="axi_ddr_rlast"/>
+        <PORTMAP LOGICAL="RREADY" PHYSICAL="axi_ddr_rready"/>
+        <PORTMAP LOGICAL="RRESP" PHYSICAL="axi_ddr_rresp"/>
+        <PORTMAP LOGICAL="RVALID" PHYSICAL="axi_ddr_rvalid"/>
+        <PORTMAP LOGICAL="WDATA" PHYSICAL="axi_ddr_wdata"/>
+        <PORTMAP LOGICAL="WLAST" PHYSICAL="axi_ddr_wlast"/>
+        <PORTMAP LOGICAL="WREADY" PHYSICAL="axi_ddr_wready"/>
+        <PORTMAP LOGICAL="WSTRB" PHYSICAL="axi_ddr_wstrb"/>
+        <PORTMAP LOGICAL="WVALID" PHYSICAL="axi_ddr_wvalid"/>
+      </PORTMAPS>
+      <MEMORYMAP>
+        <MEMRANGE ADDRESSBLOCK="HP0_DDR_LOW" BASENAME="C_BASEADDR" BASEVALUE="0x00000000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x7FFFFFFF" INSTANCE="zynq_ultra_ps_e_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="axi_ddr" MEMTYPE="MEMORY" SLAVEBUSINTERFACE="S_AXI_HP0_FPD"/>
+        <MEMRANGE ADDRESSBLOCK="HP0_LPS_OCM" BASENAME="C_BASEADDR" BASEVALUE="0xFF000000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0xFFFFFFFF" INSTANCE="zynq_ultra_ps_e_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="axi_ddr" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S_AXI_HP0_FPD"/>
+      </MEMORYMAP>
+      <PERIPHERALS>
+        <PERIPHERAL INSTANCE="zynq_ultra_ps_e_0"/>
+      </PERIPHERALS>
+    </BUSINTERFACE>
+  </EXTERNALINTERFACES>
+
+  <MODULES>
+    <MODULE FULLNAME="/bram_ctrl" HWVERSION="4.0" INSTANCE="bram_ctrl" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="MEMORY_CNTLR" MODTYPE="axi_bram_ctrl" VLNV="xilinx.com:ip:axi_bram_ctrl:4.0">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axi_bram_ctrl;v=v4_0;d=pg078-axi-bram-ctrl.pdf"/>
+      </DOCUMENTS>
+      <ADDRESSBLOCKS>
+        <ADDRESSBLOCK ACCESS="read-write" INTERFACE="S_AXI" NAME="Mem0" RANGE="4096" USAGE="memory">
+          <REGISTERS>
+            <REGISTER NAME="ECC_STATUS">
+              <PROPERTY NAME="DESCRIPTION" VALUE="ECC Status Register"/>
+              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x000"/>
+              <PROPERTY NAME="SIZE" VALUE="1"/>
+              <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+              <PROPERTY NAME="IS_ENABLED" VALUE="false"/>
+              <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
+              <FIELDS>
+                <FIELD NAME="UE_STATUS">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="If 1 an uncorrectable error has occurred. Cleared when 1 is written to this bit position&#xA;"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE="oneToClear"/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="1"/>
+                </FIELD>
+                <FIELD NAME="CE_STATUS">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="If 1 a correctable error has occurred. Cleared when 1 is written to this bit position&#xA;"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="1"/>
+                  <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE="oneToClear"/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="1"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="1"/>
+                </FIELD>
+              </FIELDS>
+            </REGISTER>
+            <REGISTER NAME="ECC_EN_IRQ">
+              <PROPERTY NAME="DESCRIPTION" VALUE="ECC Enable Interrupt Register"/>
+              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x004"/>
+              <PROPERTY NAME="SIZE" VALUE="1"/>
+              <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+              <PROPERTY NAME="IS_ENABLED" VALUE="false"/>
+              <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
+              <FIELDS>
+                <FIELD NAME="UE_EN_IRQ">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="1 - The value of the UE_STATUS bit of the ECC Status Register is propagated to the Interrupt signal.&#xA;0 - The value of the UE_STATUS bit of the ECC Status Register is not propagated to the Interrupt signal.&#xA;"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE=""/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="1"/>
+                </FIELD>
+                <FIELD NAME="CE_EN_IRQ">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="1 - The value of the CE_STATUS bit of the ECC Status Register is propagated to the Interrupt signal.&#xA;0 - The value of the CE_STATUS bit of the ECC Status Register is not propagated to the Interrupt signal.&#xA;"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="1"/>
+                  <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE=""/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="1"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="1"/>
+                </FIELD>
+              </FIELDS>
+            </REGISTER>
+            <REGISTER NAME="ECC_ON_OFF">
+              <PROPERTY NAME="DESCRIPTION" VALUE="ECC On/Off Register"/>
+              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x008"/>
+              <PROPERTY NAME="SIZE" VALUE="1"/>
+              <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+              <PROPERTY NAME="IS_ENABLED" VALUE="false"/>
+              <PROPERTY NAME="RESET_VALUE" VALUE="0"/>
+              <FIELDS>
+                <FIELD NAME="ECC_ON_OFF">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="0 - ECC checking is disabled on read operations. (ECC generation is enabled on write operations when C_ECC = 1).&#xA;1 - ECC checking is enabled on read operations. All correctable and uncorrectable error conditions are captured and status updated.&#xA;"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE=""/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="1"/>
+                </FIELD>
+              </FIELDS>
+            </REGISTER>
+            <REGISTER NAME="CE_CNT">
+              <PROPERTY NAME="DESCRIPTION" VALUE="Correctable Error Counter Register"/>
+              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x00C"/>
+              <PROPERTY NAME="SIZE" VALUE="1"/>
+              <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+              <PROPERTY NAME="IS_ENABLED" VALUE="false"/>
+              <PROPERTY NAME="RESET_VALUE" VALUE="0"/>
+              <FIELDS>
+                <FIELD NAME="CE_CNT">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="Registers holds number of correctable errors encountered&#xA;"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE=""/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="8"/>
+                </FIELD>
+              </FIELDS>
+            </REGISTER>
+            <REGISTER NAME="CE_FFA0">
+              <PROPERTY NAME="DESCRIPTION" VALUE="Correctable Error First Failing Address Register, bits [31:0]"/>
+              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x1C0"/>
+              <PROPERTY NAME="SIZE" VALUE="1"/>
+              <PROPERTY NAME="ACCESS" VALUE="read-only"/>
+              <PROPERTY NAME="IS_ENABLED" VALUE="false"/>
+              <PROPERTY NAME="RESET_VALUE" VALUE="0"/>
+              <FIELDS>
+                <FIELD NAME="CE_FFA0">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="Address (bits [31:0]) of the first occurrence of a correctable error&#xA;"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="ACCESS" VALUE="read-only"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE=""/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="32"/>
+                </FIELD>
+              </FIELDS>
+            </REGISTER>
+            <REGISTER NAME="CE_FFA1">
+              <PROPERTY NAME="DESCRIPTION" VALUE="Correctable Error First Failing Address Register, bits [63:32]"/>
+              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x1C4"/>
+              <PROPERTY NAME="SIZE" VALUE="1"/>
+              <PROPERTY NAME="ACCESS" VALUE="read-only"/>
+              <PROPERTY NAME="IS_ENABLED" VALUE="false"/>
+              <PROPERTY NAME="RESET_VALUE" VALUE="0"/>
+              <FIELDS>
+                <FIELD NAME="CE_FFA1">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="Address (bits [63:32]) of the first occurrence of a correctable error&#xA;"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="ACCESS" VALUE="read-only"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE=""/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="32"/>
+                </FIELD>
+              </FIELDS>
+            </REGISTER>
+            <REGISTER NAME="UE_FFD1">
+              <PROPERTY NAME="DESCRIPTION" VALUE="Uncorrectable Error First Failing Data Register , bits [63:32]"/>
+              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x204"/>
+              <PROPERTY NAME="SIZE" VALUE="1"/>
+              <PROPERTY NAME="ACCESS" VALUE="read-only"/>
+              <PROPERTY NAME="IS_ENABLED" VALUE="false"/>
+              <PROPERTY NAME="RESET_VALUE" VALUE="0"/>
+              <FIELDS>
+                <FIELD NAME="UE_FFD">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="Data (bits [63:32) of the first occurrence of an uncorrectable error&#xA;"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="ACCESS" VALUE="read-only"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE=""/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="32"/>
+                </FIELD>
+              </FIELDS>
+            </REGISTER>
+            <REGISTER NAME="UE_FFD2">
+              <PROPERTY NAME="DESCRIPTION" VALUE="Uncorrectable Error First Failing Data Register , bits [95:64]"/>
+              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x208"/>
+              <PROPERTY NAME="SIZE" VALUE="1"/>
+              <PROPERTY NAME="ACCESS" VALUE="read-only"/>
+              <PROPERTY NAME="IS_ENABLED" VALUE="false"/>
+              <PROPERTY NAME="RESET_VALUE" VALUE="0"/>
+              <FIELDS>
+                <FIELD NAME="UE_FFD">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="Data (bits [95:64]) of the first occurrence of an uncorrectable error&#xA;"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="ACCESS" VALUE="read-only"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE=""/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="32"/>
+                </FIELD>
+              </FIELDS>
+            </REGISTER>
+            <REGISTER NAME="UE_FFD3">
+              <PROPERTY NAME="DESCRIPTION" VALUE="Uncorrectable Error First Failing Data Register , bits [127:96]"/>
+              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x20C"/>
+              <PROPERTY NAME="SIZE" VALUE="1"/>
+              <PROPERTY NAME="ACCESS" VALUE="read-only"/>
+              <PROPERTY NAME="IS_ENABLED" VALUE="false"/>
+              <PROPERTY NAME="RESET_VALUE" VALUE="0"/>
+              <FIELDS>
+                <FIELD NAME="UE_FFD">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="Data (bits [127:96]) of the first occurrence of an uncorrectable error&#xA;"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="ACCESS" VALUE="read-only"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE=""/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="32"/>
+                </FIELD>
+              </FIELDS>
+            </REGISTER>
+            <REGISTER NAME="FI_D0">
+              <PROPERTY NAME="DESCRIPTION" VALUE="Fault Inject Data Register, bits[31:0]"/>
+              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x300"/>
+              <PROPERTY NAME="SIZE" VALUE="1"/>
+              <PROPERTY NAME="ACCESS" VALUE="write-only"/>
+              <PROPERTY NAME="IS_ENABLED" VALUE="false"/>
+              <PROPERTY NAME="RESET_VALUE" VALUE="0"/>
+              <FIELDS>
+                <FIELD NAME="FI_D0">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="Bit positions set to 1 toggle the corresponding bits [31:0] of the next data word written to the block RAM.&#xA;The register is automatically cleared after the fault has been injected.&#xA;"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="ACCESS" VALUE="read-only"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE=""/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="32"/>
+                </FIELD>
+              </FIELDS>
+            </REGISTER>
+            <REGISTER NAME="FI_D1">
+              <PROPERTY NAME="DESCRIPTION" VALUE="Fault Inject Data Register, bits[63:32]"/>
+              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x304"/>
+              <PROPERTY NAME="SIZE" VALUE="1"/>
+              <PROPERTY NAME="ACCESS" VALUE="write-only"/>
+              <PROPERTY NAME="IS_ENABLED" VALUE="false"/>
+              <PROPERTY NAME="RESET_VALUE" VALUE="0"/>
+              <FIELDS>
+                <FIELD NAME="FI_D1">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="Bit positions set to 1 toggle the corresponding bits [63:32] of the next data word written to the block RAM.&#xA;The register is automatically cleared after the fault has been injected.&#xA;"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="ACCESS" VALUE="read-only"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE=""/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="32"/>
+                </FIELD>
+              </FIELDS>
+            </REGISTER>
+            <REGISTER NAME="FI_D2">
+              <PROPERTY NAME="DESCRIPTION" VALUE="Fault Inject Data Register, bits[95:64]"/>
+              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x308"/>
+              <PROPERTY NAME="SIZE" VALUE="1"/>
+              <PROPERTY NAME="ACCESS" VALUE="write-only"/>
+              <PROPERTY NAME="IS_ENABLED" VALUE="false"/>
+              <PROPERTY NAME="RESET_VALUE" VALUE="0"/>
+              <FIELDS>
+                <FIELD NAME="FI_D2">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="Bit positions set to 1 toggle the corresponding bits [95:64] of the next data word written to the block RAM.&#xA;The register is automatically cleared after the fault has been injected.&#xA;"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="ACCESS" VALUE="read-only"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE=""/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="32"/>
+                </FIELD>
+              </FIELDS>
+            </REGISTER>
+            <REGISTER NAME="FI_D3">
+              <PROPERTY NAME="DESCRIPTION" VALUE="Fault Inject Data Register, bits[127:96]"/>
+              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x30C"/>
+              <PROPERTY NAME="SIZE" VALUE="1"/>
+              <PROPERTY NAME="ACCESS" VALUE="write-only"/>
+              <PROPERTY NAME="IS_ENABLED" VALUE="false"/>
+              <PROPERTY NAME="RESET_VALUE" VALUE="0"/>
+              <FIELDS>
+                <FIELD NAME="FI_D3">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="Bit positions set to 1 toggle the corresponding bits [127:96] of the next data word written to the block RAM.&#xA;The register is automatically cleared after the fault has been injected.&#xA;"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="ACCESS" VALUE="read-only"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE=""/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="32"/>
+                </FIELD>
+              </FIELDS>
+            </REGISTER>
+            <REGISTER NAME="FI_ECC">
+              <PROPERTY NAME="DESCRIPTION" VALUE="Fault Inject ECC Register"/>
+              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x380"/>
+              <PROPERTY NAME="SIZE" VALUE="1"/>
+              <PROPERTY NAME="ACCESS" VALUE="write-only"/>
+              <PROPERTY NAME="IS_ENABLED" VALUE="false"/>
+              <PROPERTY NAME="RESET_VALUE" VALUE="0"/>
+              <FIELDS>
+                <FIELD NAME="FI_ECC">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="Bit positions set to 1 toggle the corresponding bit of the next ECC written to the block RAM.&#xA;The register is automatically cleared after the fault has been injected.&#xA;"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="ACCESS" VALUE="read-only"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE=""/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="32"/>
+                </FIELD>
+              </FIELDS>
+            </REGISTER>
+          </REGISTERS>
+        </ADDRESSBLOCK>
+      </ADDRESSBLOCKS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_BRAM_INST_MODE" VALUE="EXTERNAL"/>
+        <PARAMETER NAME="C_MEMORY_DEPTH" VALUE="1024"/>
+        <PARAMETER NAME="C_BRAM_ADDR_WIDTH" VALUE="10"/>
+        <PARAMETER NAME="C_S_AXI_ADDR_WIDTH" VALUE="12"/>
+        <PARAMETER NAME="C_S_AXI_DATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_S_AXI_ID_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="C_S_AXI_PROTOCOL" VALUE="AXI4"/>
+        <PARAMETER NAME="C_S_AXI_SUPPORTS_NARROW_BURST" VALUE="1"/>
+        <PARAMETER NAME="C_SINGLE_PORT_BRAM" VALUE="1"/>
+        <PARAMETER NAME="C_FAMILY" VALUE="zynquplus"/>
+        <PARAMETER NAME="C_SELECT_XPM" VALUE="1"/>
+        <PARAMETER NAME="C_S_AXI_CTRL_ADDR_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_S_AXI_CTRL_DATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_ECC" VALUE="0"/>
+        <PARAMETER NAME="C_ECC_TYPE" VALUE="0"/>
+        <PARAMETER NAME="C_FAULT_INJECT" VALUE="0"/>
+        <PARAMETER NAME="C_ECC_ONOFF_RESET_VALUE" VALUE="0"/>
+        <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="ID_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="PROTOCOL" VALUE="AXI4"/>
+        <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="1"/>
+        <PARAMETER NAME="SINGLE_PORT_BRAM" VALUE="1"/>
+        <PARAMETER NAME="ECC_TYPE" VALUE="0"/>
+        <PARAMETER NAME="USE_ECC" VALUE="0"/>
+        <PARAMETER NAME="FAULT_INJECT" VALUE="0"/>
+        <PARAMETER NAME="ECC_ONOFF_RESET_VALUE" VALUE="0"/>
+        <PARAMETER NAME="Component_Name" VALUE="ps_block_axi_bram_ctrl_0_0"/>
+        <PARAMETER NAME="BMG_INSTANCE" VALUE="EXTERNAL"/>
+        <PARAMETER NAME="MEM_DEPTH" VALUE="1024"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+        <PARAMETER NAME="EDK_SPECIAL" VALUE="BRAM_CTRL"/>
+        <PARAMETER NAME="C_S_AXI_BASEADDR" VALUE="0xA0000000"/>
+        <PARAMETER NAME="C_S_AXI_HIGHADDR" VALUE="0xA0000FFF"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="233333338" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_aresetn" SIGIS="rst" SIGNAME="rst_ps8_0_100M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_ps8_0_100M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="s_axi_awid" RIGHT="0" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_awid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_awid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="s_axi_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="s_axi_awlen" RIGHT="0" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_awlen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_awlen"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="s_axi_awsize" RIGHT="0" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_awsize">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_awsize"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="s_axi_awburst" RIGHT="0" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_awburst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_awburst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_awlock" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_awlock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_awlock"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="s_axi_awcache" RIGHT="0" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_awcache">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_awcache"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="s_axi_awprot" RIGHT="0" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_awprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_awprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_awvalid" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_awready" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="s_axi_wdata" RIGHT="0" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="s_axi_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_wlast" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_wlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_wlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_wvalid" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_wready" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="s_axi_bid" RIGHT="0" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_bid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_bid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="s_axi_bresp" RIGHT="0" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_bvalid" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_bready" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="s_axi_arid" RIGHT="0" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_arid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_arid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="s_axi_araddr" RIGHT="0" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="s_axi_arlen" RIGHT="0" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_arlen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_arlen"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="s_axi_arsize" RIGHT="0" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_arsize">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_arsize"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="s_axi_arburst" RIGHT="0" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_arburst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_arburst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_arlock" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_arlock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_arlock"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="s_axi_arcache" RIGHT="0" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_arcache">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_arcache"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="s_axi_arprot" RIGHT="0" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_arprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_arprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_arvalid" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_arready" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="s_axi_rid" RIGHT="0" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_rid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_rid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="s_axi_rdata" RIGHT="0" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="s_axi_rresp" RIGHT="0" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_rlast" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_rlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_rlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_rvalid" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_rready" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_rready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="bram_rst_a" SIGIS="rst"/>
+        <PORT DIR="O" NAME="bram_clk_a" SIGIS="clk"/>
+        <PORT DIR="O" NAME="bram_en_a" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="3" NAME="bram_we_a" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="11" NAME="bram_addr_a" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="31" NAME="bram_wrdata_a" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="bram_rddata_a" RIGHT="0" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="zynq_ultra_ps_e_0_M_AXI_HPM0_FPD" DATAWIDTH="32" NAME="S_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
+          <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
+          <PARAMETER NAME="PROTOCOL" VALUE="AXI4"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="233333338"/>
+          <PARAMETER NAME="ID_WIDTH" VALUE="16"/>
+          <PARAMETER NAME="ADDR_WIDTH" VALUE="12"/>
+          <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="ARUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="WUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="RUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
+          <PARAMETER NAME="HAS_BURST" VALUE="1"/>
+          <PARAMETER NAME="HAS_LOCK" VALUE="1"/>
+          <PARAMETER NAME="HAS_PROT" VALUE="1"/>
+          <PARAMETER NAME="HAS_CACHE" VALUE="1"/>
+          <PARAMETER NAME="HAS_QOS" VALUE="0"/>
+          <PARAMETER NAME="HAS_REGION" VALUE="0"/>
+          <PARAMETER NAME="HAS_WSTRB" VALUE="1"/>
+          <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
+          <PARAMETER NAME="HAS_RRESP" VALUE="1"/>
+          <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="1"/>
+          <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="8"/>
+          <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="8"/>
+          <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="256"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="ps_block_zynq_ultra_ps_e_0_0_pl_clk0"/>
+          <PARAMETER NAME="NUM_READ_THREADS" VALUE="4"/>
+          <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="4"/>
+          <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
+          <PARAMETER NAME="WUSER_BITS_PER_BYTE" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="ARADDR" PHYSICAL="s_axi_araddr"/>
+            <PORTMAP LOGICAL="ARBURST" PHYSICAL="s_axi_arburst"/>
+            <PORTMAP LOGICAL="ARCACHE" PHYSICAL="s_axi_arcache"/>
+            <PORTMAP LOGICAL="ARID" PHYSICAL="s_axi_arid"/>
+            <PORTMAP LOGICAL="ARLEN" PHYSICAL="s_axi_arlen"/>
+            <PORTMAP LOGICAL="ARLOCK" PHYSICAL="s_axi_arlock"/>
+            <PORTMAP LOGICAL="ARPROT" PHYSICAL="s_axi_arprot"/>
+            <PORTMAP LOGICAL="ARREADY" PHYSICAL="s_axi_arready"/>
+            <PORTMAP LOGICAL="ARSIZE" PHYSICAL="s_axi_arsize"/>
+            <PORTMAP LOGICAL="ARVALID" PHYSICAL="s_axi_arvalid"/>
+            <PORTMAP LOGICAL="AWADDR" PHYSICAL="s_axi_awaddr"/>
+            <PORTMAP LOGICAL="AWBURST" PHYSICAL="s_axi_awburst"/>
+            <PORTMAP LOGICAL="AWCACHE" PHYSICAL="s_axi_awcache"/>
+            <PORTMAP LOGICAL="AWID" PHYSICAL="s_axi_awid"/>
+            <PORTMAP LOGICAL="AWLEN" PHYSICAL="s_axi_awlen"/>
+            <PORTMAP LOGICAL="AWLOCK" PHYSICAL="s_axi_awlock"/>
+            <PORTMAP LOGICAL="AWPROT" PHYSICAL="s_axi_awprot"/>
+            <PORTMAP LOGICAL="AWREADY" PHYSICAL="s_axi_awready"/>
+            <PORTMAP LOGICAL="AWSIZE" PHYSICAL="s_axi_awsize"/>
+            <PORTMAP LOGICAL="AWVALID" PHYSICAL="s_axi_awvalid"/>
+            <PORTMAP LOGICAL="BID" PHYSICAL="s_axi_bid"/>
+            <PORTMAP LOGICAL="BREADY" PHYSICAL="s_axi_bready"/>
+            <PORTMAP LOGICAL="BRESP" PHYSICAL="s_axi_bresp"/>
+            <PORTMAP LOGICAL="BVALID" PHYSICAL="s_axi_bvalid"/>
+            <PORTMAP LOGICAL="RDATA" PHYSICAL="s_axi_rdata"/>
+            <PORTMAP LOGICAL="RID" PHYSICAL="s_axi_rid"/>
+            <PORTMAP LOGICAL="RLAST" PHYSICAL="s_axi_rlast"/>
+            <PORTMAP LOGICAL="RREADY" PHYSICAL="s_axi_rready"/>
+            <PORTMAP LOGICAL="RRESP" PHYSICAL="s_axi_rresp"/>
+            <PORTMAP LOGICAL="RVALID" PHYSICAL="s_axi_rvalid"/>
+            <PORTMAP LOGICAL="WDATA" PHYSICAL="s_axi_wdata"/>
+            <PORTMAP LOGICAL="WLAST" PHYSICAL="s_axi_wlast"/>
+            <PORTMAP LOGICAL="WREADY" PHYSICAL="s_axi_wready"/>
+            <PORTMAP LOGICAL="WSTRB" PHYSICAL="s_axi_wstrb"/>
+            <PORTMAP LOGICAL="WVALID" PHYSICAL="s_axi_wvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="bram_ctrl_BRAM_PORTA" NAME="BRAM_PORTA" TYPE="INITIATOR" VLNV="xilinx.com:interface:bram:1.0">
+          <PARAMETER NAME="MASTER_TYPE" VALUE="BRAM_CTRL"/>
+          <PARAMETER NAME="MEM_SIZE" VALUE="4096"/>
+          <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
+          <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>
+          <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="ADDR" PHYSICAL="bram_addr_a"/>
+            <PORTMAP LOGICAL="CLK" PHYSICAL="bram_clk_a"/>
+            <PORTMAP LOGICAL="DIN" PHYSICAL="bram_wrdata_a"/>
+            <PORTMAP LOGICAL="DOUT" PHYSICAL="bram_rddata_a"/>
+            <PORTMAP LOGICAL="EN" PHYSICAL="bram_en_a"/>
+            <PORTMAP LOGICAL="RST" PHYSICAL="bram_rst_a"/>
+            <PORTMAP LOGICAL="WE" PHYSICAL="bram_we_a"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE FULLNAME="/rst_ps8_0_100M" HWVERSION="5.0" INSTANCE="rst_ps8_0_100M" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="proc_sys_reset" VLNV="xilinx.com:ip:proc_sys_reset:5.0">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=proc_sys_reset;v=v5_0;d=pg164-proc-sys-reset.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_FAMILY" VALUE="zynquplus"/>
+        <PARAMETER NAME="C_EXT_RST_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="C_AUX_RST_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="C_EXT_RESET_HIGH" VALUE="0"/>
+        <PARAMETER NAME="C_AUX_RESET_HIGH" VALUE="0"/>
+        <PARAMETER NAME="C_NUM_BUS_RST" VALUE="1"/>
+        <PARAMETER NAME="C_NUM_PERP_RST" VALUE="1"/>
+        <PARAMETER NAME="C_NUM_INTERCONNECT_ARESETN" VALUE="1"/>
+        <PARAMETER NAME="C_NUM_PERP_ARESETN" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="ps_block_rst_ps8_0_100M_0"/>
+        <PARAMETER NAME="USE_BOARD_FLOW" VALUE="false"/>
+        <PARAMETER NAME="RESET_BOARD_INTERFACE" VALUE="Custom"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="233333338" DIR="I" NAME="slowest_sync_clk" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ext_reset_in" SIGIS="rst" SIGNAME="zynq_ultra_ps_e_0_pl_resetn0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_resetn0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="aux_reset_in" SIGIS="rst"/>
+        <PORT DIR="I" NAME="mb_debug_sys_rst" SIGIS="rst"/>
+        <PORT DIR="I" NAME="dcm_locked" SIGIS="undef"/>
+        <PORT DIR="O" NAME="mb_reset" SIGIS="rst"/>
+        <PORT DIR="O" LEFT="0" NAME="bus_struct_reset" RIGHT="0" SIGIS="rst"/>
+        <PORT DIR="O" LEFT="0" NAME="peripheral_reset" RIGHT="0" SIGIS="rst"/>
+        <PORT DIR="O" LEFT="0" NAME="interconnect_aresetn" RIGHT="0" SIGIS="rst"/>
+        <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" RIGHT="0" SIGIS="rst" SIGNAME="rst_ps8_0_100M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_ctrl" PORT="s_axi_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE CONFIGURABLE="TRUE" FULLNAME="/zynq_ultra_ps_e_0" HWVERSION="3.2" INSTANCE="zynq_ultra_ps_e_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" IS_PL="FALSE" MODTYPE="zynq_ultra_ps_e" VLNV="xilinx.com:ip:zynq_ultra_ps_e:3.2">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=zynq_ultra_ps_e;v=v3_2;d=pg201-zynq-ultrascale-plus-processing-system.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_DP_USE_AUDIO" VALUE="0"/>
+        <PARAMETER NAME="C_DP_USE_VIDEO" VALUE="0"/>
+        <PARAMETER NAME="C_MAXIGP0_DATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_MAXIGP1_DATA_WIDTH" VALUE="128"/>
+        <PARAMETER NAME="C_MAXIGP2_DATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_SAXIGP0_DATA_WIDTH" VALUE="128"/>
+        <PARAMETER NAME="C_SAXIGP1_DATA_WIDTH" VALUE="128"/>
+        <PARAMETER NAME="C_SAXIGP2_DATA_WIDTH" VALUE="128"/>
+        <PARAMETER NAME="C_SAXIGP3_DATA_WIDTH" VALUE="128"/>
+        <PARAMETER NAME="C_SAXIGP4_DATA_WIDTH" VALUE="128"/>
+        <PARAMETER NAME="C_SAXIGP5_DATA_WIDTH" VALUE="128"/>
+        <PARAMETER NAME="C_SAXIGP6_DATA_WIDTH" VALUE="128"/>
+        <PARAMETER NAME="C_USE_DIFF_RW_CLK_GP0" VALUE="0"/>
+        <PARAMETER NAME="C_USE_DIFF_RW_CLK_GP1" VALUE="0"/>
+        <PARAMETER NAME="C_USE_DIFF_RW_CLK_GP2" VALUE="0"/>
+        <PARAMETER NAME="C_USE_DIFF_RW_CLK_GP3" VALUE="0"/>
+        <PARAMETER NAME="C_USE_DIFF_RW_CLK_GP4" VALUE="0"/>
+        <PARAMETER NAME="C_USE_DIFF_RW_CLK_GP5" VALUE="0"/>
+        <PARAMETER NAME="C_USE_DIFF_RW_CLK_GP6" VALUE="0"/>
+        <PARAMETER NAME="C_EN_FIFO_ENET0" VALUE="0"/>
+        <PARAMETER NAME="C_EN_FIFO_ENET1" VALUE="0"/>
+        <PARAMETER NAME="C_EN_FIFO_ENET2" VALUE="0"/>
+        <PARAMETER NAME="C_EN_FIFO_ENET3" VALUE="0"/>
+        <PARAMETER NAME="C_PL_CLK0_BUF" VALUE="TRUE"/>
+        <PARAMETER NAME="C_PL_CLK1_BUF" VALUE="FALSE"/>
+        <PARAMETER NAME="C_PL_CLK2_BUF" VALUE="FALSE"/>
+        <PARAMETER NAME="C_PL_CLK3_BUF" VALUE="FALSE"/>
+        <PARAMETER NAME="C_TRACE_PIPELINE_WIDTH" VALUE="8"/>
+        <PARAMETER NAME="C_EN_EMIO_TRACE" VALUE="0"/>
+        <PARAMETER NAME="C_TRACE_DATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_USE_DEBUG_TEST" VALUE="0"/>
+        <PARAMETER NAME="C_SD0_INTERNAL_BUS_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="C_SD1_INTERNAL_BUS_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="C_NUM_F2P_0_INTR_INPUTS" VALUE="1"/>
+        <PARAMETER NAME="C_NUM_F2P_1_INTR_INPUTS" VALUE="1"/>
+        <PARAMETER NAME="C_EMIO_GPIO_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_NUM_FABRIC_RESETS" VALUE="1"/>
+        <PARAMETER NAME="PSU_VALUE_SILVERSION" VALUE="3"/>
+        <PARAMETER NAME="PSU__USE__DDR_INTF_REQUESTED" VALUE="0"/>
+        <PARAMETER NAME="PSU__EN_AXI_STATUS_PORTS" VALUE="0"/>
+        <PARAMETER NAME="PSU__PSS_REF_CLK__FREQMHZ" VALUE="33.333333"/>
+        <PARAMETER NAME="PSU__PSS_ALT_REF_CLK__FREQMHZ" VALUE="33.333"/>
+        <PARAMETER NAME="PSU__VIDEO_REF_CLK__FREQMHZ" VALUE="33.333"/>
+        <PARAMETER NAME="PSU__AUX_REF_CLK__FREQMHZ" VALUE="33.333"/>
+        <PARAMETER NAME="PSU__GT_REF_CLK__FREQMHZ" VALUE="33.333"/>
+        <PARAMETER NAME="PSU__VIDEO_REF_CLK__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__VIDEO_REF_CLK__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PSS_ALT_REF_CLK__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__PSS_ALT_REF_CLK__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__CAN0__PERIPHERAL__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__CAN0__PERIPHERAL__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__CAN0__GRP_CLK__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__CAN0__GRP_CLK__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__CAN1__PERIPHERAL__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__CAN1__PERIPHERAL__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__CAN1__GRP_CLK__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__CAN1__GRP_CLK__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__CAN0_LOOP_CAN1__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__DPAUX__PERIPHERAL__ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PSU__DPAUX__PERIPHERAL__IO" VALUE="MIO 27 .. 30"/>
+        <PARAMETER NAME="PSU__ENET0__GRP_MDIO__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__ACT_DDR_FREQ_MHZ" VALUE="525.000000"/>
+        <PARAMETER NAME="PSU__ENET0__GRP_MDIO__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__GEM__TSU__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__GEM__TSU__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__ENET0__PERIPHERAL__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__ENET0__FIFO__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__ENET0__PTP__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__ENET0__PERIPHERAL__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__ENET1__PERIPHERAL__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__ENET1__FIFO__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__ENET1__PTP__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__ENET1__PERIPHERAL__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__ENET1__GRP_MDIO__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__FPGA_PL0_ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PSU__FPGA_PL1_ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__FPGA_PL2_ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__FPGA_PL3_ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__ENET1__GRP_MDIO__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__ENET2__PERIPHERAL__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__ENET2__FIFO__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__ENET2__PTP__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__ENET2__PERIPHERAL__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__ENET2__GRP_MDIO__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__ENET2__GRP_MDIO__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__ENET3__PERIPHERAL__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__ENET3__FIFO__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__ENET3__PTP__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__ENET3__PERIPHERAL__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__ENET3__GRP_MDIO__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__ENET3__GRP_MDIO__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__GPIO_EMIO__PERIPHERAL__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__GPIO_EMIO__PERIPHERAL__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__GPIO0_MIO__PERIPHERAL__ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PSU__GPIO0_MIO__IO" VALUE="MIO 0 .. 25"/>
+        <PARAMETER NAME="PSU__GPIO1_MIO__PERIPHERAL__ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PSU__GPIO1_MIO__IO" VALUE="MIO 26 .. 51"/>
+        <PARAMETER NAME="PSU__GPIO2_MIO__PERIPHERAL__ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PSU__GPIO2_MIO__IO" VALUE="MIO 52 .. 77"/>
+        <PARAMETER NAME="PSU__I2C0__PERIPHERAL__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__I2C0__PERIPHERAL__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__I2C0__GRP_INT__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__I2C0__GRP_INT__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__I2C1__PERIPHERAL__ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PSU__I2C1__PERIPHERAL__IO" VALUE="MIO 4 .. 5"/>
+        <PARAMETER NAME="PSU__I2C1__GRP_INT__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__I2C1__GRP_INT__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__I2C0_LOOP_I2C1__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__TESTSCAN__PERIPHERAL__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__PERIPHERAL__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__PERIPHERAL__ENDPOINT_ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PSU__PCIE__PERIPHERAL__ROOTPORT_ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__PERIPHERAL__ENDPOINT_IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PCIE__PERIPHERAL__ROOTPORT_IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PCIE__LANE0__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__LANE0__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PCIE__LANE1__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__LANE1__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PCIE__LANE2__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__LANE2__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PCIE__LANE3__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__LANE3__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PCIE__RESET__POLARITY" VALUE="Active Low"/>
+        <PARAMETER NAME="PSU__GT__LINK_SPEED" VALUE="HBR"/>
+        <PARAMETER NAME="PSU__GT__VLT_SWNG_LVL_4" VALUE="0"/>
+        <PARAMETER NAME="PSU__GT__PRE_EMPH_LVL_4" VALUE="0"/>
+        <PARAMETER NAME="PSU__USB0__REF_CLK_SEL" VALUE="Ref Clk0"/>
+        <PARAMETER NAME="PSU__USB0__REF_CLK_FREQ" VALUE="26"/>
+        <PARAMETER NAME="PSU__USB1__REF_CLK_SEL" VALUE="Ref Clk0"/>
+        <PARAMETER NAME="PSU__USB1__REF_CLK_FREQ" VALUE="26"/>
+        <PARAMETER NAME="PSU__GEM0__REF_CLK_SEL" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__GEM0__REF_CLK_FREQ" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__GEM1__REF_CLK_SEL" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__GEM1__REF_CLK_FREQ" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__GEM2__REF_CLK_SEL" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__GEM2__REF_CLK_FREQ" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__GEM3__REF_CLK_SEL" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__GEM3__REF_CLK_FREQ" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__DP__REF_CLK_SEL" VALUE="Ref Clk1"/>
+        <PARAMETER NAME="PSU__DP__REF_CLK_FREQ" VALUE="27"/>
+        <PARAMETER NAME="PSU__SATA__REF_CLK_SEL" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__SATA__REF_CLK_FREQ" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PCIE__REF_CLK_SEL" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PCIE__REF_CLK_FREQ" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__DP__LANE_SEL" VALUE="Dual Lower"/>
+        <PARAMETER NAME="PSU__PCIE__DEVICE_PORT_TYPE" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PCIE__MAXIMUM_LINK_WIDTH" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PCIE__LINK_SPEED" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PCIE__INTERFACE_WIDTH" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PCIE__BAR0_ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__BAR0_TYPE" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PCIE__BAR0_SCALE" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PCIE__BAR0_64BIT" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__BAR0_SIZE" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PCIE__BAR0_VAL"/>
+        <PARAMETER NAME="PSU__PCIE__BAR0_PREFETCHABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__BAR1_ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__BAR1_TYPE" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PCIE__BAR1_SCALE" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PCIE__BAR1_64BIT" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__BAR1_SIZE" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PCIE__BAR1_VAL"/>
+        <PARAMETER NAME="PSU__PCIE__BAR1_PREFETCHABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__BAR2_ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__BAR2_TYPE" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PCIE__BAR2_SCALE" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PCIE__BAR2_64BIT" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__BAR2_SIZE" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PCIE__BAR2_VAL"/>
+        <PARAMETER NAME="PSU__PCIE__BAR2_PREFETCHABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__BAR3_ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__BAR3_TYPE" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PCIE__BAR3_SCALE" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PCIE__BAR3_64BIT" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__BAR3_SIZE" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PCIE__BAR3_VAL"/>
+        <PARAMETER NAME="PSU__PCIE__BAR3_PREFETCHABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__BAR4_ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__BAR4_TYPE" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PCIE__BAR4_SCALE" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PCIE__BAR4_64BIT" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__BAR4_SIZE" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PCIE__BAR4_VAL"/>
+        <PARAMETER NAME="PSU__PCIE__BAR4_PREFETCHABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__BAR5_ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__BAR5_TYPE" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PCIE__BAR5_SCALE" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PCIE__BAR5_64BIT" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__BAR5_SIZE" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PCIE__BAR5_VAL"/>
+        <PARAMETER NAME="PSU__PCIE__BAR5_PREFETCHABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__EROM_ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__EROM_SCALE" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PCIE__EROM_SIZE" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PCIE__EROM_VAL"/>
+        <PARAMETER NAME="PSU__PCIE__CAP_SLOT_IMPLEMENTED" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PCIE__MAX_PAYLOAD_SIZE" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PCIE__LEGACY_INTERRUPT" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PCIE__VENDOR_ID"/>
+        <PARAMETER NAME="PSU__PCIE__DEVICE_ID"/>
+        <PARAMETER NAME="PSU__PCIE__REVISION_ID"/>
+        <PARAMETER NAME="PSU__PCIE__SUBSYSTEM_VENDOR_ID"/>
+        <PARAMETER NAME="PSU__PCIE__SUBSYSTEM_ID"/>
+        <PARAMETER NAME="PSU__PCIE__BASE_CLASS_MENU" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PCIE__USE_CLASS_CODE_LOOKUP_ASSISTANT" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PCIE__SUB_CLASS_INTERFACE_MENU" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PCIE__CLASS_CODE_BASE"/>
+        <PARAMETER NAME="PSU__PCIE__CLASS_CODE_SUB"/>
+        <PARAMETER NAME="PSU__PCIE__CLASS_CODE_INTERFACE"/>
+        <PARAMETER NAME="PSU__PCIE__CLASS_CODE_VALUE"/>
+        <PARAMETER NAME="PSU__PCIE__AER_CAPABILITY" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__CORRECTABLE_INT_ERR" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__HEADER_LOG_OVERFLOW" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__RECEIVER_ERR" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__SURPRISE_DOWN" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__FLOW_CONTROL_ERR" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__COMPLTION_TIMEOUT" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__COMPLETER_ABORT" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__RECEIVER_OVERFLOW" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__ECRC_ERR" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__ACS_VIOLAION" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__UNCORRECTABL_INT_ERR" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__MC_BLOCKED_TLP" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__ATOMICOP_EGRESS_BLOCKED" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__TLP_PREFIX_BLOCKED" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__FLOW_CONTROL_PROTOCOL_ERR" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__ACS_VIOLATION" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__MULTIHEADER" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__ECRC_CHECK" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__ECRC_GEN" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__PERM_ROOT_ERR_UPDATE" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__CRS_SW_VISIBILITY" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__INTX_GENERATION" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__INTX_PIN" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PCIE__MSI_CAPABILITY" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__MSI_64BIT_ADDR_CAPABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__MSI_MULTIPLE_MSG_CAPABLE" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PCIE__MSIX_CAPABILITY" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__MSIX_TABLE_SIZE" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__MSIX_TABLE_OFFSET" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__MSIX_BAR_INDICATOR"/>
+        <PARAMETER NAME="PSU__PCIE__MSIX_PBA_OFFSET" VALUE="0"/>
+        <PARAMETER NAME="PSU__PCIE__MSIX_PBA_BAR_INDICATOR"/>
+        <PARAMETER NAME="PSU__PCIE__BRIDGE_BAR_INDICATOR" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU_IMPORT_BOARD_PRESET"/>
+        <PARAMETER NAME="PSU__PROTECTION__SUBSYSTEMS" VALUE="PMU Firmware:PMU"/>
+        <PARAMETER NAME="PSU__PROTECTION__MASTERS_TZ" VALUE="GEM0:NonSecure|SD1:NonSecure|GEM2:NonSecure|GEM1:NonSecure|GEM3:NonSecure|PCIe:NonSecure|DP:NonSecure|NAND:NonSecure|GPU:NonSecure|USB1:NonSecure|USB0:NonSecure|LDMA:NonSecure|FDMA:NonSecure|QSPI:NonSecure|SD0:NonSecure"/>
+        <PARAMETER NAME="PSU__PROTECTION__MASTERS" VALUE="USB1:NonSecure;1|USB0:NonSecure;1|S_AXI_LPD:NA;0|S_AXI_HPC1_FPD:NA;0|S_AXI_HPC0_FPD:NA;0|S_AXI_HP3_FPD:NA;0|S_AXI_HP2_FPD:NA;0|S_AXI_HP1_FPD:NA;0|S_AXI_HP0_FPD:NA;1|S_AXI_ACP:NA;0|S_AXI_ACE:NA;0|SD1:NonSecure;1|SD0:NonSecure;1|SATA1:NonSecure;0|SATA0:NonSecure;0|RPU1:Secure;1|RPU0:Secure;1|QSPI:NonSecure;0|PMU:NA;1|PCIe:NonSecure;0|NAND:NonSecure;0|LDMA:NonSecure;1|GPU:NonSecure;1|GEM3:NonSecure;0|GEM2:NonSecure;0|GEM1:NonSecure;0|GEM0:NonSecure;0|FDMA:NonSecure;1|DP:NonSecure;1|DAP:NA;1|Coresight:NA;1|CSU:NA;1|APU:NA;1"/>
+        <PARAMETER NAME="PSU__PROTECTION__DDR_SEGMENTS" VALUE="NONE"/>
+        <PARAMETER NAME="PSU__PROTECTION__OCM_SEGMENTS" VALUE="NONE"/>
+        <PARAMETER NAME="PSU__PROTECTION__LPD_SEGMENTS" VALUE="SA:0xFF980000 ;SIZE:64;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware|SA:0xFF5E0000 ;SIZE:2560;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware|SA:0xFFCC0000 ;SIZE:64;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware|SA:0xFF180000 ;SIZE:768;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware|SA:0xFF410000 ;SIZE:640;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware|SA:0xFFA70000 ;SIZE:64;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware|SA:0xFF9A0000 ;SIZE:64;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware"/>
+        <PARAMETER NAME="PSU__PROTECTION__FPD_SEGMENTS" VALUE="SA:0xFD1A0000 ;SIZE:1280;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware|SA:0xFD000000 ;SIZE:64;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware|SA:0xFD010000 ;SIZE:64;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware|SA:0xFD020000 ;SIZE:64;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware|SA:0xFD030000 ;SIZE:64;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware|SA:0xFD040000 ;SIZE:64;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware|SA:0xFD050000 ;SIZE:64;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware|SA:0xFD610000 ;SIZE:512;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware|SA:0xFD5D0000 ;SIZE:64;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware"/>
+        <PARAMETER NAME="PSU__PROTECTION__DEBUG" VALUE="0"/>
+        <PARAMETER NAME="PSU__PROTECTION__SLAVES" VALUE="LPD;USB3_1_XHCI;FE300000;FE3FFFFF;1|LPD;USB3_1;FF9E0000;FF9EFFFF;1|LPD;USB3_0_XHCI;FE200000;FE2FFFFF;1|LPD;USB3_0;FF9D0000;FF9DFFFF;1|LPD;UART1;FF010000;FF01FFFF;1|LPD;UART0;FF000000;FF00FFFF;1|LPD;TTC3;FF140000;FF14FFFF;1|LPD;TTC2;FF130000;FF13FFFF;1|LPD;TTC1;FF120000;FF12FFFF;1|LPD;TTC0;FF110000;FF11FFFF;1|FPD;SWDT1;FD4D0000;FD4DFFFF;1|LPD;SWDT0;FF150000;FF15FFFF;1|LPD;SPI1;FF050000;FF05FFFF;1|LPD;SPI0;FF040000;FF04FFFF;1|FPD;SMMU_REG;FD5F0000;FD5FFFFF;1|FPD;SMMU;FD800000;FDFFFFFF;1|FPD;SIOU;FD3D0000;FD3DFFFF;1|FPD;SERDES;FD400000;FD47FFFF;1|LPD;SD1;FF170000;FF17FFFF;1|LPD;SD0;FF160000;FF16FFFF;1|FPD;SATA;FD0C0000;FD0CFFFF;0|LPD;RTC;FFA60000;FFA6FFFF;1|LPD;RSA_CORE;FFCE0000;FFCEFFFF;1|LPD;RPU;FF9A0000;FF9AFFFF;1|FPD;RCPU_GIC;F9000000;F900FFFF;1|LPD;R5_TCM_RAM_GLOBAL;FFE00000;FFE3FFFF;1|LPD;R5_1_Instruction_Cache;FFEC0000;FFECFFFF;1|LPD;R5_1_Data_Cache;FFED0000;FFEDFFFF;1|LPD;R5_1_BTCM_GLOBAL;FFEB0000;FFEBFFFF;1|LPD;R5_1_ATCM_GLOBAL;FFE90000;FFE9FFFF;1|LPD;R5_0_Instruction_Cache;FFE40000;FFE4FFFF;1|LPD;R5_0_Data_Cache;FFE50000;FFE5FFFF;1|LPD;R5_0_BTCM_GLOBAL;FFE20000;FFE2FFFF;1|LPD;R5_0_ATCM_GLOBAL;FFE00000;FFE0FFFF;1|LPD;QSPI_Linear_Address;C0000000;DFFFFFFF;1|LPD;QSPI;FF0F0000;FF0FFFFF;0|LPD;PMU_RAM;FFDC0000;FFDDFFFF;1|LPD;PMU_GLOBAL;FFD80000;FFDBFFFF;1|FPD;PCIE_MAIN;FD0E0000;FD0EFFFF;0|FPD;PCIE_LOW;E0000000;EFFFFFFF;0|FPD;PCIE_HIGH2;8000000000;BFFFFFFFFF;0|FPD;PCIE_HIGH1;600000000;7FFFFFFFF;0|FPD;PCIE_DMA;FD0F0000;FD0FFFFF;0|FPD;PCIE_ATTRIB;FD480000;FD48FFFF;0|LPD;OCM_XMPU_CFG;FFA70000;FFA7FFFF;1|LPD;OCM_SLCR;FF960000;FF96FFFF;1|OCM;OCM;FFFC0000;FFFFFFFF;1|LPD;NAND;FF100000;FF10FFFF;0|LPD;MBISTJTAG;FFCF0000;FFCFFFFF;1|LPD;LPD_XPPU_SINK;FF9C0000;FF9CFFFF;1|LPD;LPD_XPPU;FF980000;FF98FFFF;1|LPD;LPD_SLCR_SECURE;FF4B0000;FF4DFFFF;1|LPD;LPD_SLCR;FF410000;FF4AFFFF;1|LPD;LPD_GPV;FE100000;FE1FFFFF;1|LPD;LPD_DMA_7;FFAF0000;FFAFFFFF;1|LPD;LPD_DMA_6;FFAE0000;FFAEFFFF;1|LPD;LPD_DMA_5;FFAD0000;FFADFFFF;1|LPD;LPD_DMA_4;FFAC0000;FFACFFFF;1|LPD;LPD_DMA_3;FFAB0000;FFABFFFF;1|LPD;LPD_DMA_2;FFAA0000;FFAAFFFF;1|LPD;LPD_DMA_1;FFA90000;FFA9FFFF;1|LPD;LPD_DMA_0;FFA80000;FFA8FFFF;1|LPD;IPI_CTRL;FF380000;FF3FFFFF;1|LPD;IOU_SLCR;FF180000;FF23FFFF;1|LPD;IOU_SECURE_SLCR;FF240000;FF24FFFF;1|LPD;IOU_SCNTRS;FF260000;FF26FFFF;1|LPD;IOU_SCNTR;FF250000;FF25FFFF;1|LPD;IOU_GPV;FE000000;FE0FFFFF;1|LPD;I2C1;FF030000;FF03FFFF;1|LPD;I2C0;FF020000;FF02FFFF;0|FPD;GPU;FD4B0000;FD4BFFFF;1|LPD;GPIO;FF0A0000;FF0AFFFF;1|LPD;GEM3;FF0E0000;FF0EFFFF;0|LPD;GEM2;FF0D0000;FF0DFFFF;0|LPD;GEM1;FF0C0000;FF0CFFFF;0|LPD;GEM0;FF0B0000;FF0BFFFF;0|FPD;FPD_XMPU_SINK;FD4F0000;FD4FFFFF;1|FPD;FPD_XMPU_CFG;FD5D0000;FD5DFFFF;1|FPD;FPD_SLCR_SECURE;FD690000;FD6CFFFF;1|FPD;FPD_SLCR;FD610000;FD68FFFF;1|FPD;FPD_GPV;FD700000;FD7FFFFF;1|FPD;FPD_DMA_CH7;FD570000;FD57FFFF;1|FPD;FPD_DMA_CH6;FD560000;FD56FFFF;1|FPD;FPD_DMA_CH5;FD550000;FD55FFFF;1|FPD;FPD_DMA_CH4;FD540000;FD54FFFF;1|FPD;FPD_DMA_CH3;FD530000;FD53FFFF;1|FPD;FPD_DMA_CH2;FD520000;FD52FFFF;1|FPD;FPD_DMA_CH1;FD510000;FD51FFFF;1|FPD;FPD_DMA_CH0;FD500000;FD50FFFF;1|LPD;EFUSE;FFCC0000;FFCCFFFF;1|FPD;Display Port;FD4A0000;FD4AFFFF;1|FPD;DPDMA;FD4C0000;FD4CFFFF;1|FPD;DDR_XMPU5_CFG;FD050000;FD05FFFF;1|FPD;DDR_XMPU4_CFG;FD040000;FD04FFFF;1|FPD;DDR_XMPU3_CFG;FD030000;FD03FFFF;1|FPD;DDR_XMPU2_CFG;FD020000;FD02FFFF;1|FPD;DDR_XMPU1_CFG;FD010000;FD01FFFF;1|FPD;DDR_XMPU0_CFG;FD000000;FD00FFFF;1|FPD;DDR_QOS_CTRL;FD090000;FD09FFFF;1|FPD;DDR_PHY;FD080000;FD08FFFF;1|DDR;DDR_LOW;0;7FFFFFFF;1|DDR;DDR_HIGH;800000000;800000000;0|FPD;DDDR_CTRL;FD070000;FD070FFF;1|LPD;Coresight;FE800000;FEFFFFFF;1|LPD;CSU_DMA;FFC80000;FFC9FFFF;1|LPD;CSU;FFCA0000;FFCAFFFF;0|LPD;CRL_APB;FF5E0000;FF85FFFF;1|FPD;CRF_APB;FD1A0000;FD2DFFFF;1|FPD;CCI_REG;FD5E0000;FD5EFFFF;1|FPD;CCI_GPV;FD6E0000;FD6EFFFF;1|LPD;CAN1;FF070000;FF07FFFF;0|LPD;CAN0;FF060000;FF06FFFF;0|FPD;APU;FD5C0000;FD5CFFFF;1|LPD;APM_INTC_IOU;FFA20000;FFA2FFFF;1|LPD;APM_FPD_LPD;FFA30000;FFA3FFFF;1|FPD;APM_5;FD490000;FD49FFFF;1|FPD;APM_0;FD0B0000;FD0BFFFF;1|LPD;APM2;FFA10000;FFA1FFFF;1|LPD;APM1;FFA00000;FFA0FFFF;1|LPD;AMS;FFA50000;FFA5FFFF;1|FPD;AFI_5;FD3B0000;FD3BFFFF;1|FPD;AFI_4;FD3A0000;FD3AFFFF;1|FPD;AFI_3;FD390000;FD39FFFF;1|FPD;AFI_2;FD380000;FD38FFFF;1|FPD;AFI_1;FD370000;FD37FFFF;1|FPD;AFI_0;FD360000;FD36FFFF;1|LPD;AFIFM6;FF9B0000;FF9BFFFF;1|FPD;ACPU_GIC;F9000000;F907FFFF;1"/>
+        <PARAMETER NAME="PSU__PROTECTION__PRESUBSYSTEMS" VALUE="NONE"/>
+        <PARAMETER NAME="PSU__PROTECTION__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__DDR_SW_REFRESH_ENABLED" VALUE="1"/>
+        <PARAMETER NAME="PSU__PROTECTION__LOCK_UNUSED_SEGMENTS" VALUE="0"/>
+        <PARAMETER NAME="PSU__EP__IP" VALUE="0"/>
+        <PARAMETER NAME="PSU__ACTUAL__IP" VALUE="1"/>
+        <PARAMETER NAME="SUBPRESET1" VALUE="Custom"/>
+        <PARAMETER NAME="SUBPRESET2" VALUE="Custom"/>
+        <PARAMETER NAME="PSU_UIPARAM_GENERATE_SUMMARY" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU_MIO_TREE_PERIPHERALS" VALUE="UART 1#UART 1#UART 0#UART 0#I2C 1#I2C 1#SPI 1#GPIO0 MIO#GPIO0 MIO#SPI 1#SPI 1#SPI 1#GPIO0 MIO#SD 0#SD 0#SD 0#SD 0#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#SD 0#SD 0#GPIO0 MIO#SD 0#GPIO0 MIO#PMU GPI 0#DPAUX#DPAUX#DPAUX#DPAUX#GPIO1 MIO#PMU GPO 0#PMU GPO 1#PMU GPO 2#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#SPI 0#GPIO1 MIO#GPIO1 MIO#SPI 0#SPI 0#SPI 0#GPIO1 MIO#GPIO1 MIO#SD 1#SD 1#SD 1#SD 1#SD 1#SD 1#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#GPIO2 MIO#GPIO2 MIO"/>
+        <PARAMETER NAME="PSU_MIO_TREE_SIGNALS" VALUE="txd#rxd#rxd#txd#scl_out#sda_out#sclk_out#gpio0[7]#gpio0[8]#n_ss_out[0]#miso#mosi#gpio0[12]#sdio0_data_out[0]#sdio0_data_out[1]#sdio0_data_out[2]#sdio0_data_out[3]#gpio0[17]#gpio0[18]#gpio0[19]#gpio0[20]#sdio0_cmd_out#sdio0_clk_out#gpio0[23]#sdio0_cd_n#gpio0[25]#gpi[0]#dp_aux_data_out#dp_hot_plug_detect#dp_aux_data_oe#dp_aux_data_in#gpio1[31]#gpo[0]#gpo[1]#gpo[2]#gpio1[35]#gpio1[36]#gpio1[37]#sclk_out#gpio1[39]#gpio1[40]#n_ss_out[0]#miso#mosi#gpio1[44]#gpio1[45]#sdio1_data_out[0]#sdio1_data_out[1]#sdio1_data_out[2]#sdio1_data_out[3]#sdio1_cmd_out#sdio1_clk_out#ulpi_clk_in#ulpi_dir#ulpi_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#ulpi_tx_data[4]#ulpi_tx_data[5]#ulpi_tx_data[6]#ulpi_tx_data[7]#ulpi_clk_in#ulpi_dir#ulpi_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#ulpi_tx_data[4]#ulpi_tx_data[5]#ulpi_tx_data[6]#ulpi_tx_data[7]#gpio2[76]#gpio2[77]"/>
+        <PARAMETER NAME="PSU_PERIPHERAL_BOARD_PRESET"/>
+        <PARAMETER NAME="PSU__NAND__PERIPHERAL__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__NAND__PERIPHERAL__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__NAND__READY_BUSY__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__NAND__READY0_BUSY__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__NAND__READY1_BUSY__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__NAND__READY_BUSY__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__NAND__READY0_BUSY__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__NAND__READY1_BUSY__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__NAND__CHIP_ENABLE__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__NAND__CHIP_ENABLE__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__NAND__DATA_STROBE__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__NAND__DATA_STROBE__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PJTAG__PERIPHERAL__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__PJTAG__PERIPHERAL__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PMU__AIBACK__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__PMU__PLERROR__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__PMU__PERIPHERAL__ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PSU__PMU__PERIPHERAL__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PMU__EMIO_GPI__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__PMU__EMIO_GPO__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__PMU__GPI0__ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PSU__PMU__GPI1__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__PMU__GPI2__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__PMU__GPI3__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__PMU__GPI4__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__PMU__GPI5__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__PMU__GPO0__ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PSU__PMU__GPO1__ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PSU__PMU__GPO2__ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PSU__PMU__GPO3__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__PMU__GPO4__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__PMU__GPO5__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__PMU__GPI0__IO" VALUE="MIO 26"/>
+        <PARAMETER NAME="PSU__PMU__GPI1__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PMU__GPI2__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PMU__GPI3__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PMU__GPI4__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PMU__GPI5__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PMU__GPO0__IO" VALUE="MIO 32"/>
+        <PARAMETER NAME="PSU__PMU__GPO1__IO" VALUE="MIO 33"/>
+        <PARAMETER NAME="PSU__PMU__GPO2__IO" VALUE="MIO 34"/>
+        <PARAMETER NAME="PSU__PMU__GPO3__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PMU__GPO4__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PMU__GPO5__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PMU__GPO2__POLARITY" VALUE="high"/>
+        <PARAMETER NAME="PSU__PMU__GPO3__POLARITY" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PMU__GPO4__POLARITY" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__PMU__GPO5__POLARITY" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__CSU__PERIPHERAL__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__CSU__PERIPHERAL__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__QSPI__PERIPHERAL__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__QSPI__PERIPHERAL__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__QSPI__PERIPHERAL__MODE" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__QSPI__PERIPHERAL__DATA_MODE" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__QSPI__GRP_FBCLK__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__QSPI__GRP_FBCLK__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__SD0__PERIPHERAL__ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PSU__SD0__PERIPHERAL__IO" VALUE="MIO 13 .. 16 21 22"/>
+        <PARAMETER NAME="PSU__SD0__GRP_CD__ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PSU__SD0__GRP_CD__IO" VALUE="MIO 24"/>
+        <PARAMETER NAME="PSU__SD0__GRP_POW__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__SD0__GRP_POW__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__SD0__GRP_WP__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__SD0__GRP_WP__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__SD0__SLOT_TYPE" VALUE="SD 2.0"/>
+        <PARAMETER NAME="PSU__SD0__RESET__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__SD0__DATA_TRANSFER_MODE" VALUE="4Bit"/>
+        <PARAMETER NAME="PSU__SD1__PERIPHERAL__ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PSU__SD1__PERIPHERAL__IO" VALUE="MIO 46 .. 51"/>
+        <PARAMETER NAME="PSU__SD1__GRP_CD__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__SD1__GRP_CD__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__SD1__GRP_POW__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__SD1__GRP_POW__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__SD1__GRP_WP__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__SD1__GRP_WP__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__SD1__SLOT_TYPE" VALUE="SD 2.0"/>
+        <PARAMETER NAME="PSU__SD1__RESET__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__SD1__DATA_TRANSFER_MODE" VALUE="4Bit"/>
+        <PARAMETER NAME="PSU__DEVICE_TYPE" VALUE="EG"/>
+        <PARAMETER NAME="PSU_SMC_CYCLE_T0" VALUE="NA"/>
+        <PARAMETER NAME="PSU_SMC_CYCLE_T1" VALUE="NA"/>
+        <PARAMETER NAME="PSU_SMC_CYCLE_T2" VALUE="NA"/>
+        <PARAMETER NAME="PSU_SMC_CYCLE_T3" VALUE="NA"/>
+        <PARAMETER NAME="PSU_SMC_CYCLE_T4" VALUE="NA"/>
+        <PARAMETER NAME="PSU_SMC_CYCLE_T5" VALUE="NA"/>
+        <PARAMETER NAME="PSU_SMC_CYCLE_T6" VALUE="NA"/>
+        <PARAMETER NAME="PSU__SPI0__PERIPHERAL__ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PSU__SPI0__PERIPHERAL__IO" VALUE="MIO 38 .. 43"/>
+        <PARAMETER NAME="PSU__SPI0__GRP_SS0__ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PSU__SPI0__GRP_SS0__IO" VALUE="MIO 41"/>
+        <PARAMETER NAME="PSU__SPI0__GRP_SS1__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__SPI0__GRP_SS1__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__SPI0__GRP_SS2__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__SPI0__GRP_SS2__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__SPI1__PERIPHERAL__ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PSU__SPI1__PERIPHERAL__IO" VALUE="MIO 6 .. 11"/>
+        <PARAMETER NAME="PSU__SPI1__GRP_SS0__ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PSU__SPI1__GRP_SS0__IO" VALUE="MIO 9"/>
+        <PARAMETER NAME="PSU__SPI1__GRP_SS1__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__SPI1__GRP_SS1__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__SPI1__GRP_SS2__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__SPI1__GRP_SS2__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__SPI0_LOOP_SPI1__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__LPD_SLCR__CSUPMU_WDT_CLK_SEL__SELECT" VALUE="APB"/>
+        <PARAMETER NAME="PSU__SWDT0__PERIPHERAL__ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PSU__SWDT0__CLOCK__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__SWDT0__RESET__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__SWDT0__PERIPHERAL__IO" VALUE="NA"/>
+        <PARAMETER NAME="PSU__SWDT0__CLOCK__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__SWDT0__RESET__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__SWDT1__PERIPHERAL__ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PSU__SWDT1__CLOCK__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__SWDT1__RESET__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__SWDT1__PERIPHERAL__IO" VALUE="NA"/>
+        <PARAMETER NAME="PSU__SWDT1__CLOCK__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__SWDT1__RESET__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__UART0__BAUD_RATE" VALUE="115200"/>
+        <PARAMETER NAME="PSU__TRACE__PERIPHERAL__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__TRACE__PERIPHERAL__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__TRACE__WIDTH" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__TRACE__INTERNAL_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="PSU_SD0_INTERNAL_BUS_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="PSU__TTC0__PERIPHERAL__ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PSU__TTC0__CLOCK__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__TTC0__WAVEOUT__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__TTC0__CLOCK__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__TTC0__WAVEOUT__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__TTC0__PERIPHERAL__IO" VALUE="NA"/>
+        <PARAMETER NAME="PSU__TTC1__PERIPHERAL__ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PSU__TTC1__PERIPHERAL__IO" VALUE="NA"/>
+        <PARAMETER NAME="PSU__UART1__BAUD_RATE" VALUE="115200"/>
+        <PARAMETER NAME="PSU__TTC1__CLOCK__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__TTC1__WAVEOUT__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__TTC1__CLOCK__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__TTC1__WAVEOUT__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__TTC2__PERIPHERAL__ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PSU__TTC2__PERIPHERAL__IO" VALUE="NA"/>
+        <PARAMETER NAME="PSU__TTC2__CLOCK__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__TTC2__WAVEOUT__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__TTC2__CLOCK__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__TTC2__WAVEOUT__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__TTC3__PERIPHERAL__ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PSU__TTC3__PERIPHERAL__IO" VALUE="NA"/>
+        <PARAMETER NAME="PSU__TTC3__CLOCK__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__TTC3__WAVEOUT__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__TTC3__CLOCK__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__TTC3__WAVEOUT__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__CSUPMU__PERIPHERAL__VALID" VALUE="1"/>
+        <PARAMETER NAME="PSU__DDRC__AL" VALUE="0"/>
+        <PARAMETER NAME="PSU__DDRC__BANK_ADDR_COUNT" VALUE="3"/>
+        <PARAMETER NAME="PSU__DDRC__BUS_WIDTH" VALUE="32 Bit"/>
+        <PARAMETER NAME="PSU__DDRC__CL" VALUE="NA"/>
+        <PARAMETER NAME="PSU__DDRC__CLOCK_STOP_EN" VALUE="0"/>
+        <PARAMETER NAME="PSU__DDRC__COL_ADDR_COUNT" VALUE="10"/>
+        <PARAMETER NAME="PSU__DDRC__RANK_ADDR_COUNT" VALUE="0"/>
+        <PARAMETER NAME="PSU__DDRC__CWL" VALUE="NA"/>
+        <PARAMETER NAME="PSU__DDRC__BG_ADDR_COUNT" VALUE="NA"/>
+        <PARAMETER NAME="PSU__DDRC__DEVICE_CAPACITY" VALUE="16384 MBits"/>
+        <PARAMETER NAME="PSU__DDRC__DRAM_WIDTH" VALUE="32 Bits"/>
+        <PARAMETER NAME="PSU__DDRC__ECC" VALUE="Disabled"/>
+        <PARAMETER NAME="PSU__DDRC__ECC_SCRUB" VALUE="0"/>
+        <PARAMETER NAME="PSU__DDRC__ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PSU__DDRC__FREQ_MHZ" VALUE="1"/>
+        <PARAMETER NAME="PSU__DDRC__HIGH_TEMP" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__DDRC__MEMORY_TYPE" VALUE="LPDDR 4"/>
+        <PARAMETER NAME="PSU__DDRC__PARTNO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__DDRC__ROW_ADDR_COUNT" VALUE="16"/>
+        <PARAMETER NAME="PSU__DDRC__SPEED_BIN" VALUE="LPDDR4_1066"/>
+        <PARAMETER NAME="PSU__DDRC__T_FAW" VALUE="40.0"/>
+        <PARAMETER NAME="PSU__DDRC__T_RAS_MIN" VALUE="42"/>
+        <PARAMETER NAME="PSU__DDRC__T_RC" VALUE="63"/>
+        <PARAMETER NAME="PSU__DDRC__T_RCD" VALUE="15"/>
+        <PARAMETER NAME="PSU__DDRC__T_RP" VALUE="15"/>
+        <PARAMETER NAME="PSU__DDRC__TRAIN_DATA_EYE" VALUE="1"/>
+        <PARAMETER NAME="PSU__DDRC__TRAIN_READ_GATE" VALUE="1"/>
+        <PARAMETER NAME="PSU__DDRC__TRAIN_WRITE_LEVEL" VALUE="1"/>
+        <PARAMETER NAME="PSU__DDRC__VREF" VALUE="0"/>
+        <PARAMETER NAME="PSU__DDRC__VIDEO_BUFFER_SIZE" VALUE="0"/>
+        <PARAMETER NAME="PSU__DDRC__BRC_MAPPING" VALUE="ROW_BANK_COL"/>
+        <PARAMETER NAME="PSU__DDRC__DIMM_ADDR_MIRROR" VALUE="0"/>
+        <PARAMETER NAME="PSU__DDRC__STATIC_RD_MODE" VALUE="0"/>
+        <PARAMETER NAME="PSU__DDRC__DDR4_MAXPWR_SAVING_EN" VALUE="NA"/>
+        <PARAMETER NAME="PSU__DDRC__PWR_DOWN_EN" VALUE="0"/>
+        <PARAMETER NAME="PSU__DDRC__DEEP_PWR_DOWN_EN" VALUE="0"/>
+        <PARAMETER NAME="PSU__DDRC__PLL_BYPASS" VALUE="0"/>
+        <PARAMETER NAME="PSU__DDRC__DDR4_T_REF_MODE" VALUE="NA"/>
+        <PARAMETER NAME="PSU__DDRC__DDR4_T_REF_RANGE" VALUE="NA"/>
+        <PARAMETER NAME="PSU__DDRC__PHY_DBI_MODE" VALUE="0"/>
+        <PARAMETER NAME="PSU__DDRC__DM_DBI" VALUE="DM_NO_DBI"/>
+        <PARAMETER NAME="PSU__DDRC__COMPONENTS" VALUE="Components"/>
+        <PARAMETER NAME="PSU__DDRC__PARITY_ENABLE" VALUE="NA"/>
+        <PARAMETER NAME="PSU__DDRC__DDR4_CAL_MODE_ENABLE" VALUE="NA"/>
+        <PARAMETER NAME="PSU__DDRC__DDR4_CRC_CONTROL" VALUE="NA"/>
+        <PARAMETER NAME="PSU__DDRC__FGRM" VALUE="NA"/>
+        <PARAMETER NAME="PSU__DDRC__VENDOR_PART" VALUE="OTHERS"/>
+        <PARAMETER NAME="PSU__DDRC__SB_TARGET" VALUE="NA"/>
+        <PARAMETER NAME="PSU__DDRC__LP_ASR" VALUE="NA"/>
+        <PARAMETER NAME="PSU__DDRC__DDR4_ADDR_MAPPING" VALUE="NA"/>
+        <PARAMETER NAME="PSU__DDRC__SELF_REF_ABORT" VALUE="NA"/>
+        <PARAMETER NAME="PSU__DDRC__DERATE_INT_D" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__DDRC__ADDR_MIRROR" VALUE="1"/>
+        <PARAMETER NAME="PSU__DDRC__EN_2ND_CLK" VALUE="0"/>
+        <PARAMETER NAME="PSU__DDRC__LPDDR3_DUALRANK_SDP" VALUE="0"/>
+        <PARAMETER NAME="PSU__DDRC__PER_BANK_REFRESH" VALUE="0"/>
+        <PARAMETER NAME="PSU__DDRC__ENABLE_DP_SWITCH" VALUE="1"/>
+        <PARAMETER NAME="PSU__DDRC__ENABLE_LP4_SLOWBOOT" VALUE="0"/>
+        <PARAMETER NAME="PSU__DDRC__ENABLE_LP4_HAS_ECC_COMP" VALUE="0"/>
+        <PARAMETER NAME="PSU__DDRC__ENABLE_2T_TIMING" VALUE="0"/>
+        <PARAMETER NAME="PSU__DDRC__RD_DQS_CENTER" VALUE="0"/>
+        <PARAMETER NAME="PSU__DDRC__DQMAP_0_3" VALUE="0"/>
+        <PARAMETER NAME="PSU__DDRC__DQMAP_4_7" VALUE="0"/>
+        <PARAMETER NAME="PSU__DDRC__DQMAP_8_11" VALUE="0"/>
+        <PARAMETER NAME="PSU__DDRC__DQMAP_12_15" VALUE="0"/>
+        <PARAMETER NAME="PSU__DDRC__DQMAP_16_19" VALUE="0"/>
+        <PARAMETER NAME="PSU__DDRC__DQMAP_20_23" VALUE="0"/>
+        <PARAMETER NAME="PSU__DDRC__DQMAP_24_27" VALUE="0"/>
+        <PARAMETER NAME="PSU__DDRC__DQMAP_28_31" VALUE="0"/>
+        <PARAMETER NAME="PSU__DDRC__DQMAP_32_35" VALUE="0"/>
+        <PARAMETER NAME="PSU__DDRC__DQMAP_36_39" VALUE="0"/>
+        <PARAMETER NAME="PSU__DDRC__DQMAP_40_43" VALUE="0"/>
+        <PARAMETER NAME="PSU__DDRC__DQMAP_44_47" VALUE="0"/>
+        <PARAMETER NAME="PSU__DDRC__DQMAP_48_51" VALUE="0"/>
+        <PARAMETER NAME="PSU__DDRC__DQMAP_52_55" VALUE="0"/>
+        <PARAMETER NAME="PSU__DDRC__DQMAP_56_59" VALUE="0"/>
+        <PARAMETER NAME="PSU__DDRC__DQMAP_60_63" VALUE="0"/>
+        <PARAMETER NAME="PSU__DDRC__DQMAP_64_67" VALUE="0"/>
+        <PARAMETER NAME="PSU__DDRC__DQMAP_68_71" VALUE="0"/>
+        <PARAMETER NAME="PSU_DDR_RAM_HIGHADDR" VALUE="0x7FFFFFFF"/>
+        <PARAMETER NAME="PSU_DDR_RAM_HIGHADDR_OFFSET" VALUE="0x00000002"/>
+        <PARAMETER NAME="PSU_DDR_RAM_LOWADDR_OFFSET" VALUE="0x80000000"/>
+        <PARAMETER NAME="PSU__DDR_QOS_ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PSU__DDR_QOS_PORT0_TYPE" VALUE="Low Latency"/>
+        <PARAMETER NAME="PSU__DDR_QOS_PORT1_VN1_TYPE" VALUE="Low Latency"/>
+        <PARAMETER NAME="PSU__DDR_QOS_PORT1_VN2_TYPE" VALUE="Best Effort"/>
+        <PARAMETER NAME="PSU__DDR_QOS_PORT2_VN1_TYPE" VALUE="Low Latency"/>
+        <PARAMETER NAME="PSU__DDR_QOS_PORT2_VN2_TYPE" VALUE="Best Effort"/>
+        <PARAMETER NAME="PSU__DDR_QOS_PORT3_TYPE" VALUE="Video Traffic"/>
+        <PARAMETER NAME="PSU__DDR_QOS_PORT4_TYPE" VALUE="Best Effort"/>
+        <PARAMETER NAME="PSU__DDR_QOS_PORT5_TYPE" VALUE="Best Effort"/>
+        <PARAMETER NAME="PSU__DDR_QOS_RD_LPR_THRSHLD" VALUE="16"/>
+        <PARAMETER NAME="PSU__DDR_QOS_RD_HPR_THRSHLD" VALUE="0"/>
+        <PARAMETER NAME="PSU__DDR_QOS_WR_THRSHLD" VALUE="16"/>
+        <PARAMETER NAME="PSU__DDR_QOS_HP0_RDQOS" VALUE="7"/>
+        <PARAMETER NAME="PSU__DDR_QOS_HP0_WRQOS" VALUE="15"/>
+        <PARAMETER NAME="PSU__DDR_QOS_HP1_RDQOS" VALUE="3"/>
+        <PARAMETER NAME="PSU__DDR_QOS_HP1_WRQOS" VALUE="3"/>
+        <PARAMETER NAME="PSU__DDR_QOS_HP2_RDQOS" VALUE="3"/>
+        <PARAMETER NAME="PSU__DDR_QOS_HP2_WRQOS" VALUE="3"/>
+        <PARAMETER NAME="PSU__DDR_QOS_HP3_RDQOS" VALUE="3"/>
+        <PARAMETER NAME="PSU__DDR_QOS_HP3_WRQOS" VALUE="3"/>
+        <PARAMETER NAME="PSU__FP__POWER__ON" VALUE="1"/>
+        <PARAMETER NAME="PSU__PL__POWER__ON" VALUE="1"/>
+        <PARAMETER NAME="PSU__OCM_BANK0__POWER__ON" VALUE="1"/>
+        <PARAMETER NAME="PSU__OCM_BANK1__POWER__ON" VALUE="1"/>
+        <PARAMETER NAME="PSU__OCM_BANK2__POWER__ON" VALUE="1"/>
+        <PARAMETER NAME="PSU__OCM_BANK3__POWER__ON" VALUE="1"/>
+        <PARAMETER NAME="PSU__TCM0A__POWER__ON" VALUE="1"/>
+        <PARAMETER NAME="PSU__TCM0B__POWER__ON" VALUE="1"/>
+        <PARAMETER NAME="PSU__TCM1A__POWER__ON" VALUE="1"/>
+        <PARAMETER NAME="PSU__TCM1B__POWER__ON" VALUE="1"/>
+        <PARAMETER NAME="PSU__RPU__POWER__ON" VALUE="1"/>
+        <PARAMETER NAME="PSU__L2_BANK0__POWER__ON" VALUE="1"/>
+        <PARAMETER NAME="PSU__GPU_PP0__POWER__ON" VALUE="1"/>
+        <PARAMETER NAME="PSU__GPU_PP1__POWER__ON" VALUE="1"/>
+        <PARAMETER NAME="PSU__ACPU0__POWER__ON" VALUE="1"/>
+        <PARAMETER NAME="PSU__ACPU1__POWER__ON" VALUE="1"/>
+        <PARAMETER NAME="PSU__ACPU2__POWER__ON" VALUE="1"/>
+        <PARAMETER NAME="PSU__ACPU3__POWER__ON" VALUE="1"/>
+        <PARAMETER NAME="PSU__UART0__PERIPHERAL__ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PSU__UART0__PERIPHERAL__IO" VALUE="MIO 2 .. 3"/>
+        <PARAMETER NAME="PSU__UART0__MODEM__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__UART1__PERIPHERAL__ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PSU__UART1__PERIPHERAL__IO" VALUE="MIO 0 .. 1"/>
+        <PARAMETER NAME="PSU__UART1__MODEM__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__UART0_LOOP_UART1__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__USB0__PERIPHERAL__ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PSU__USB0__PERIPHERAL__IO" VALUE="MIO 52 .. 63"/>
+        <PARAMETER NAME="PSU__USB1__PERIPHERAL__ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PSU__USB1__PERIPHERAL__IO" VALUE="MIO 64 .. 75"/>
+        <PARAMETER NAME="PSU__USB3_0__PERIPHERAL__ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PSU__USB3_0__PERIPHERAL__IO" VALUE="GT Lane2"/>
+        <PARAMETER NAME="PSU__USB3_1__PERIPHERAL__ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PSU__USB3_1__PERIPHERAL__IO" VALUE="GT Lane3"/>
+        <PARAMETER NAME="PSU__USB3_0__EMIO__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__USB2_0__EMIO__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__USB3_1__EMIO__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__USB2_1__EMIO__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__USE__USB3_0_HUB" VALUE="0"/>
+        <PARAMETER NAME="PSU__USE__USB3_1_HUB" VALUE="0"/>
+        <PARAMETER NAME="PSU__USE__ADMA" VALUE="0"/>
+        <PARAMETER NAME="PSU__USE__M_AXI_GP0" VALUE="1"/>
+        <PARAMETER NAME="PSU__M_AXI_GP0_SUPPORTS_NARROW_BURST" VALUE="1"/>
+        <PARAMETER NAME="PSU__MAXIGP0__DATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="PSU__USE__M_AXI_GP1" VALUE="0"/>
+        <PARAMETER NAME="PSU__M_AXI_GP1_SUPPORTS_NARROW_BURST" VALUE="1"/>
+        <PARAMETER NAME="PSU__MAXIGP1__DATA_WIDTH" VALUE="128"/>
+        <PARAMETER NAME="PSU__USE__M_AXI_GP2" VALUE="0"/>
+        <PARAMETER NAME="PSU__M_AXI_GP2_SUPPORTS_NARROW_BURST" VALUE="1"/>
+        <PARAMETER NAME="PSU__MAXIGP2__DATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="PSU__USE__S_AXI_ACP" VALUE="0"/>
+        <PARAMETER NAME="PSU__USE__S_AXI_GP0" VALUE="0"/>
+        <PARAMETER NAME="PSU__USE_DIFF_RW_CLK_GP0" VALUE="0"/>
+        <PARAMETER NAME="PSU__SAXIGP0__DATA_WIDTH" VALUE="128"/>
+        <PARAMETER NAME="PSU__USE__S_AXI_GP1" VALUE="0"/>
+        <PARAMETER NAME="PSU__USE_DIFF_RW_CLK_GP1" VALUE="0"/>
+        <PARAMETER NAME="PSU__SAXIGP1__DATA_WIDTH" VALUE="128"/>
+        <PARAMETER NAME="PSU__USE__S_AXI_GP2" VALUE="1"/>
+        <PARAMETER NAME="PSU__USE_DIFF_RW_CLK_GP2" VALUE="0"/>
+        <PARAMETER NAME="PSU__SAXIGP2__DATA_WIDTH" VALUE="128"/>
+        <PARAMETER NAME="PSU__USE__S_AXI_GP3" VALUE="0"/>
+        <PARAMETER NAME="PSU__USE_DIFF_RW_CLK_GP3" VALUE="0"/>
+        <PARAMETER NAME="PSU__SAXIGP3__DATA_WIDTH" VALUE="128"/>
+        <PARAMETER NAME="PSU__USE__S_AXI_GP4" VALUE="0"/>
+        <PARAMETER NAME="PSU__USE_DIFF_RW_CLK_GP4" VALUE="0"/>
+        <PARAMETER NAME="PSU__SAXIGP4__DATA_WIDTH" VALUE="128"/>
+        <PARAMETER NAME="PSU__USE__S_AXI_GP5" VALUE="0"/>
+        <PARAMETER NAME="PSU__USE_DIFF_RW_CLK_GP5" VALUE="0"/>
+        <PARAMETER NAME="PSU__SAXIGP5__DATA_WIDTH" VALUE="128"/>
+        <PARAMETER NAME="PSU__USE__S_AXI_GP6" VALUE="0"/>
+        <PARAMETER NAME="PSU__USE_DIFF_RW_CLK_GP6" VALUE="0"/>
+        <PARAMETER NAME="PSU__SAXIGP6__DATA_WIDTH" VALUE="128"/>
+        <PARAMETER NAME="PSU__USE__S_AXI_ACE" VALUE="0"/>
+        <PARAMETER NAME="PSU__TRACE_PIPELINE_WIDTH" VALUE="8"/>
+        <PARAMETER NAME="PSU__EN_EMIO_TRACE" VALUE="0"/>
+        <PARAMETER NAME="PSU__USE__AUDIO" VALUE="0"/>
+        <PARAMETER NAME="PSU__USE__VIDEO" VALUE="0"/>
+        <PARAMETER NAME="PSU__USE__PROC_EVENT_BUS" VALUE="0"/>
+        <PARAMETER NAME="PSU__USE__FTM" VALUE="0"/>
+        <PARAMETER NAME="PSU__USE__CROSS_TRIGGER" VALUE="0"/>
+        <PARAMETER NAME="PSU__FTM__CTI_IN_0" VALUE="0"/>
+        <PARAMETER NAME="PSU__FTM__CTI_IN_1" VALUE="0"/>
+        <PARAMETER NAME="PSU__FTM__CTI_IN_2" VALUE="0"/>
+        <PARAMETER NAME="PSU__FTM__CTI_IN_3" VALUE="0"/>
+        <PARAMETER NAME="PSU__FTM__CTI_OUT_0" VALUE="0"/>
+        <PARAMETER NAME="PSU__FTM__CTI_OUT_1" VALUE="0"/>
+        <PARAMETER NAME="PSU__FTM__CTI_OUT_2" VALUE="0"/>
+        <PARAMETER NAME="PSU__FTM__CTI_OUT_3" VALUE="0"/>
+        <PARAMETER NAME="PSU__FTM__GPO" VALUE="0"/>
+        <PARAMETER NAME="PSU__FTM__GPI" VALUE="0"/>
+        <PARAMETER NAME="PSU__USE__GDMA" VALUE="0"/>
+        <PARAMETER NAME="PSU__USE__IRQ" VALUE="0"/>
+        <PARAMETER NAME="PSU__USE__IRQ0" VALUE="0"/>
+        <PARAMETER NAME="PSU__USE__IRQ1" VALUE="0"/>
+        <PARAMETER NAME="PSU__USE__CLK0" VALUE="0"/>
+        <PARAMETER NAME="PSU__USE__CLK1" VALUE="0"/>
+        <PARAMETER NAME="PSU__USE__CLK2" VALUE="0"/>
+        <PARAMETER NAME="PSU__USE__CLK3" VALUE="0"/>
+        <PARAMETER NAME="PSU__USE__RST0" VALUE="0"/>
+        <PARAMETER NAME="PSU__USE__RST1" VALUE="0"/>
+        <PARAMETER NAME="PSU__USE__RST2" VALUE="0"/>
+        <PARAMETER NAME="PSU__USE__RST3" VALUE="0"/>
+        <PARAMETER NAME="PSU__USE__FABRIC__RST" VALUE="1"/>
+        <PARAMETER NAME="PSU__USE__RTC" VALUE="0"/>
+        <PARAMETER NAME="PSU__PRESET_APPLIED" VALUE="1"/>
+        <PARAMETER NAME="PSU__USE__EVENT_RPU" VALUE="0"/>
+        <PARAMETER NAME="PSU__USE__APU_LEGACY_INTERRUPT" VALUE="0"/>
+        <PARAMETER NAME="PSU__USE__RPU_LEGACY_INTERRUPT" VALUE="0"/>
+        <PARAMETER NAME="PSU__USE__STM" VALUE="0"/>
+        <PARAMETER NAME="PSU__USE__DEBUG__TEST" VALUE="0"/>
+        <PARAMETER NAME="PSU__HIGH_ADDRESS__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__DDR_HIGH_ADDRESS_GUI_ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__EXPAND__LOWER_LPS_SLAVES" VALUE="0"/>
+        <PARAMETER NAME="PSU__EXPAND__CORESIGHT" VALUE="0"/>
+        <PARAMETER NAME="PSU__EXPAND__GIC" VALUE="0"/>
+        <PARAMETER NAME="PSU__EXPAND__FPD_SLAVES" VALUE="0"/>
+        <PARAMETER NAME="PSU__EXPAND__UPPER_LPS_SLAVES" VALUE="0"/>
+        <PARAMETER NAME="PSU_MIO_0_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_0_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_0_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_0_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_0_DIRECTION" VALUE="out"/>
+        <PARAMETER NAME="PSU_MIO_1_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_1_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_1_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_1_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_1_DIRECTION" VALUE="in"/>
+        <PARAMETER NAME="PSU_MIO_2_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_2_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_2_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_2_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_2_DIRECTION" VALUE="in"/>
+        <PARAMETER NAME="PSU_MIO_3_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_3_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_3_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_3_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_3_DIRECTION" VALUE="out"/>
+        <PARAMETER NAME="PSU_MIO_4_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_4_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_4_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_4_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_4_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_5_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_5_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_5_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_5_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_5_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_6_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_6_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_6_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_6_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_6_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_7_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_7_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_7_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_7_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_7_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_8_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_8_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_8_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_8_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_8_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_9_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_9_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_9_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_9_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_9_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_10_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_10_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_10_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_10_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_10_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_11_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_11_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_11_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_11_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_11_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_12_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_12_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_12_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_12_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_12_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_13_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_13_DRIVE_STRENGTH" VALUE="4"/>
+        <PARAMETER NAME="PSU_MIO_13_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_13_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_13_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_14_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_14_DRIVE_STRENGTH" VALUE="4"/>
+        <PARAMETER NAME="PSU_MIO_14_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_14_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_14_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_15_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_15_DRIVE_STRENGTH" VALUE="4"/>
+        <PARAMETER NAME="PSU_MIO_15_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_15_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_15_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_16_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_16_DRIVE_STRENGTH" VALUE="4"/>
+        <PARAMETER NAME="PSU_MIO_16_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_16_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_16_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_17_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_17_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_17_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_17_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_17_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_18_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_18_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_18_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_18_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_18_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_19_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_19_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_19_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_19_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_19_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_20_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_20_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_20_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_20_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_20_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_21_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_21_DRIVE_STRENGTH" VALUE="4"/>
+        <PARAMETER NAME="PSU_MIO_21_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_21_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_21_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_22_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_22_DRIVE_STRENGTH" VALUE="4"/>
+        <PARAMETER NAME="PSU_MIO_22_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_22_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_22_DIRECTION" VALUE="out"/>
+        <PARAMETER NAME="PSU_MIO_23_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_23_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_23_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_23_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_23_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_24_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_24_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_24_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_24_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_24_DIRECTION" VALUE="in"/>
+        <PARAMETER NAME="PSU_MIO_25_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_25_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_25_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_25_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_25_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_26_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_26_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_26_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_26_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_26_DIRECTION" VALUE="in"/>
+        <PARAMETER NAME="PSU_MIO_27_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_27_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_27_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_27_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_27_DIRECTION" VALUE="out"/>
+        <PARAMETER NAME="PSU_MIO_28_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_28_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_28_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_28_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_28_DIRECTION" VALUE="in"/>
+        <PARAMETER NAME="PSU_MIO_29_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_29_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_29_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_29_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_29_DIRECTION" VALUE="out"/>
+        <PARAMETER NAME="PSU_MIO_30_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_30_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_30_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_30_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_30_DIRECTION" VALUE="in"/>
+        <PARAMETER NAME="PSU_MIO_31_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_31_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_31_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_31_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_31_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_32_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_32_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_32_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_32_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_32_DIRECTION" VALUE="out"/>
+        <PARAMETER NAME="PSU_MIO_33_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_33_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_33_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_33_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_33_DIRECTION" VALUE="out"/>
+        <PARAMETER NAME="PSU_MIO_34_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_34_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_34_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_34_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_34_DIRECTION" VALUE="out"/>
+        <PARAMETER NAME="PSU_MIO_35_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_35_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_35_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_35_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_35_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_36_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_36_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_36_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_36_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_36_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_37_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_37_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_37_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_37_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_37_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_38_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_38_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_38_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_38_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_38_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_39_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_39_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_39_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_39_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_39_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_40_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_40_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_40_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_40_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_40_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_41_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_41_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_41_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_41_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_41_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_42_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_42_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_42_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_42_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_42_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_43_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_43_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_43_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_43_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_43_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_44_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_44_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_44_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_44_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_44_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_45_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_45_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_45_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_45_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_45_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_46_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_46_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_46_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_46_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_46_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_47_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_47_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_47_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_47_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_47_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_48_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_48_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_48_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_48_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_48_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_49_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_49_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_49_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_49_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_49_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_50_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_50_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_50_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_50_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_50_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_51_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_51_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_51_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_51_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_51_DIRECTION" VALUE="out"/>
+        <PARAMETER NAME="PSU_MIO_52_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_52_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_52_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_52_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_52_DIRECTION" VALUE="in"/>
+        <PARAMETER NAME="PSU_MIO_53_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_53_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_53_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_53_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_53_DIRECTION" VALUE="in"/>
+        <PARAMETER NAME="PSU_MIO_54_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_54_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_54_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_54_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_54_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_55_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_55_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_55_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_55_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_55_DIRECTION" VALUE="in"/>
+        <PARAMETER NAME="PSU_MIO_56_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_56_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_56_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_56_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_56_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_57_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_57_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_57_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_57_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_57_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_58_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_58_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_58_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_58_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_58_DIRECTION" VALUE="out"/>
+        <PARAMETER NAME="PSU_MIO_59_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_59_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_59_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_59_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_59_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_60_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_60_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_60_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_60_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_60_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_61_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_61_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_61_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_61_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_61_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_62_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_62_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_62_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_62_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_62_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_63_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_63_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_63_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_63_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_63_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_64_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_64_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_64_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_64_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_64_DIRECTION" VALUE="in"/>
+        <PARAMETER NAME="PSU_MIO_65_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_65_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_65_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_65_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_65_DIRECTION" VALUE="in"/>
+        <PARAMETER NAME="PSU_MIO_66_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_66_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_66_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_66_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_66_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_67_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_67_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_67_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_67_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_67_DIRECTION" VALUE="in"/>
+        <PARAMETER NAME="PSU_MIO_68_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_68_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_68_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_68_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_68_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_69_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_69_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_69_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_69_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_69_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_70_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_70_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_70_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_70_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_70_DIRECTION" VALUE="out"/>
+        <PARAMETER NAME="PSU_MIO_71_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_71_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_71_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_71_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_71_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_72_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_72_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_72_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_72_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_72_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_73_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_73_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_73_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_73_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_73_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_74_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_74_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_74_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_74_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_74_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_75_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_75_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_75_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_75_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_75_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_76_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_76_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_76_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_76_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_76_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_77_PULLUPDOWN" VALUE="pullup"/>
+        <PARAMETER NAME="PSU_MIO_77_DRIVE_STRENGTH" VALUE="12"/>
+        <PARAMETER NAME="PSU_MIO_77_INPUT_TYPE" VALUE="schmitt"/>
+        <PARAMETER NAME="PSU_MIO_77_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_77_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_BANK_0_IO_STANDARD" VALUE="LVCMOS18"/>
+        <PARAMETER NAME="PSU_BANK_1_IO_STANDARD" VALUE="LVCMOS18"/>
+        <PARAMETER NAME="PSU_BANK_2_IO_STANDARD" VALUE="LVCMOS18"/>
+        <PARAMETER NAME="PSU_BANK_3_IO_STANDARD" VALUE="LVCMOS18"/>
+        <PARAMETER NAME="PSU__CRF_APB__APLL_CTRL__FRACDATA" VALUE="0.000000"/>
+        <PARAMETER NAME="PSU__CRF_APB__VPLL_CTRL__FRACDATA" VALUE="0.000000"/>
+        <PARAMETER NAME="PSU__CRF_APB__DPLL_CTRL__FRACDATA" VALUE="0.000000"/>
+        <PARAMETER NAME="PSU__CRL_APB__IOPLL_CTRL__FRACDATA" VALUE="0.000000"/>
+        <PARAMETER NAME="PSU__CRL_APB__RPLL_CTRL__FRACDATA" VALUE="0.000000"/>
+        <PARAMETER NAME="PSU__CRF_APB__DPLL_CTRL__DIV2" VALUE="1"/>
+        <PARAMETER NAME="PSU__CRF_APB__APLL_CTRL__DIV2" VALUE="1"/>
+        <PARAMETER NAME="PSU__CRF_APB__VPLL_CTRL__DIV2" VALUE="1"/>
+        <PARAMETER NAME="PSU__CRL_APB__IOPLL_CTRL__DIV2" VALUE="1"/>
+        <PARAMETER NAME="PSU__CRL_APB__RPLL_CTRL__DIV2" VALUE="1"/>
+        <PARAMETER NAME="PSU__CRF_APB__APLL_CTRL__FBDIV" VALUE="72"/>
+        <PARAMETER NAME="PSU__CRF_APB__DPLL_CTRL__FBDIV" VALUE="63"/>
+        <PARAMETER NAME="PSU__CRF_APB__VPLL_CTRL__FBDIV" VALUE="90"/>
+        <PARAMETER NAME="PSU__CRF_APB__APLL_TO_LPD_CTRL__DIVISOR0" VALUE="3"/>
+        <PARAMETER NAME="PSU__CRF_APB__DPLL_TO_LPD_CTRL__DIVISOR0" VALUE="2"/>
+        <PARAMETER NAME="PSU__CRF_APB__VPLL_TO_LPD_CTRL__DIVISOR0" VALUE="3"/>
+        <PARAMETER NAME="PSU__CRF_APB__ACPU_CTRL__DIVISOR0" VALUE="1"/>
+        <PARAMETER NAME="PSU__CRF_APB__DBG_TRACE_CTRL__DIVISOR0" VALUE="5"/>
+        <PARAMETER NAME="PSU__DISPLAYPORT__PERIPHERAL__ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PSU__DISPLAYPORT__LANE0__ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PSU__DISPLAYPORT__LANE0__IO" VALUE="GT Lane1"/>
+        <PARAMETER NAME="PSU__DISPLAYPORT__LANE1__ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PSU__DISPLAYPORT__LANE1__IO" VALUE="GT Lane0"/>
+        <PARAMETER NAME="PSU__CRF_APB__DBG_FPD_CTRL__DIVISOR0" VALUE="2"/>
+        <PARAMETER NAME="PSU__CRF_APB__APM_CTRL__DIVISOR0" VALUE="1"/>
+        <PARAMETER NAME="PSU__CRF_APB__DP_VIDEO_REF_CTRL__DIVISOR0" VALUE="5"/>
+        <PARAMETER NAME="PSU__CRF_APB__DP_VIDEO_REF_CTRL__DIVISOR1" VALUE="1"/>
+        <PARAMETER NAME="PSU__CRF_APB__DP_AUDIO_REF_CTRL__DIVISOR0" VALUE="19"/>
+        <PARAMETER NAME="PSU__CRF_APB__DP_AUDIO_REF_CTRL__DIVISOR1" VALUE="1"/>
+        <PARAMETER NAME="PSU__CRF_APB__DP_STC_REF_CTRL__DIVISOR0" VALUE="18"/>
+        <PARAMETER NAME="PSU__CRF_APB__DP_STC_REF_CTRL__DIVISOR1" VALUE="1"/>
+        <PARAMETER NAME="PSU__CRF_APB__DDR_CTRL__DIVISOR0" VALUE="4"/>
+        <PARAMETER NAME="PSU__CRF_APB__GPU_REF_CTRL__DIVISOR0" VALUE="1"/>
+        <PARAMETER NAME="PSU__CRF_APB__AFI0_REF_CTRL__DIVISOR0" VALUE="2"/>
+        <PARAMETER NAME="PSU__CRF_APB__AFI0_REF__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__CRF_APB__AFI1_REF_CTRL__DIVISOR0" VALUE="2"/>
+        <PARAMETER NAME="PSU__CRF_APB__AFI1_REF__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__CRF_APB__AFI2_REF_CTRL__DIVISOR0" VALUE="2"/>
+        <PARAMETER NAME="PSU__CRF_APB__AFI2_REF__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__CRF_APB__AFI3_REF_CTRL__DIVISOR0" VALUE="2"/>
+        <PARAMETER NAME="PSU__CRF_APB__AFI3_REF__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__CRF_APB__AFI4_REF_CTRL__DIVISOR0" VALUE="2"/>
+        <PARAMETER NAME="PSU__CRF_APB__AFI4_REF__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__CRF_APB__AFI5_REF_CTRL__DIVISOR0" VALUE="2"/>
+        <PARAMETER NAME="PSU__CRF_APB__AFI5_REF__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__CRF_APB__SATA_REF_CTRL__DIVISOR0" VALUE="5"/>
+        <PARAMETER NAME="PSU__SATA__PERIPHERAL__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__SATA__LANE0__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__SATA__LANE0__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__SATA__LANE1__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__SATA__LANE1__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__CRF_APB__PCIE_REF_CTRL__DIVISOR0" VALUE="6"/>
+        <PARAMETER NAME="PSU__CRL_APB__PL0_REF_CTRL__DIVISOR0" VALUE="6"/>
+        <PARAMETER NAME="PSU__CRL_APB__PL1_REF_CTRL__DIVISOR0" VALUE="4"/>
+        <PARAMETER NAME="PSU__CRL_APB__PL2_REF_CTRL__DIVISOR0" VALUE="4"/>
+        <PARAMETER NAME="PSU__CRL_APB__PL3_REF_CTRL__DIVISOR0" VALUE="4"/>
+        <PARAMETER NAME="PSU__CRL_APB__PL0_REF_CTRL__DIVISOR1" VALUE="1"/>
+        <PARAMETER NAME="PSU__CRL_APB__PL1_REF_CTRL__DIVISOR1" VALUE="1"/>
+        <PARAMETER NAME="PSU__CRL_APB__PL2_REF_CTRL__DIVISOR1" VALUE="1"/>
+        <PARAMETER NAME="PSU__CRL_APB__PL3_REF_CTRL__DIVISOR1" VALUE="1"/>
+        <PARAMETER NAME="PSU__CRL_APB__AMS_REF_CTRL__DIVISOR0" VALUE="30"/>
+        <PARAMETER NAME="PSU__CRL_APB__AMS_REF_CTRL__DIVISOR1" VALUE="1"/>
+        <PARAMETER NAME="PSU__CRL_APB__TIMESTAMP_REF_CTRL__DIVISOR0" VALUE="15"/>
+        <PARAMETER NAME="PSU__CRL_APB__AFI6_REF_CTRL__DIVISOR0" VALUE="3"/>
+        <PARAMETER NAME="PSU__CRL_APB__AFI6__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__CRL_APB__USB3_DUAL_REF_CTRL__DIVISOR0" VALUE="25"/>
+        <PARAMETER NAME="PSU__CRL_APB__USB3_DUAL_REF_CTRL__DIVISOR1" VALUE="3"/>
+        <PARAMETER NAME="PSU__CRL_APB__USB3__ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PSU__CRF_APB__GDMA_REF_CTRL__DIVISOR0" VALUE="2"/>
+        <PARAMETER NAME="PSU__USE__CLK" VALUE="0"/>
+        <PARAMETER NAME="PSU__CRF_APB__DPDMA_REF_CTRL__DIVISOR0" VALUE="2"/>
+        <PARAMETER NAME="PSU__CRF_APB__TOPSW_MAIN_CTRL__DIVISOR0" VALUE="2"/>
+        <PARAMETER NAME="PSU__CRF_APB__TOPSW_LSBUS_CTRL__DIVISOR0" VALUE="5"/>
+        <PARAMETER NAME="PSU__CRF_APB__GTGREF0_REF_CTRL__DIVISOR0" VALUE="-1"/>
+        <PARAMETER NAME="PSU__CRF_APB__GTGREF0__ENABLE" VALUE="NA"/>
+        <PARAMETER NAME="PSU__CRF_APB__DBG_TSTMP_CTRL__DIVISOR0" VALUE="2"/>
+        <PARAMETER NAME="PSU__CRL_APB__IOPLL_CTRL__FBDIV" VALUE="90"/>
+        <PARAMETER NAME="PSU__CRL_APB__RPLL_CTRL__FBDIV" VALUE="84"/>
+        <PARAMETER NAME="PSU__CRL_APB__IOPLL_TO_FPD_CTRL__DIVISOR0" VALUE="3"/>
+        <PARAMETER NAME="PSU__CRL_APB__RPLL_TO_FPD_CTRL__DIVISOR0" VALUE="3"/>
+        <PARAMETER NAME="PSU__CRL_APB__GEM0_REF_CTRL__DIVISOR0" VALUE="12"/>
+        <PARAMETER NAME="PSU__CRL_APB__GEM1_REF_CTRL__DIVISOR0" VALUE="12"/>
+        <PARAMETER NAME="PSU__CRL_APB__GEM2_REF_CTRL__DIVISOR0" VALUE="12"/>
+        <PARAMETER NAME="PSU__CRL_APB__GEM3_REF_CTRL__DIVISOR0" VALUE="12"/>
+        <PARAMETER NAME="PSU__CRL_APB__GEM0_REF_CTRL__DIVISOR1" VALUE="1"/>
+        <PARAMETER NAME="PSU__CRL_APB__GEM1_REF_CTRL__DIVISOR1" VALUE="1"/>
+        <PARAMETER NAME="PSU__CRL_APB__GEM2_REF_CTRL__DIVISOR1" VALUE="1"/>
+        <PARAMETER NAME="PSU__CRL_APB__GEM3_REF_CTRL__DIVISOR1" VALUE="1"/>
+        <PARAMETER NAME="PSU__CRL_APB__GEM_TSU_REF_CTRL__DIVISOR0" VALUE="4"/>
+        <PARAMETER NAME="PSU__CRL_APB__GEM_TSU_REF_CTRL__DIVISOR1" VALUE="1"/>
+        <PARAMETER NAME="PSU__CRL_APB__USB0_BUS_REF_CTRL__DIVISOR0" VALUE="6"/>
+        <PARAMETER NAME="PSU__CRL_APB__USB0_BUS_REF_CTRL__DIVISOR1" VALUE="1"/>
+        <PARAMETER NAME="PSU__CRL_APB__USB1_BUS_REF_CTRL__DIVISOR0" VALUE="6"/>
+        <PARAMETER NAME="PSU__CRL_APB__USB1_BUS_REF_CTRL__DIVISOR1" VALUE="1"/>
+        <PARAMETER NAME="PSU__CRL_APB__QSPI_REF_CTRL__DIVISOR0" VALUE="5"/>
+        <PARAMETER NAME="PSU__CRL_APB__QSPI_REF_CTRL__DIVISOR1" VALUE="1"/>
+        <PARAMETER NAME="PSU__CRL_APB__SDIO0_REF_CTRL__DIVISOR0" VALUE="7"/>
+        <PARAMETER NAME="PSU__CRL_APB__SDIO0_REF_CTRL__DIVISOR1" VALUE="1"/>
+        <PARAMETER NAME="PSU__CRL_APB__SDIO1_REF_CTRL__DIVISOR0" VALUE="8"/>
+        <PARAMETER NAME="PSU__CRL_APB__SDIO1_REF_CTRL__DIVISOR1" VALUE="1"/>
+        <PARAMETER NAME="PSU__CRL_APB__UART0_REF_CTRL__DIVISOR0" VALUE="15"/>
+        <PARAMETER NAME="PSU__CRL_APB__UART0_REF_CTRL__DIVISOR1" VALUE="1"/>
+        <PARAMETER NAME="PSU__CRL_APB__UART1_REF_CTRL__DIVISOR0" VALUE="15"/>
+        <PARAMETER NAME="PSU__CRL_APB__UART1_REF_CTRL__DIVISOR1" VALUE="1"/>
+        <PARAMETER NAME="PSU__CRL_APB__I2C0_REF_CTRL__DIVISOR0" VALUE="15"/>
+        <PARAMETER NAME="PSU__CRL_APB__I2C0_REF_CTRL__DIVISOR1" VALUE="1"/>
+        <PARAMETER NAME="PSU__CRL_APB__I2C1_REF_CTRL__DIVISOR0" VALUE="15"/>
+        <PARAMETER NAME="PSU__CRL_APB__I2C1_REF_CTRL__DIVISOR1" VALUE="1"/>
+        <PARAMETER NAME="PSU__CRL_APB__SPI0_REF_CTRL__DIVISOR0" VALUE="7"/>
+        <PARAMETER NAME="PSU__CRL_APB__SPI0_REF_CTRL__DIVISOR1" VALUE="1"/>
+        <PARAMETER NAME="PSU__CRL_APB__SPI1_REF_CTRL__DIVISOR0" VALUE="7"/>
+        <PARAMETER NAME="PSU__CRL_APB__SPI1_REF_CTRL__DIVISOR1" VALUE="1"/>
+        <PARAMETER NAME="PSU__CRL_APB__CAN0_REF_CTRL__DIVISOR0" VALUE="15"/>
+        <PARAMETER NAME="PSU__CRL_APB__CAN0_REF_CTRL__DIVISOR1" VALUE="1"/>
+        <PARAMETER NAME="PSU__CRL_APB__CAN1_REF_CTRL__DIVISOR0" VALUE="15"/>
+        <PARAMETER NAME="PSU__CRL_APB__CAN1_REF_CTRL__DIVISOR1" VALUE="1"/>
+        <PARAMETER NAME="PSU__CRL_APB__DEBUG_R5_ATCLK_CTRL__DIVISOR0" VALUE="6"/>
+        <PARAMETER NAME="PSU__CRL_APB__CPU_R5_CTRL__DIVISOR0" VALUE="3"/>
+        <PARAMETER NAME="PSU__CRL_APB__OCM_MAIN_CTRL__DIVISOR0" VALUE="3"/>
+        <PARAMETER NAME="PSU__CRL_APB__IOU_SWITCH_CTRL__DIVISOR0" VALUE="6"/>
+        <PARAMETER NAME="PSU__CRL_APB__CSU_PLL_CTRL__DIVISOR0" VALUE="3"/>
+        <PARAMETER NAME="PSU__CRL_APB__PCAP_CTRL__DIVISOR0" VALUE="8"/>
+        <PARAMETER NAME="PSU__CRL_APB__LPD_LSBUS_CTRL__DIVISOR0" VALUE="15"/>
+        <PARAMETER NAME="PSU__CRL_APB__LPD_SWITCH_CTRL__DIVISOR0" VALUE="3"/>
+        <PARAMETER NAME="PSU__CRL_APB__DBG_LPD_CTRL__DIVISOR0" VALUE="6"/>
+        <PARAMETER NAME="PSU__CRL_APB__NAND_REF_CTRL__DIVISOR0" VALUE="15"/>
+        <PARAMETER NAME="PSU__CRL_APB__NAND_REF_CTRL__DIVISOR1" VALUE="1"/>
+        <PARAMETER NAME="PSU__CRL_APB__ADMA_REF_CTRL__DIVISOR0" VALUE="3"/>
+        <PARAMETER NAME="PSU__CRF_APB__APLL_CTRL__SRCSEL" VALUE="PSS_REF_CLK"/>
+        <PARAMETER NAME="PSU__CRF_APB__DPLL_CTRL__SRCSEL" VALUE="PSS_REF_CLK"/>
+        <PARAMETER NAME="PSU__CRF_APB__VPLL_CTRL__SRCSEL" VALUE="PSS_REF_CLK"/>
+        <PARAMETER NAME="PSU__CRF_APB__ACPU_CTRL__SRCSEL" VALUE="APLL"/>
+        <PARAMETER NAME="PSU__CRF_APB__DBG_TRACE_CTRL__SRCSEL" VALUE="IOPLL"/>
+        <PARAMETER NAME="PSU__CRF_APB__DBG_FPD_CTRL__SRCSEL" VALUE="IOPLL"/>
+        <PARAMETER NAME="PSU__CRF_APB__APM_CTRL__SRCSEL" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__CRF_APB__DP_VIDEO_REF_CTRL__SRCSEL" VALUE="VPLL"/>
+        <PARAMETER NAME="PSU__CRF_APB__DP_AUDIO_REF_CTRL__SRCSEL" VALUE="RPLL"/>
+        <PARAMETER NAME="PSU__CRF_APB__DP_STC_REF_CTRL__SRCSEL" VALUE="RPLL"/>
+        <PARAMETER NAME="PSU__CRF_APB__DDR_CTRL__SRCSEL" VALUE="DPLL"/>
+        <PARAMETER NAME="PSU__CRF_APB__GPU_REF_CTRL__SRCSEL" VALUE="IOPLL"/>
+        <PARAMETER NAME="PSU__CRF_APB__AFI0_REF_CTRL__SRCSEL" VALUE="DPLL"/>
+        <PARAMETER NAME="PSU__CRF_APB__AFI1_REF_CTRL__SRCSEL" VALUE="DPLL"/>
+        <PARAMETER NAME="PSU__CRF_APB__AFI2_REF_CTRL__SRCSEL" VALUE="DPLL"/>
+        <PARAMETER NAME="PSU__CRF_APB__AFI3_REF_CTRL__SRCSEL" VALUE="DPLL"/>
+        <PARAMETER NAME="PSU__CRF_APB__AFI4_REF_CTRL__SRCSEL" VALUE="DPLL"/>
+        <PARAMETER NAME="PSU__CRF_APB__AFI5_REF_CTRL__SRCSEL" VALUE="DPLL"/>
+        <PARAMETER NAME="PSU__CRF_APB__SATA_REF_CTRL__SRCSEL" VALUE="IOPLL"/>
+        <PARAMETER NAME="PSU__CRF_APB__PCIE_REF_CTRL__SRCSEL" VALUE="IOPLL"/>
+        <PARAMETER NAME="PSU__CRL_APB__PL0_REF_CTRL__SRCSEL" VALUE="RPLL"/>
+        <PARAMETER NAME="PSU__CRL_APB__PL1_REF_CTRL__SRCSEL" VALUE="RPLL"/>
+        <PARAMETER NAME="PSU__CRL_APB__PL2_REF_CTRL__SRCSEL" VALUE="RPLL"/>
+        <PARAMETER NAME="PSU__CRL_APB__PL3_REF_CTRL__SRCSEL" VALUE="RPLL"/>
+        <PARAMETER NAME="PSU__CRF_APB__GDMA_REF_CTRL__SRCSEL" VALUE="APLL"/>
+        <PARAMETER NAME="PSU__CRF_APB__DPDMA_REF_CTRL__SRCSEL" VALUE="APLL"/>
+        <PARAMETER NAME="PSU__CRF_APB__TOPSW_MAIN_CTRL__SRCSEL" VALUE="DPLL"/>
+        <PARAMETER NAME="PSU__CRF_APB__TOPSW_LSBUS_CTRL__SRCSEL" VALUE="IOPLL"/>
+        <PARAMETER NAME="PSU__CRF_APB__GTGREF0_REF_CTRL__SRCSEL" VALUE="NA"/>
+        <PARAMETER NAME="PSU__CRF_APB__DBG_TSTMP_CTRL__SRCSEL" VALUE="IOPLL"/>
+        <PARAMETER NAME="PSU__CRL_APB__IOPLL_CTRL__SRCSEL" VALUE="PSS_REF_CLK"/>
+        <PARAMETER NAME="PSU__CRL_APB__RPLL_CTRL__SRCSEL" VALUE="PSS_REF_CLK"/>
+        <PARAMETER NAME="PSU__CRL_APB__GEM0_REF_CTRL__SRCSEL" VALUE="IOPLL"/>
+        <PARAMETER NAME="PSU__CRL_APB__GEM1_REF_CTRL__SRCSEL" VALUE="IOPLL"/>
+        <PARAMETER NAME="PSU__CRL_APB__GEM2_REF_CTRL__SRCSEL" VALUE="IOPLL"/>
+        <PARAMETER NAME="PSU__CRL_APB__GEM3_REF_CTRL__SRCSEL" VALUE="IOPLL"/>
+        <PARAMETER NAME="PSU__CRL_APB__GEM_TSU_REF_CTRL__SRCSEL" VALUE="IOPLL"/>
+        <PARAMETER NAME="PSU__CRL_APB__USB0_BUS_REF_CTRL__SRCSEL" VALUE="IOPLL"/>
+        <PARAMETER NAME="PSU__CRL_APB__USB1_BUS_REF_CTRL__SRCSEL" VALUE="IOPLL"/>
+        <PARAMETER NAME="PSU__CRL_APB__QSPI_REF_CTRL__SRCSEL" VALUE="IOPLL"/>
+        <PARAMETER NAME="PSU__CRL_APB__SDIO0_REF_CTRL__SRCSEL" VALUE="RPLL"/>
+        <PARAMETER NAME="PSU__CRL_APB__SDIO1_REF_CTRL__SRCSEL" VALUE="IOPLL"/>
+        <PARAMETER NAME="PSU__CRL_APB__UART0_REF_CTRL__SRCSEL" VALUE="IOPLL"/>
+        <PARAMETER NAME="PSU__CRL_APB__UART1_REF_CTRL__SRCSEL" VALUE="IOPLL"/>
+        <PARAMETER NAME="PSU__CRL_APB__I2C0_REF_CTRL__SRCSEL" VALUE="IOPLL"/>
+        <PARAMETER NAME="PSU__CRL_APB__I2C1_REF_CTRL__SRCSEL" VALUE="IOPLL"/>
+        <PARAMETER NAME="PSU__CRL_APB__SPI0_REF_CTRL__SRCSEL" VALUE="RPLL"/>
+        <PARAMETER NAME="PSU__CRL_APB__SPI1_REF_CTRL__SRCSEL" VALUE="RPLL"/>
+        <PARAMETER NAME="PSU__CRL_APB__CAN0_REF_CTRL__SRCSEL" VALUE="IOPLL"/>
+        <PARAMETER NAME="PSU__CRL_APB__CAN1_REF_CTRL__SRCSEL" VALUE="IOPLL"/>
+        <PARAMETER NAME="PSU__CRL_APB__DEBUG_R5_ATCLK_CTRL__SRCSEL" VALUE="RPLL"/>
+        <PARAMETER NAME="PSU__CRL_APB__CPU_R5_CTRL__SRCSEL" VALUE="IOPLL"/>
+        <PARAMETER NAME="PSU__CRL_APB__OCM_MAIN_CTRL__SRCSEL" VALUE="IOPLL"/>
+        <PARAMETER NAME="PSU__CRL_APB__IOU_SWITCH_CTRL__SRCSEL" VALUE="IOPLL"/>
+        <PARAMETER NAME="PSU__CRL_APB__CSU_PLL_CTRL__SRCSEL" VALUE="SysOsc"/>
+        <PARAMETER NAME="PSU__CRL_APB__PCAP_CTRL__SRCSEL" VALUE="IOPLL"/>
+        <PARAMETER NAME="PSU__CRL_APB__LPD_LSBUS_CTRL__SRCSEL" VALUE="IOPLL"/>
+        <PARAMETER NAME="PSU__CRL_APB__LPD_SWITCH_CTRL__SRCSEL" VALUE="IOPLL"/>
+        <PARAMETER NAME="PSU__CRL_APB__DBG_LPD_CTRL__SRCSEL" VALUE="IOPLL"/>
+        <PARAMETER NAME="PSU__CRL_APB__NAND_REF_CTRL__SRCSEL" VALUE="IOPLL"/>
+        <PARAMETER NAME="PSU__CRL_APB__ADMA_REF_CTRL__SRCSEL" VALUE="IOPLL"/>
+        <PARAMETER NAME="PSU__CRL_APB__DLL_REF_CTRL__SRCSEL" VALUE="IOPLL"/>
+        <PARAMETER NAME="PSU__CRL_APB__AMS_REF_CTRL__SRCSEL" VALUE="IOPLL"/>
+        <PARAMETER NAME="PSU__CRL_APB__TIMESTAMP_REF_CTRL__SRCSEL" VALUE="IOPLL"/>
+        <PARAMETER NAME="PSU__CRL_APB__AFI6_REF_CTRL__SRCSEL" VALUE="IOPLL"/>
+        <PARAMETER NAME="PSU__CRL_APB__USB3_DUAL_REF_CTRL__SRCSEL" VALUE="IOPLL"/>
+        <PARAMETER NAME="PSU__IOU_SLCR__WDT_CLK_SEL__SELECT" VALUE="APB"/>
+        <PARAMETER NAME="PSU__FPD_SLCR__WDT_CLK_SEL__SELECT" VALUE="APB"/>
+        <PARAMETER NAME="PSU__IOU_SLCR__IOU_TTC_APB_CLK__TTC0_SEL" VALUE="APB"/>
+        <PARAMETER NAME="PSU__IOU_SLCR__IOU_TTC_APB_CLK__TTC1_SEL" VALUE="APB"/>
+        <PARAMETER NAME="PSU__IOU_SLCR__IOU_TTC_APB_CLK__TTC2_SEL" VALUE="APB"/>
+        <PARAMETER NAME="PSU__IOU_SLCR__IOU_TTC_APB_CLK__TTC3_SEL" VALUE="APB"/>
+        <PARAMETER NAME="PSU__CRF_APB__APLL_FRAC_CFG__ENABLED" VALUE="0"/>
+        <PARAMETER NAME="PSU__CRF_APB__VPLL_FRAC_CFG__ENABLED" VALUE="0"/>
+        <PARAMETER NAME="PSU__CRF_APB__DPLL_FRAC_CFG__ENABLED" VALUE="0"/>
+        <PARAMETER NAME="PSU__CRL_APB__IOPLL_FRAC_CFG__ENABLED" VALUE="0"/>
+        <PARAMETER NAME="PSU__CRL_APB__RPLL_FRAC_CFG__ENABLED" VALUE="0"/>
+        <PARAMETER NAME="PSU__CRF_APB__DP_VIDEO__FRAC_ENABLED" VALUE="0"/>
+        <PARAMETER NAME="PSU__CRF_APB__DP_AUDIO__FRAC_ENABLED" VALUE="0"/>
+        <PARAMETER NAME="PSU__CRF_APB__ACPU__FRAC_ENABLED" VALUE="0"/>
+        <PARAMETER NAME="PSU__OVERRIDE__BASIC_CLOCK" VALUE="0"/>
+        <PARAMETER NAME="PSU__DLL__ISUSED" VALUE="1"/>
+        <PARAMETER NAME="PSU__PL_CLK0_BUF" VALUE="TRUE"/>
+        <PARAMETER NAME="PSU__PL_CLK1_BUF" VALUE="FALSE"/>
+        <PARAMETER NAME="PSU__PL_CLK2_BUF" VALUE="FALSE"/>
+        <PARAMETER NAME="PSU__PL_CLK3_BUF" VALUE="FALSE"/>
+        <PARAMETER NAME="PSU__CRF_APB__APLL_CTRL__FRACFREQ" VALUE="27.138"/>
+        <PARAMETER NAME="PSU__CRF_APB__VPLL_CTRL__FRACFREQ" VALUE="27.138"/>
+        <PARAMETER NAME="PSU__CRF_APB__DPLL_CTRL__FRACFREQ" VALUE="27.138"/>
+        <PARAMETER NAME="PSU__CRL_APB__IOPLL_CTRL__FRACFREQ" VALUE="27.138"/>
+        <PARAMETER NAME="PSU__CRL_APB__RPLL_CTRL__FRACFREQ" VALUE="27.138"/>
+        <PARAMETER NAME="PSU__IOU_SLCR__TTC0__ACT_FREQMHZ" VALUE="100.000000"/>
+        <PARAMETER NAME="PSU__IOU_SLCR__TTC1__ACT_FREQMHZ" VALUE="100.000000"/>
+        <PARAMETER NAME="PSU__IOU_SLCR__TTC2__ACT_FREQMHZ" VALUE="100.000000"/>
+        <PARAMETER NAME="PSU__IOU_SLCR__TTC3__ACT_FREQMHZ" VALUE="100.000000"/>
+        <PARAMETER NAME="PSU__IOU_SLCR__WDT0__ACT_FREQMHZ" VALUE="100.000000"/>
+        <PARAMETER NAME="PSU__FPD_SLCR__WDT1__ACT_FREQMHZ" VALUE="100.000000"/>
+        <PARAMETER NAME="PSU__LPD_SLCR__CSUPMU__ACT_FREQMHZ" VALUE="100.000000"/>
+        <PARAMETER NAME="PSU__CRF_APB__ACPU_CTRL__ACT_FREQMHZ" VALUE="1200.000024"/>
+        <PARAMETER NAME="PSU__CRF_APB__DBG_TRACE_CTRL__ACT_FREQMHZ" VALUE="250"/>
+        <PARAMETER NAME="PSU__CRF_APB__DBG_FPD_CTRL__ACT_FREQMHZ" VALUE="250.000005"/>
+        <PARAMETER NAME="PSU__CRF_APB__APM_CTRL__ACT_FREQMHZ" VALUE="1"/>
+        <PARAMETER NAME="PSU__CRF_APB__DP_VIDEO_REF_CTRL__ACT_FREQMHZ" VALUE="300.000006"/>
+        <PARAMETER NAME="PSU__CRF_APB__DP_AUDIO_REF_CTRL__ACT_FREQMHZ" VALUE="24.561404"/>
+        <PARAMETER NAME="PSU__CRF_APB__DP_STC_REF_CTRL__ACT_FREQMHZ" VALUE="25.925926"/>
+        <PARAMETER NAME="PSU__CRF_APB__DDR_CTRL__ACT_FREQMHZ" VALUE="262.500005"/>
+        <PARAMETER NAME="PSU__DDR__INTERFACE__FREQMHZ" VALUE="266.500"/>
+        <PARAMETER NAME="PSU__CRF_APB__GPU_REF_CTRL__ACT_FREQMHZ" VALUE="500.000010"/>
+        <PARAMETER NAME="PSU__CRF_APB__AFI0_REF_CTRL__ACT_FREQMHZ" VALUE="667"/>
+        <PARAMETER NAME="PSU__CRF_APB__AFI1_REF_CTRL__ACT_FREQMHZ" VALUE="667"/>
+        <PARAMETER NAME="PSU__CRF_APB__AFI2_REF_CTRL__ACT_FREQMHZ" VALUE="667"/>
+        <PARAMETER NAME="PSU__CRF_APB__AFI3_REF_CTRL__ACT_FREQMHZ" VALUE="667"/>
+        <PARAMETER NAME="PSU__CRF_APB__AFI4_REF_CTRL__ACT_FREQMHZ" VALUE="667"/>
+        <PARAMETER NAME="PSU__CRF_APB__AFI5_REF_CTRL__ACT_FREQMHZ" VALUE="667"/>
+        <PARAMETER NAME="PSU__CRF_APB__SATA_REF_CTRL__ACT_FREQMHZ" VALUE="250"/>
+        <PARAMETER NAME="PSU__CRF_APB__PCIE_REF_CTRL__ACT_FREQMHZ" VALUE="250"/>
+        <PARAMETER NAME="PSU__CRL_APB__PL0_REF_CTRL__ACT_FREQMHZ" VALUE="233.333338"/>
+        <PARAMETER NAME="PSU__CRL_APB__PL1_REF_CTRL__ACT_FREQMHZ" VALUE="100"/>
+        <PARAMETER NAME="PSU__CRL_APB__PL2_REF_CTRL__ACT_FREQMHZ" VALUE="100"/>
+        <PARAMETER NAME="PSU__CRL_APB__PL3_REF_CTRL__ACT_FREQMHZ" VALUE="100"/>
+        <PARAMETER NAME="PSU__CRF_APB__GDMA_REF_CTRL__ACT_FREQMHZ" VALUE="600.000012"/>
+        <PARAMETER NAME="PSU__CRF_APB__DPDMA_REF_CTRL__ACT_FREQMHZ" VALUE="600.000012"/>
+        <PARAMETER NAME="PSU__CRF_APB__TOPSW_MAIN_CTRL__ACT_FREQMHZ" VALUE="525.000011"/>
+        <PARAMETER NAME="PSU__CRF_APB__TOPSW_LSBUS_CTRL__ACT_FREQMHZ" VALUE="100.000002"/>
+        <PARAMETER NAME="PSU__CRF_APB__GTGREF0_REF_CTRL__ACT_FREQMHZ" VALUE="-1"/>
+        <PARAMETER NAME="PSU__CRF_APB__DBG_TSTMP_CTRL__ACT_FREQMHZ" VALUE="250.000005"/>
+        <PARAMETER NAME="PSU__CRL_APB__GEM0_REF_CTRL__ACT_FREQMHZ" VALUE="125"/>
+        <PARAMETER NAME="PSU__CRL_APB__GEM1_REF_CTRL__ACT_FREQMHZ" VALUE="125"/>
+        <PARAMETER NAME="PSU__CRL_APB__GEM2_REF_CTRL__ACT_FREQMHZ" VALUE="125"/>
+        <PARAMETER NAME="PSU__CRL_APB__GEM3_REF_CTRL__ACT_FREQMHZ" VALUE="125"/>
+        <PARAMETER NAME="PSU__CRL_APB__GEM_TSU_REF_CTRL__ACT_FREQMHZ" VALUE="250"/>
+        <PARAMETER NAME="PSU__CRL_APB__USB0_BUS_REF_CTRL__ACT_FREQMHZ" VALUE="250.000005"/>
+        <PARAMETER NAME="PSU__CRL_APB__USB1_BUS_REF_CTRL__ACT_FREQMHZ" VALUE="250.000005"/>
+        <PARAMETER NAME="PSU__CRL_APB__QSPI_REF_CTRL__ACT_FREQMHZ" VALUE="300"/>
+        <PARAMETER NAME="PSU__CRL_APB__SDIO0_REF_CTRL__ACT_FREQMHZ" VALUE="200.000004"/>
+        <PARAMETER NAME="PSU__CRL_APB__SDIO1_REF_CTRL__ACT_FREQMHZ" VALUE="187.500004"/>
+        <PARAMETER NAME="PSU__CRL_APB__UART0_REF_CTRL__ACT_FREQMHZ" VALUE="100.000002"/>
+        <PARAMETER NAME="PSU__CRL_APB__UART1_REF_CTRL__ACT_FREQMHZ" VALUE="100.000002"/>
+        <PARAMETER NAME="PSU__CRL_APB__I2C0_REF_CTRL__ACT_FREQMHZ" VALUE="100"/>
+        <PARAMETER NAME="PSU__CRL_APB__I2C1_REF_CTRL__ACT_FREQMHZ" VALUE="100.000002"/>
+        <PARAMETER NAME="PSU__CRL_APB__SPI0_REF_CTRL__ACT_FREQMHZ" VALUE="200.000004"/>
+        <PARAMETER NAME="PSU__CRL_APB__SPI1_REF_CTRL__ACT_FREQMHZ" VALUE="200.000004"/>
+        <PARAMETER NAME="PSU__CRL_APB__CAN0_REF_CTRL__ACT_FREQMHZ" VALUE="100"/>
+        <PARAMETER NAME="PSU__CRL_APB__CAN1_REF_CTRL__ACT_FREQMHZ" VALUE="100"/>
+        <PARAMETER NAME="PSU__CRL_APB__DEBUG_R5_ATCLK_CTRL__ACT_FREQMHZ" VALUE="1000"/>
+        <PARAMETER NAME="PSU__CRL_APB__CPU_R5_CTRL__ACT_FREQMHZ" VALUE="500.000010"/>
+        <PARAMETER NAME="PSU__CRL_APB__OCM_MAIN_CTRL__ACT_FREQMHZ" VALUE="500"/>
+        <PARAMETER NAME="PSU__CRL_APB__IOU_SWITCH_CTRL__ACT_FREQMHZ" VALUE="250.000005"/>
+        <PARAMETER NAME="PSU__CRL_APB__CSU_PLL_CTRL__ACT_FREQMHZ" VALUE="180"/>
+        <PARAMETER NAME="PSU__CRL_APB__PCAP_CTRL__ACT_FREQMHZ" VALUE="187.500004"/>
+        <PARAMETER NAME="PSU__CRL_APB__LPD_LSBUS_CTRL__ACT_FREQMHZ" VALUE="100.000002"/>
+        <PARAMETER NAME="PSU__CRL_APB__LPD_SWITCH_CTRL__ACT_FREQMHZ" VALUE="500.000010"/>
+        <PARAMETER NAME="PSU__CRL_APB__DBG_LPD_CTRL__ACT_FREQMHZ" VALUE="250.000005"/>
+        <PARAMETER NAME="PSU__CRL_APB__NAND_REF_CTRL__ACT_FREQMHZ" VALUE="100"/>
+        <PARAMETER NAME="PSU__CRL_APB__ADMA_REF_CTRL__ACT_FREQMHZ" VALUE="500.000010"/>
+        <PARAMETER NAME="PSU__CRL_APB__DLL_REF_CTRL__ACT_FREQMHZ" VALUE="1499.999985"/>
+        <PARAMETER NAME="PSU__CRL_APB__AMS_REF_CTRL__ACT_FREQMHZ" VALUE="50.000001"/>
+        <PARAMETER NAME="PSU__CRL_APB__TIMESTAMP_REF_CTRL__ACT_FREQMHZ" VALUE="100.000002"/>
+        <PARAMETER NAME="PSU__CRL_APB__AFI6_REF_CTRL__ACT_FREQMHZ" VALUE="500"/>
+        <PARAMETER NAME="PSU__CRL_APB__USB3_DUAL_REF_CTRL__ACT_FREQMHZ" VALUE="20.000000"/>
+        <PARAMETER NAME="PSU__CRF_APB__ACPU_CTRL__FREQMHZ" VALUE="1200"/>
+        <PARAMETER NAME="PSU__CRF_APB__DBG_TRACE_CTRL__FREQMHZ" VALUE="250"/>
+        <PARAMETER NAME="PSU__CRF_APB__DBG_FPD_CTRL__FREQMHZ" VALUE="250"/>
+        <PARAMETER NAME="PSU__CRF_APB__APM_CTRL__FREQMHZ" VALUE="1"/>
+        <PARAMETER NAME="PSU__CRF_APB__DP_VIDEO_REF_CTRL__FREQMHZ" VALUE="300"/>
+        <PARAMETER NAME="PSU__CRF_APB__DP_AUDIO_REF_CTRL__FREQMHZ" VALUE="25"/>
+        <PARAMETER NAME="PSU__CRF_APB__DP_STC_REF_CTRL__FREQMHZ" VALUE="27"/>
+        <PARAMETER NAME="PSU__CRF_APB__DDR_CTRL__FREQMHZ" VALUE="533"/>
+        <PARAMETER NAME="PSU__CRF_APB__GPU_REF_CTRL__FREQMHZ" VALUE="500"/>
+        <PARAMETER NAME="PSU__CRF_APB__AFI0_REF_CTRL__FREQMHZ" VALUE="667"/>
+        <PARAMETER NAME="PSU__CRF_APB__AFI1_REF_CTRL__FREQMHZ" VALUE="667"/>
+        <PARAMETER NAME="PSU__CRF_APB__AFI2_REF_CTRL__FREQMHZ" VALUE="667"/>
+        <PARAMETER NAME="PSU__CRF_APB__AFI3_REF_CTRL__FREQMHZ" VALUE="667"/>
+        <PARAMETER NAME="PSU__CRF_APB__AFI4_REF_CTRL__FREQMHZ" VALUE="667"/>
+        <PARAMETER NAME="PSU__CRF_APB__AFI5_REF_CTRL__FREQMHZ" VALUE="667"/>
+        <PARAMETER NAME="PSU__CRF_APB__SATA_REF_CTRL__FREQMHZ" VALUE="250"/>
+        <PARAMETER NAME="PSU__CRF_APB__PCIE_REF_CTRL__FREQMHZ" VALUE="250"/>
+        <PARAMETER NAME="PSU__CRL_APB__PL0_REF_CTRL__FREQMHZ" VALUE="234"/>
+        <PARAMETER NAME="PSU__CRL_APB__PL1_REF_CTRL__FREQMHZ" VALUE="100"/>
+        <PARAMETER NAME="PSU__CRL_APB__PL2_REF_CTRL__FREQMHZ" VALUE="100"/>
+        <PARAMETER NAME="PSU__CRL_APB__PL3_REF_CTRL__FREQMHZ" VALUE="100"/>
+        <PARAMETER NAME="PSU__CRF_APB__GDMA_REF_CTRL__FREQMHZ" VALUE="600"/>
+        <PARAMETER NAME="PSU__CRF_APB__DPDMA_REF_CTRL__FREQMHZ" VALUE="600"/>
+        <PARAMETER NAME="PSU__CRF_APB__TOPSW_MAIN_CTRL__FREQMHZ" VALUE="533.33"/>
+        <PARAMETER NAME="PSU__CRF_APB__TOPSW_LSBUS_CTRL__FREQMHZ" VALUE="100"/>
+        <PARAMETER NAME="PSU__CRF_APB__GTGREF0_REF_CTRL__FREQMHZ" VALUE="-1"/>
+        <PARAMETER NAME="PSU__CRF_APB__DBG_TSTMP_CTRL__FREQMHZ" VALUE="250"/>
+        <PARAMETER NAME="PSU__CRL_APB__GEM0_REF_CTRL__FREQMHZ" VALUE="125"/>
+        <PARAMETER NAME="PSU__CRL_APB__GEM1_REF_CTRL__FREQMHZ" VALUE="125"/>
+        <PARAMETER NAME="PSU__CRL_APB__GEM2_REF_CTRL__FREQMHZ" VALUE="125"/>
+        <PARAMETER NAME="PSU__CRL_APB__GEM3_REF_CTRL__FREQMHZ" VALUE="125"/>
+        <PARAMETER NAME="PSU__CRL_APB__GEM_TSU_REF_CTRL__FREQMHZ" VALUE="250"/>
+        <PARAMETER NAME="PSU__CRL_APB__USB0_BUS_REF_CTRL__FREQMHZ" VALUE="250"/>
+        <PARAMETER NAME="PSU__CRL_APB__USB1_BUS_REF_CTRL__FREQMHZ" VALUE="250"/>
+        <PARAMETER NAME="PSU__CRL_APB__QSPI_REF_CTRL__FREQMHZ" VALUE="125"/>
+        <PARAMETER NAME="PSU__CRL_APB__SDIO0_REF_CTRL__FREQMHZ" VALUE="200"/>
+        <PARAMETER NAME="PSU__CRL_APB__SDIO1_REF_CTRL__FREQMHZ" VALUE="200"/>
+        <PARAMETER NAME="PSU__CRL_APB__UART0_REF_CTRL__FREQMHZ" VALUE="100"/>
+        <PARAMETER NAME="PSU__CRL_APB__UART1_REF_CTRL__FREQMHZ" VALUE="100"/>
+        <PARAMETER NAME="PSU__CRL_APB__I2C0_REF_CTRL__FREQMHZ" VALUE="100"/>
+        <PARAMETER NAME="PSU__CRL_APB__I2C1_REF_CTRL__FREQMHZ" VALUE="100"/>
+        <PARAMETER NAME="PSU__CRL_APB__SPI0_REF_CTRL__FREQMHZ" VALUE="200"/>
+        <PARAMETER NAME="PSU__CRL_APB__SPI1_REF_CTRL__FREQMHZ" VALUE="200"/>
+        <PARAMETER NAME="PSU__CRL_APB__CAN0_REF_CTRL__FREQMHZ" VALUE="100"/>
+        <PARAMETER NAME="PSU__CRL_APB__CAN1_REF_CTRL__FREQMHZ" VALUE="100"/>
+        <PARAMETER NAME="PSU__CRL_APB__DEBUG_R5_ATCLK_CTRL__FREQMHZ" VALUE="1000"/>
+        <PARAMETER NAME="PSU__CRL_APB__CPU_R5_CTRL__FREQMHZ" VALUE="500"/>
+        <PARAMETER NAME="PSU__CRL_APB__OCM_MAIN_CTRL__FREQMHZ" VALUE="500"/>
+        <PARAMETER NAME="PSU__CRL_APB__IOU_SWITCH_CTRL__FREQMHZ" VALUE="250"/>
+        <PARAMETER NAME="PSU__CRL_APB__CSU_PLL_CTRL__FREQMHZ" VALUE="180"/>
+        <PARAMETER NAME="PSU__CRL_APB__PCAP_CTRL__FREQMHZ" VALUE="200"/>
+        <PARAMETER NAME="PSU__CRL_APB__LPD_LSBUS_CTRL__FREQMHZ" VALUE="100"/>
+        <PARAMETER NAME="PSU__CRL_APB__LPD_SWITCH_CTRL__FREQMHZ" VALUE="500"/>
+        <PARAMETER NAME="PSU__CRL_APB__DBG_LPD_CTRL__FREQMHZ" VALUE="250"/>
+        <PARAMETER NAME="PSU__CRL_APB__NAND_REF_CTRL__FREQMHZ" VALUE="100"/>
+        <PARAMETER NAME="PSU__CRL_APB__ADMA_REF_CTRL__FREQMHZ" VALUE="500"/>
+        <PARAMETER NAME="PSU__CRL_APB__DLL_REF_CTRL__FREQMHZ" VALUE="1500"/>
+        <PARAMETER NAME="PSU__CRL_APB__AMS_REF_CTRL__FREQMHZ" VALUE="50"/>
+        <PARAMETER NAME="PSU__CRL_APB__TIMESTAMP_REF_CTRL__FREQMHZ" VALUE="100"/>
+        <PARAMETER NAME="PSU__CRL_APB__AFI6_REF_CTRL__FREQMHZ" VALUE="500"/>
+        <PARAMETER NAME="PSU__CRL_APB__USB3_DUAL_REF_CTRL__FREQMHZ" VALUE="20"/>
+        <PARAMETER NAME="PSU__IOU_SLCR__TTC0__FREQMHZ" VALUE="100.000000"/>
+        <PARAMETER NAME="PSU__IOU_SLCR__TTC1__FREQMHZ" VALUE="100.000000"/>
+        <PARAMETER NAME="PSU__IOU_SLCR__TTC2__FREQMHZ" VALUE="100.000000"/>
+        <PARAMETER NAME="PSU__IOU_SLCR__TTC3__FREQMHZ" VALUE="100.000000"/>
+        <PARAMETER NAME="PSU__IOU_SLCR__WDT0__FREQMHZ" VALUE="100.000000"/>
+        <PARAMETER NAME="PSU__FPD_SLCR__WDT1__FREQMHZ" VALUE="100.000000"/>
+        <PARAMETER NAME="PSU__LPD_SLCR__CSUPMU__FREQMHZ" VALUE="100.000000"/>
+        <PARAMETER NAME="PSU__CSU__CSU_TAMPER_0__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__CSU__CSU_TAMPER_1__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__CSU__CSU_TAMPER_2__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__CSU__CSU_TAMPER_3__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__CSU__CSU_TAMPER_4__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__CSU__CSU_TAMPER_5__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__CSU__CSU_TAMPER_6__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__CSU__CSU_TAMPER_7__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__CSU__CSU_TAMPER_8__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__CSU__CSU_TAMPER_9__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__CSU__CSU_TAMPER_10__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__CSU__CSU_TAMPER_11__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__CSU__CSU_TAMPER_12__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__CSU__CSU_TAMPER_0__ERASE_BBRAM" VALUE="0"/>
+        <PARAMETER NAME="PSU__CSU__CSU_TAMPER_1__ERASE_BBRAM" VALUE="0"/>
+        <PARAMETER NAME="PSU__CSU__CSU_TAMPER_2__ERASE_BBRAM" VALUE="0"/>
+        <PARAMETER NAME="PSU__CSU__CSU_TAMPER_3__ERASE_BBRAM" VALUE="0"/>
+        <PARAMETER NAME="PSU__CSU__CSU_TAMPER_4__ERASE_BBRAM" VALUE="0"/>
+        <PARAMETER NAME="PSU__CSU__CSU_TAMPER_5__ERASE_BBRAM" VALUE="0"/>
+        <PARAMETER NAME="PSU__CSU__CSU_TAMPER_6__ERASE_BBRAM" VALUE="0"/>
+        <PARAMETER NAME="PSU__CSU__CSU_TAMPER_7__ERASE_BBRAM" VALUE="0"/>
+        <PARAMETER NAME="PSU__CSU__CSU_TAMPER_8__ERASE_BBRAM" VALUE="0"/>
+        <PARAMETER NAME="PSU__CSU__CSU_TAMPER_9__ERASE_BBRAM" VALUE="0"/>
+        <PARAMETER NAME="PSU__CSU__CSU_TAMPER_10__ERASE_BBRAM" VALUE="0"/>
+        <PARAMETER NAME="PSU__CSU__CSU_TAMPER_11__ERASE_BBRAM" VALUE="0"/>
+        <PARAMETER NAME="PSU__CSU__CSU_TAMPER_12__ERASE_BBRAM" VALUE="0"/>
+        <PARAMETER NAME="PSU__CSU__CSU_TAMPER_0__RESPONSE" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__CSU__CSU_TAMPER_1__RESPONSE" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__CSU__CSU_TAMPER_2__RESPONSE" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__CSU__CSU_TAMPER_3__RESPONSE" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__CSU__CSU_TAMPER_4__RESPONSE" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__CSU__CSU_TAMPER_5__RESPONSE" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__CSU__CSU_TAMPER_6__RESPONSE" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__CSU__CSU_TAMPER_7__RESPONSE" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__CSU__CSU_TAMPER_8__RESPONSE" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__CSU__CSU_TAMPER_9__RESPONSE" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__CSU__CSU_TAMPER_10__RESPONSE" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__CSU__CSU_TAMPER_11__RESPONSE" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__CSU__CSU_TAMPER_12__RESPONSE" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__GEN_IPI_0__MASTER" VALUE="APU"/>
+        <PARAMETER NAME="PSU__GEN_IPI_1__MASTER" VALUE="RPU0"/>
+        <PARAMETER NAME="PSU__GEN_IPI_2__MASTER" VALUE="RPU1"/>
+        <PARAMETER NAME="PSU__GEN_IPI_3__MASTER" VALUE="PMU"/>
+        <PARAMETER NAME="PSU__GEN_IPI_4__MASTER" VALUE="PMU"/>
+        <PARAMETER NAME="PSU__GEN_IPI_5__MASTER" VALUE="PMU"/>
+        <PARAMETER NAME="PSU__GEN_IPI_6__MASTER" VALUE="PMU"/>
+        <PARAMETER NAME="PSU__GEN_IPI_7__MASTER" VALUE="NONE"/>
+        <PARAMETER NAME="PSU__GEN_IPI_8__MASTER" VALUE="NONE"/>
+        <PARAMETER NAME="PSU__GEN_IPI_9__MASTER" VALUE="NONE"/>
+        <PARAMETER NAME="PSU__GEN_IPI_10__MASTER" VALUE="NONE"/>
+        <PARAMETER NAME="PSU__GEN_IPI__TRUSTZONE" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_RPU_PERMON__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_OCM_ERR__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_LPD_APB__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_R5_CORE0_ECC_ERR__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_R5_CORE1_ECC_ERR__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_NAND__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_QSPI__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_GPIO__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_I2C0__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_I2C1__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_SPI0__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_SPI1__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_UART0__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_UART1__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_CAN0__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_CAN1__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_LPD_APM__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_RTC_ALARM__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_RTC_SECONDS__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_CLKMON__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_PL_IPI__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_RPU_IPI__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_APU_IPI__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_TTC0__INT0" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_TTC0__INT1" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_TTC0__INT2" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_TTC1__INT0" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_TTC1__INT1" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_TTC1__INT2" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_TTC2__INT0" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_TTC2__INT1" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_TTC2__INT2" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_TTC3__INT0" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_TTC3__INT1" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_TTC3__INT2" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_SDIO0__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_SDIO1__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_SDIO0_WAKE__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_SDIO1_WAKE__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_LP_WDT__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_CSUPMU_WDT__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_ATB_LPD__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_AIB_AXI__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_AMS__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_ENT0__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_ENT0_WAKEUP__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_ENT1__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_ENT1_WAKEUP__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_ENT2__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_ENT2_WAKEUP__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_ENT3__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_ENT3_WAKEUP__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_USB3_ENDPOINT__INT0" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_USB3_OTG__INT0" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_USB3_ENDPOINT__INT1" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_USB3_OTG__INT1" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_USB3_PMU_WAKEUP__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_ADMA_CHAN__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_CSU__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_CSU_DMA__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_EFUSE__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_XMPU_LPD__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_DDR_SS__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_FP_WDT__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_PCIE_MSI__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_PCIE_LEGACY__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_PCIE_DMA__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_PCIE_MSC__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_DPORT__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_FPD_APB__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_FPD_ATB_ERR__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_DPDMA__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_APM_FPD__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_GDMA_CHAN__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_GPU__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_SATA__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_XMPU_FPD__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_APU_CPUMNT__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_APU_CTI__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_APU_PMU__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_APU_COMM__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_APU_L2ERR__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_APU_EXTERR__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_APU_REGS__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F__INTF_PPD_CCI__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F__INTF_FPD_SMMU__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__NUM_F2P0__INTR__INPUTS" VALUE="1"/>
+        <PARAMETER NAME="PSU__NUM_F2P1__INTR__INPUTS" VALUE="1"/>
+        <PARAMETER NAME="PSU__NUM_FABRIC_RESETS" VALUE="1"/>
+        <PARAMETER NAME="PSU__GPIO_EMIO_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="PSU__HPM0_FPD__NUM_WRITE_THREADS" VALUE="4"/>
+        <PARAMETER NAME="PSU__HPM0_FPD__NUM_READ_THREADS" VALUE="4"/>
+        <PARAMETER NAME="PSU__HPM1_FPD__NUM_WRITE_THREADS" VALUE="4"/>
+        <PARAMETER NAME="PSU__HPM1_FPD__NUM_READ_THREADS" VALUE="4"/>
+        <PARAMETER NAME="PSU__HPM0_LPD__NUM_WRITE_THREADS" VALUE="4"/>
+        <PARAMETER NAME="PSU__HPM0_LPD__NUM_READ_THREADS" VALUE="4"/>
+        <PARAMETER NAME="PSU__TRISTATE__INVERTED" VALUE="1"/>
+        <PARAMETER NAME="PSU__GPIO_EMIO__WIDTH" VALUE="[94:0]"/>
+        <PARAMETER NAME="PSU__REPORT__DBGLOG" VALUE="0"/>
+        <PARAMETER NAME="IIC0_BOARD_INTERFACE" VALUE="custom"/>
+        <PARAMETER NAME="IIC1_BOARD_INTERFACE" VALUE="custom"/>
+        <PARAMETER NAME="QSPI_BOARD_INTERFACE" VALUE="custom"/>
+        <PARAMETER NAME="NAND_BOARD_INTERFACE" VALUE="custom"/>
+        <PARAMETER NAME="SD0_BOARD_INTERFACE" VALUE="custom"/>
+        <PARAMETER NAME="SD1_BOARD_INTERFACE" VALUE="custom"/>
+        <PARAMETER NAME="CAN0_BOARD_INTERFACE" VALUE="custom"/>
+        <PARAMETER NAME="CAN1_BOARD_INTERFACE" VALUE="custom"/>
+        <PARAMETER NAME="PJTAG_BOARD_INTERFACE" VALUE="custom"/>
+        <PARAMETER NAME="PMU_BOARD_INTERFACE" VALUE="custom"/>
+        <PARAMETER NAME="CSU_BOARD_INTERFACE" VALUE="custom"/>
+        <PARAMETER NAME="SPI0_BOARD_INTERFACE" VALUE="custom"/>
+        <PARAMETER NAME="SPI1_BOARD_INTERFACE" VALUE="custom"/>
+        <PARAMETER NAME="UART0_BOARD_INTERFACE" VALUE="custom"/>
+        <PARAMETER NAME="UART1_BOARD_INTERFACE" VALUE="custom"/>
+        <PARAMETER NAME="GPIO_BOARD_INTERFACE" VALUE="custom"/>
+        <PARAMETER NAME="SWDT0_BOARD_INTERFACE" VALUE="custom"/>
+        <PARAMETER NAME="SWDT1_BOARD_INTERFACE" VALUE="custom"/>
+        <PARAMETER NAME="TRACE_BOARD_INTERFACE" VALUE="custom"/>
+        <PARAMETER NAME="TTC0_BOARD_INTERFACE" VALUE="custom"/>
+        <PARAMETER NAME="TTC1_BOARD_INTERFACE" VALUE="custom"/>
+        <PARAMETER NAME="TTC2_BOARD_INTERFACE" VALUE="custom"/>
+        <PARAMETER NAME="TTC3_BOARD_INTERFACE" VALUE="custom"/>
+        <PARAMETER NAME="GEM0_BOARD_INTERFACE" VALUE="custom"/>
+        <PARAMETER NAME="GEM1_BOARD_INTERFACE" VALUE="custom"/>
+        <PARAMETER NAME="GEM2_BOARD_INTERFACE" VALUE="custom"/>
+        <PARAMETER NAME="GEM3_BOARD_INTERFACE" VALUE="custom"/>
+        <PARAMETER NAME="USB0_BOARD_INTERFACE" VALUE="custom"/>
+        <PARAMETER NAME="USB1_BOARD_INTERFACE" VALUE="custom"/>
+        <PARAMETER NAME="PCIE_BOARD_INTERFACE" VALUE="custom"/>
+        <PARAMETER NAME="DP_BOARD_INTERFACE" VALUE="custom"/>
+        <PARAMETER NAME="SATA_BOARD_INTERFACE" VALUE="custom"/>
+        <PARAMETER NAME="preset" VALUE="None"/>
+        <PARAMETER NAME="PSU__RPU_COHERENCY" VALUE="0"/>
+        <PARAMETER NAME="PSU__PMU_COHERENCY" VALUE="0"/>
+        <PARAMETER NAME="PSU__CSU_COHERENCY" VALUE="0"/>
+        <PARAMETER NAME="PSU__USB0_COHERENCY" VALUE="0"/>
+        <PARAMETER NAME="PSU__USB1_COHERENCY" VALUE="0"/>
+        <PARAMETER NAME="PSU__LPDMA0_COHERENCY" VALUE="0"/>
+        <PARAMETER NAME="PSU__LPDMA1_COHERENCY" VALUE="0"/>
+        <PARAMETER NAME="PSU__LPDMA2_COHERENCY" VALUE="0"/>
+        <PARAMETER NAME="PSU__LPDMA3_COHERENCY" VALUE="0"/>
+        <PARAMETER NAME="PSU__LPDMA4_COHERENCY" VALUE="0"/>
+        <PARAMETER NAME="PSU__LPDMA5_COHERENCY" VALUE="0"/>
+        <PARAMETER NAME="PSU__LPDMA6_COHERENCY" VALUE="0"/>
+        <PARAMETER NAME="PSU__LPDMA7_COHERENCY" VALUE="0"/>
+        <PARAMETER NAME="PSU__SD0_COHERENCY" VALUE="0"/>
+        <PARAMETER NAME="PSU__SD1_COHERENCY" VALUE="0"/>
+        <PARAMETER NAME="PSU__NAND_COHERENCY" VALUE="0"/>
+        <PARAMETER NAME="PSU__QSPI_COHERENCY" VALUE="0"/>
+        <PARAMETER NAME="PSU__ENET0__TSU__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__ENET1__TSU__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__ENET2__TSU__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__ENET3__TSU__ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__GEM0_COHERENCY" VALUE="0"/>
+        <PARAMETER NAME="PSU__GEM1_COHERENCY" VALUE="0"/>
+        <PARAMETER NAME="PSU__GEM2_COHERENCY" VALUE="0"/>
+        <PARAMETER NAME="PSU__GEM3_COHERENCY" VALUE="0"/>
+        <PARAMETER NAME="PSU__AFI0_COHERENCY" VALUE="0"/>
+        <PARAMETER NAME="PSU__AFI1_COHERENCY" VALUE="0"/>
+        <PARAMETER NAME="PSU__FPDMASTERS_COHERENCY" VALUE="0"/>
+        <PARAMETER NAME="PSU__ENABLE__DDR__REFRESH__SIGNALS" VALUE="0"/>
+        <PARAMETER NAME="PSU__M_AXI_GP0__FREQMHZ" VALUE="233.333338"/>
+        <PARAMETER NAME="PSU__M_AXI_GP1__FREQMHZ" VALUE="100.000002"/>
+        <PARAMETER NAME="PSU__M_AXI_GP2__FREQMHZ" VALUE="10"/>
+        <PARAMETER NAME="PSU__S_AXI_GP0__FREQMHZ" VALUE="10"/>
+        <PARAMETER NAME="PSU__S_AXI_GP1__FREQMHZ" VALUE="10"/>
+        <PARAMETER NAME="PSU__S_AXI_GP2__FREQMHZ" VALUE="233.333338"/>
+        <PARAMETER NAME="PSU__S_AXI_GP3__FREQMHZ" VALUE="10"/>
+        <PARAMETER NAME="PSU__S_AXI_GP4__FREQMHZ" VALUE="10"/>
+        <PARAMETER NAME="PSU__S_AXI_GP5__FREQMHZ" VALUE="10"/>
+        <PARAMETER NAME="PSU__S_AXI_GP6__FREQMHZ" VALUE="10"/>
+        <PARAMETER NAME="PSU_SD1_INTERNAL_BUS_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="Component_Name" VALUE="ps_block_zynq_ultra_ps_e_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+        <PARAMETER NAME="C_BASEADDR" VALUE="0xFF000000"/>
+        <PARAMETER NAME="C_HIGHADDR" VALUE="0xFFFFFFFF"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="233333338" DIR="I" NAME="maxihpm0_fpd_aclk" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="maxigp0_awid" RIGHT="0" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_awid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_ctrl" PORT="s_axi_awid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="39" NAME="maxigp0_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_ctrl" PORT="s_axi_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="maxigp0_awlen" RIGHT="0" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_awlen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_ctrl" PORT="s_axi_awlen"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="maxigp0_awsize" RIGHT="0" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_awsize">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_ctrl" PORT="s_axi_awsize"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="maxigp0_awburst" RIGHT="0" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_awburst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_ctrl" PORT="s_axi_awburst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="maxigp0_awlock" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_awlock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_ctrl" PORT="s_axi_awlock"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="maxigp0_awcache" RIGHT="0" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_awcache">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_ctrl" PORT="s_axi_awcache"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="maxigp0_awprot" RIGHT="0" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_awprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_ctrl" PORT="s_axi_awprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="maxigp0_awvalid" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_ctrl" PORT="s_axi_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="maxigp0_awuser" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="maxigp0_awready" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_ctrl" PORT="s_axi_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="maxigp0_wdata" RIGHT="0" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_ctrl" PORT="s_axi_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="maxigp0_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_ctrl" PORT="s_axi_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="maxigp0_wlast" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_wlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_ctrl" PORT="s_axi_wlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="maxigp0_wvalid" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_ctrl" PORT="s_axi_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="maxigp0_wready" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_ctrl" PORT="s_axi_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="maxigp0_bid" RIGHT="0" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_bid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_ctrl" PORT="s_axi_bid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="maxigp0_bresp" RIGHT="0" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_ctrl" PORT="s_axi_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="maxigp0_bvalid" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_ctrl" PORT="s_axi_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="maxigp0_bready" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_ctrl" PORT="s_axi_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="maxigp0_arid" RIGHT="0" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_arid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_ctrl" PORT="s_axi_arid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="39" NAME="maxigp0_araddr" RIGHT="0" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_ctrl" PORT="s_axi_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="maxigp0_arlen" RIGHT="0" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_arlen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_ctrl" PORT="s_axi_arlen"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="maxigp0_arsize" RIGHT="0" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_arsize">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_ctrl" PORT="s_axi_arsize"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="maxigp0_arburst" RIGHT="0" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_arburst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_ctrl" PORT="s_axi_arburst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="maxigp0_arlock" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_arlock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_ctrl" PORT="s_axi_arlock"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="maxigp0_arcache" RIGHT="0" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_arcache">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_ctrl" PORT="s_axi_arcache"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="maxigp0_arprot" RIGHT="0" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_arprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_ctrl" PORT="s_axi_arprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="maxigp0_arvalid" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_ctrl" PORT="s_axi_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="maxigp0_aruser" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="maxigp0_arready" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_ctrl" PORT="s_axi_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="maxigp0_rid" RIGHT="0" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_rid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_ctrl" PORT="s_axi_rid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="maxigp0_rdata" RIGHT="0" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_ctrl" PORT="s_axi_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="maxigp0_rresp" RIGHT="0" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_ctrl" PORT="s_axi_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="maxigp0_rlast" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_rlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_ctrl" PORT="s_axi_rlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="maxigp0_rvalid" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_ctrl" PORT="s_axi_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="maxigp0_rready" SIGIS="undef" SIGNAME="bram_ctrl_s_axi_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_ctrl" PORT="s_axi_rready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="maxigp0_awqos" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="3" NAME="maxigp0_arqos" RIGHT="0" SIGIS="undef"/>
+        <PORT CLKFREQUENCY="233333338" DIR="I" NAME="saxihp0_fpd_aclk" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="saxigp2_aruser" SIGIS="undef"/>
+        <PORT DIR="I" NAME="saxigp2_awuser" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="5" NAME="saxigp2_awid" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="48" NAME="saxigp2_awaddr" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="7" NAME="saxigp2_awlen" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="2" NAME="saxigp2_awsize" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="1" NAME="saxigp2_awburst" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="saxigp2_awlock" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="3" NAME="saxigp2_awcache" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="2" NAME="saxigp2_awprot" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="saxigp2_awvalid" SIGIS="undef"/>
+        <PORT DIR="O" NAME="saxigp2_awready" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="127" NAME="saxigp2_wdata" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="15" NAME="saxigp2_wstrb" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="saxigp2_wlast" SIGIS="undef"/>
+        <PORT DIR="I" NAME="saxigp2_wvalid" SIGIS="undef"/>
+        <PORT DIR="O" NAME="saxigp2_wready" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="5" NAME="saxigp2_bid" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="1" NAME="saxigp2_bresp" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="saxigp2_bvalid" SIGIS="undef"/>
+        <PORT DIR="I" NAME="saxigp2_bready" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="5" NAME="saxigp2_arid" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="48" NAME="saxigp2_araddr" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="7" NAME="saxigp2_arlen" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="2" NAME="saxigp2_arsize" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="1" NAME="saxigp2_arburst" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="saxigp2_arlock" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="3" NAME="saxigp2_arcache" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="2" NAME="saxigp2_arprot" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="saxigp2_arvalid" SIGIS="undef"/>
+        <PORT DIR="O" NAME="saxigp2_arready" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="5" NAME="saxigp2_rid" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="127" NAME="saxigp2_rdata" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="1" NAME="saxigp2_rresp" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="saxigp2_rlast" SIGIS="undef"/>
+        <PORT DIR="O" NAME="saxigp2_rvalid" SIGIS="undef"/>
+        <PORT DIR="I" NAME="saxigp2_rready" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="3" NAME="saxigp2_awqos" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="3" NAME="saxigp2_arqos" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="pl_resetn0" SIGIS="rst" SIGNAME="zynq_ultra_ps_e_0_pl_resetn0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_n"/>
+            <CONNECTION INSTANCE="rst_ps8_0_100M" PORT="ext_reset_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="233333338" DIR="O" NAME="pl_clk0" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk_100m"/>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxihpm0_fpd_aclk"/>
+            <CONNECTION INSTANCE="bram_ctrl" PORT="s_axi_aclk"/>
+            <CONNECTION INSTANCE="rst_ps8_0_100M" PORT="slowest_sync_clk"/>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxihp0_fpd_aclk"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="zynq_ultra_ps_e_0_M_AXI_HPM0_FPD" DATAWIDTH="32" NAME="M_AXI_HPM0_FPD" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
+          <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="8"/>
+          <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="8"/>
+          <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
+          <PARAMETER NAME="PROTOCOL" VALUE="AXI4"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="233333338"/>
+          <PARAMETER NAME="ID_WIDTH" VALUE="16"/>
+          <PARAMETER NAME="ADDR_WIDTH" VALUE="40"/>
+          <PARAMETER NAME="AWUSER_WIDTH" VALUE="16"/>
+          <PARAMETER NAME="ARUSER_WIDTH" VALUE="16"/>
+          <PARAMETER NAME="WUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="RUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
+          <PARAMETER NAME="HAS_BURST" VALUE="1"/>
+          <PARAMETER NAME="HAS_LOCK" VALUE="1"/>
+          <PARAMETER NAME="HAS_PROT" VALUE="1"/>
+          <PARAMETER NAME="HAS_CACHE" VALUE="1"/>
+          <PARAMETER NAME="HAS_QOS" VALUE="1"/>
+          <PARAMETER NAME="HAS_REGION" VALUE="0"/>
+          <PARAMETER NAME="HAS_WSTRB" VALUE="1"/>
+          <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
+          <PARAMETER NAME="HAS_RRESP" VALUE="1"/>
+          <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="1"/>
+          <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="256"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="ps_block_zynq_ultra_ps_e_0_0_pl_clk0"/>
+          <PARAMETER NAME="NUM_READ_THREADS" VALUE="4"/>
+          <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="4"/>
+          <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
+          <PARAMETER NAME="WUSER_BITS_PER_BYTE" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="ARADDR" PHYSICAL="maxigp0_araddr"/>
+            <PORTMAP LOGICAL="ARBURST" PHYSICAL="maxigp0_arburst"/>
+            <PORTMAP LOGICAL="ARCACHE" PHYSICAL="maxigp0_arcache"/>
+            <PORTMAP LOGICAL="ARID" PHYSICAL="maxigp0_arid"/>
+            <PORTMAP LOGICAL="ARLEN" PHYSICAL="maxigp0_arlen"/>
+            <PORTMAP LOGICAL="ARLOCK" PHYSICAL="maxigp0_arlock"/>
+            <PORTMAP LOGICAL="ARPROT" PHYSICAL="maxigp0_arprot"/>
+            <PORTMAP LOGICAL="ARQOS" PHYSICAL="maxigp0_arqos"/>
+            <PORTMAP LOGICAL="ARREADY" PHYSICAL="maxigp0_arready"/>
+            <PORTMAP LOGICAL="ARSIZE" PHYSICAL="maxigp0_arsize"/>
+            <PORTMAP LOGICAL="ARUSER" PHYSICAL="maxigp0_aruser"/>
+            <PORTMAP LOGICAL="ARVALID" PHYSICAL="maxigp0_arvalid"/>
+            <PORTMAP LOGICAL="AWADDR" PHYSICAL="maxigp0_awaddr"/>
+            <PORTMAP LOGICAL="AWBURST" PHYSICAL="maxigp0_awburst"/>
+            <PORTMAP LOGICAL="AWCACHE" PHYSICAL="maxigp0_awcache"/>
+            <PORTMAP LOGICAL="AWID" PHYSICAL="maxigp0_awid"/>
+            <PORTMAP LOGICAL="AWLEN" PHYSICAL="maxigp0_awlen"/>
+            <PORTMAP LOGICAL="AWLOCK" PHYSICAL="maxigp0_awlock"/>
+            <PORTMAP LOGICAL="AWPROT" PHYSICAL="maxigp0_awprot"/>
+            <PORTMAP LOGICAL="AWQOS" PHYSICAL="maxigp0_awqos"/>
+            <PORTMAP LOGICAL="AWREADY" PHYSICAL="maxigp0_awready"/>
+            <PORTMAP LOGICAL="AWSIZE" PHYSICAL="maxigp0_awsize"/>
+            <PORTMAP LOGICAL="AWUSER" PHYSICAL="maxigp0_awuser"/>
+            <PORTMAP LOGICAL="AWVALID" PHYSICAL="maxigp0_awvalid"/>
+            <PORTMAP LOGICAL="BID" PHYSICAL="maxigp0_bid"/>
+            <PORTMAP LOGICAL="BREADY" PHYSICAL="maxigp0_bready"/>
+            <PORTMAP LOGICAL="BRESP" PHYSICAL="maxigp0_bresp"/>
+            <PORTMAP LOGICAL="BVALID" PHYSICAL="maxigp0_bvalid"/>
+            <PORTMAP LOGICAL="RDATA" PHYSICAL="maxigp0_rdata"/>
+            <PORTMAP LOGICAL="RID" PHYSICAL="maxigp0_rid"/>
+            <PORTMAP LOGICAL="RLAST" PHYSICAL="maxigp0_rlast"/>
+            <PORTMAP LOGICAL="RREADY" PHYSICAL="maxigp0_rready"/>
+            <PORTMAP LOGICAL="RRESP" PHYSICAL="maxigp0_rresp"/>
+            <PORTMAP LOGICAL="RVALID" PHYSICAL="maxigp0_rvalid"/>
+            <PORTMAP LOGICAL="WDATA" PHYSICAL="maxigp0_wdata"/>
+            <PORTMAP LOGICAL="WLAST" PHYSICAL="maxigp0_wlast"/>
+            <PORTMAP LOGICAL="WREADY" PHYSICAL="maxigp0_wready"/>
+            <PORTMAP LOGICAL="WSTRB" PHYSICAL="maxigp0_wstrb"/>
+            <PORTMAP LOGICAL="WVALID" PHYSICAL="maxigp0_wvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="External_Interface_axi_ddr" DATAWIDTH="128" NAME="S_AXI_HP0_FPD" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
+          <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="16"/>
+          <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="16"/>
+          <PARAMETER NAME="DATA_WIDTH" VALUE="128"/>
+          <PARAMETER NAME="PROTOCOL" VALUE="AXI4"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="233333338"/>
+          <PARAMETER NAME="ID_WIDTH" VALUE="6"/>
+          <PARAMETER NAME="ADDR_WIDTH" VALUE="49"/>
+          <PARAMETER NAME="AWUSER_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="ARUSER_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="WUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="RUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
+          <PARAMETER NAME="HAS_BURST" VALUE="1"/>
+          <PARAMETER NAME="HAS_LOCK" VALUE="1"/>
+          <PARAMETER NAME="HAS_PROT" VALUE="1"/>
+          <PARAMETER NAME="HAS_CACHE" VALUE="1"/>
+          <PARAMETER NAME="HAS_QOS" VALUE="1"/>
+          <PARAMETER NAME="HAS_REGION" VALUE="0"/>
+          <PARAMETER NAME="HAS_WSTRB" VALUE="1"/>
+          <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
+          <PARAMETER NAME="HAS_RRESP" VALUE="1"/>
+          <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="1"/>
+          <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="256"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="ps_block_zynq_ultra_ps_e_0_0_pl_clk0"/>
+          <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
+          <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
+          <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
+          <PARAMETER NAME="WUSER_BITS_PER_BYTE" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="ARADDR" PHYSICAL="saxigp2_araddr"/>
+            <PORTMAP LOGICAL="ARBURST" PHYSICAL="saxigp2_arburst"/>
+            <PORTMAP LOGICAL="ARCACHE" PHYSICAL="saxigp2_arcache"/>
+            <PORTMAP LOGICAL="ARID" PHYSICAL="saxigp2_arid"/>
+            <PORTMAP LOGICAL="ARLEN" PHYSICAL="saxigp2_arlen"/>
+            <PORTMAP LOGICAL="ARLOCK" PHYSICAL="saxigp2_arlock"/>
+            <PORTMAP LOGICAL="ARPROT" PHYSICAL="saxigp2_arprot"/>
+            <PORTMAP LOGICAL="ARQOS" PHYSICAL="saxigp2_arqos"/>
+            <PORTMAP LOGICAL="ARREADY" PHYSICAL="saxigp2_arready"/>
+            <PORTMAP LOGICAL="ARSIZE" PHYSICAL="saxigp2_arsize"/>
+            <PORTMAP LOGICAL="ARUSER" PHYSICAL="saxigp2_aruser"/>
+            <PORTMAP LOGICAL="ARVALID" PHYSICAL="saxigp2_arvalid"/>
+            <PORTMAP LOGICAL="AWADDR" PHYSICAL="saxigp2_awaddr"/>
+            <PORTMAP LOGICAL="AWBURST" PHYSICAL="saxigp2_awburst"/>
+            <PORTMAP LOGICAL="AWCACHE" PHYSICAL="saxigp2_awcache"/>
+            <PORTMAP LOGICAL="AWID" PHYSICAL="saxigp2_awid"/>
+            <PORTMAP LOGICAL="AWLEN" PHYSICAL="saxigp2_awlen"/>
+            <PORTMAP LOGICAL="AWLOCK" PHYSICAL="saxigp2_awlock"/>
+            <PORTMAP LOGICAL="AWPROT" PHYSICAL="saxigp2_awprot"/>
+            <PORTMAP LOGICAL="AWQOS" PHYSICAL="saxigp2_awqos"/>
+            <PORTMAP LOGICAL="AWREADY" PHYSICAL="saxigp2_awready"/>
+            <PORTMAP LOGICAL="AWSIZE" PHYSICAL="saxigp2_awsize"/>
+            <PORTMAP LOGICAL="AWUSER" PHYSICAL="saxigp2_awuser"/>
+            <PORTMAP LOGICAL="AWVALID" PHYSICAL="saxigp2_awvalid"/>
+            <PORTMAP LOGICAL="BID" PHYSICAL="saxigp2_bid"/>
+            <PORTMAP LOGICAL="BREADY" PHYSICAL="saxigp2_bready"/>
+            <PORTMAP LOGICAL="BRESP" PHYSICAL="saxigp2_bresp"/>
+            <PORTMAP LOGICAL="BVALID" PHYSICAL="saxigp2_bvalid"/>
+            <PORTMAP LOGICAL="RDATA" PHYSICAL="saxigp2_rdata"/>
+            <PORTMAP LOGICAL="RID" PHYSICAL="saxigp2_rid"/>
+            <PORTMAP LOGICAL="RLAST" PHYSICAL="saxigp2_rlast"/>
+            <PORTMAP LOGICAL="RREADY" PHYSICAL="saxigp2_rready"/>
+            <PORTMAP LOGICAL="RRESP" PHYSICAL="saxigp2_rresp"/>
+            <PORTMAP LOGICAL="RVALID" PHYSICAL="saxigp2_rvalid"/>
+            <PORTMAP LOGICAL="WDATA" PHYSICAL="saxigp2_wdata"/>
+            <PORTMAP LOGICAL="WLAST" PHYSICAL="saxigp2_wlast"/>
+            <PORTMAP LOGICAL="WREADY" PHYSICAL="saxigp2_wready"/>
+            <PORTMAP LOGICAL="WSTRB" PHYSICAL="saxigp2_wstrb"/>
+            <PORTMAP LOGICAL="WVALID" PHYSICAL="saxigp2_wvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+      <MEMORYMAP>
+        <MEMRANGE ADDRESSBLOCK="Mem0" BASENAME="C_S_AXI_BASEADDR" BASEVALUE="0xA0000000" HIGHNAME="C_S_AXI_HIGHADDR" HIGHVALUE="0xA0000FFF" INSTANCE="bram_ctrl" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_HPM0_FPD" MEMTYPE="MEMORY" SLAVEBUSINTERFACE="S_AXI"/>
+      </MEMORYMAP>
+      <PERIPHERALS>
+        <PERIPHERAL INSTANCE="bram_ctrl"/>
+      </PERIPHERALS>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

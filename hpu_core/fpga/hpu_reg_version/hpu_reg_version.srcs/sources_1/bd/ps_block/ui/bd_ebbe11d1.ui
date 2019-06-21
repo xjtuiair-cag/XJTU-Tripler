@@ -1,0 +1,25 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 TLS
+#  -string -flagsOSRD
+preplace port ps_rvram -pg 1 -y -930 -defaultsOSRD
+preplace port clk_100m -pg 1 -y -280 -defaultsOSRD
+preplace port axi_ddr -pg 1 -y -380 -defaultsOSRD -right
+preplace port rst_n -pg 1 -y -310 -defaultsOSRD
+preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 2 -y -310 -defaultsOSRD
+preplace inst bram_ctrl -pg 1 -lvl 1 -y -580 -defaultsOSRD
+preplace inst rst_ps8_0_100M -pg 1 -lvl 3 -y -440 -defaultsOSRD
+preplace netloc axi_ddr_1 1 1 4 220J -420 920 -550 1320 -380 N
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 5 -90 -310 220 -220 940 -280 NJ -280 N
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_FPD 1 0 3 -100 -400 NJ -400 920
+preplace netloc rst_ps8_0_100M_peripheral_aresetn 1 0 4 -80 -410 N -410 930J -540 1310
+preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 2 3 950 -310 N -310 N
+preplace netloc bram_ctrl_BRAM_PORTA 1 1 4 NJ -580 N -580 N -580 1360
+levelinfo -pg 1 -120 80 610 1130 1340 1380 -top -950 -bot 610
+",
+}
+{
+   da_axi4_cnt: "3",
+   da_clkrst_cnt: "1",
+   da_zynq_ultra_ps_e_cnt: "1",
+}

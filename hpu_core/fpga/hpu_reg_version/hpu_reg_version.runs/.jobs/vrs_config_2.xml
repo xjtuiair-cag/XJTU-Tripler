@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="ddr4_mig_synth_1" LaunchDir="/home/zbr/work/DNNv2/zcu102_v3/hpu_reg_version/fpga/hpu_reg_version/hpu_reg_version.runs/ddr4_mig_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="wcmd2axi_asyn_fifo_synth_1" LaunchDir="/home/zbr/work/DNNv2/zcu102_v3/hpu_reg_version/fpga/hpu_reg_version/hpu_reg_version.runs/wcmd2axi_asyn_fifo_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="wdata2axi_asyn_fifo_synth_1" LaunchDir="/home/zbr/work/DNNv2/zcu102_v3/hpu_reg_version/fpga/hpu_reg_version/hpu_reg_version.runs/wdata2axi_asyn_fifo_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="xbip_dsp48_no_pcin_synth_1" LaunchDir="/home/zbr/work/DNNv2/zcu102_v3/hpu_reg_version/fpga/hpu_reg_version/hpu_reg_version.runs/xbip_dsp48_no_pcin_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+</Runs>
+

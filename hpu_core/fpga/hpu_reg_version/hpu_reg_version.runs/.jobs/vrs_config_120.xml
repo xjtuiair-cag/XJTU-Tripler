@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="fifo_64to32_synth_1" LaunchDir="/home/cf/2019_working/hpu_reg_version_pico_200m/fpga/hpu_reg_version/hpu_reg_version.runs/fifo_64to32_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="pal_reoder_buffer_synth_1" LaunchDir="/home/cf/2019_working/hpu_reg_version_pico_200m/fpga/hpu_reg_version/hpu_reg_version.runs/pal_reoder_buffer_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+</Runs>
+

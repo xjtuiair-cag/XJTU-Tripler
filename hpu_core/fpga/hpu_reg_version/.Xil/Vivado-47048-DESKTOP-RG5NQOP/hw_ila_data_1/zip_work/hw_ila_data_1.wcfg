@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="E:/DAC2019/a_prj_on_board/zu3_sim_one_axi_smc/hpu_reg_version/fpga/hpu_reg_version/hpu_reg_version.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="1024001fs"></ZoomEndTime>
+      <Cursor1Time time="0fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="755"></NameColumnWidth>
+      <ValueColumnWidth column_width="351"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="15" />
+   <wave_markers>
+   </wave_markers>
+   <wvobject fp_name="u_ila_0_ext2itcm_icb_cmd_valid" type="logic">
+      <obj_property name="ElementShortName">u_ila_0_ext2itcm_icb_cmd_valid</obj_property>
+      <obj_property name="ObjectShortName">u_ila_0_ext2itcm_icb_cmd_valid</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="pl_top_inst/ext2dtcm_icb_cmd_wdata" type="array">
+      <obj_property name="ElementShortName">pl_top_inst/ext2dtcm_icb_cmd_wdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ext2dtcm_icb_cmd_wdata[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="u_ila_0_ext2itcm_icb_cmd_ready" type="logic">
+      <obj_property name="ElementShortName">u_ila_0_ext2itcm_icb_cmd_ready</obj_property>
+      <obj_property name="ObjectShortName">u_ila_0_ext2itcm_icb_cmd_ready</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="pl_top_inst/ext2itcm_icb_cmd_wdata" type="array">
+      <obj_property name="ElementShortName">pl_top_inst/ext2itcm_icb_cmd_wdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ext2itcm_icb_cmd_wdata[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="u_ila_0_ifu_o_pc" type="array">
+      <obj_property name="ElementShortName">u_ila_0_ifu_o_pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">u_ila_0_ifu_o_pc[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="u_ila_0_ifu_o_ir_1" type="array">
+      <obj_property name="ElementShortName">u_ila_0_ifu_o_ir_1[6:0]</obj_property>
+      <obj_property name="ObjectShortName">u_ila_0_ifu_o_ir_1[6:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="pl_top_inst/riscv_top_inst/u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/ifu_o_ir_1" type="array">
+      <obj_property name="ElementShortName">pl_top_inst/riscv_top_inst/u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/ifu_o_ir_1[7:7]</obj_property>
+      <obj_property name="ObjectShortName">ifu_o_ir_1[7:7]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="u_ila_0_ifu_o_ir_2" type="array">
+      <obj_property name="ElementShortName">u_ila_0_ifu_o_ir_2[9:8]</obj_property>
+      <obj_property name="ObjectShortName">u_ila_0_ifu_o_ir_2[9:8]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="pl_top_inst/riscv_top_inst/u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/ifu_o_ir_2" type="array">
+      <obj_property name="ElementShortName">pl_top_inst/riscv_top_inst/u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/ifu_o_ir_2[11:10]</obj_property>
+      <obj_property name="ObjectShortName">ifu_o_ir_2[11:10]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="u_ila_0_ifu_o_ir_3" type="array">
+      <obj_property name="ElementShortName">u_ila_0_ifu_o_ir_3[16:12]</obj_property>
+      <obj_property name="ObjectShortName">u_ila_0_ifu_o_ir_3[16:12]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="pl_top_inst/riscv_top_inst/u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/ifu_o_ir" type="array">
+      <obj_property name="ElementShortName">pl_top_inst/riscv_top_inst/u_e203_soc_top/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_cpu/u_e203_core/u_e203_ifu/u_e203_ifu_ifetch/ifu_o_ir[19:17]</obj_property>
+      <obj_property name="ObjectShortName">ifu_o_ir[19:17]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="u_ila_0_ifu_o_ir" type="array">
+      <obj_property name="ElementShortName">u_ila_0_ifu_o_ir[31:20]</obj_property>
+      <obj_property name="ObjectShortName">u_ila_0_ifu_o_ir[31:20]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="pl_top_inst/ext2dtcm_icb_cmd_ready" type="logic">
+      <obj_property name="ElementShortName">pl_top_inst/ext2dtcm_icb_cmd_ready</obj_property>
+      <obj_property name="ObjectShortName">ext2dtcm_icb_cmd_ready</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="u_ila_0_ext2dtcm_icb_cmd_valid" type="logic">
+      <obj_property name="ElementShortName">u_ila_0_ext2dtcm_icb_cmd_valid</obj_property>
+      <obj_property name="ObjectShortName">u_ila_0_ext2dtcm_icb_cmd_valid</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="u_ila_0_fshflg_ps" type="logic">
+      <obj_property name="ElementShortName">u_ila_0_fshflg_ps</obj_property>
+      <obj_property name="ObjectShortName">u_ila_0_fshflg_ps</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+</wave_config>
