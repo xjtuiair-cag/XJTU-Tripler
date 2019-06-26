@@ -302,7 +302,7 @@ Performance comparison of ShuffleDet on TX2 and Ultra96 FPGA platforms
 | Ultra96      | 50.91   | 0.615   | 9537          |
 
 
-5.Demonstration of XJTU-tripler
+5.Demos
 --------------------------------
 
 Our demos have been uploaded to video repository. You can find them from below link:
