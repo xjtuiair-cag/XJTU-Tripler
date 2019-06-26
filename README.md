@@ -36,7 +36,7 @@ are shown in the figure below.
   
   ZU3 Resource
 
-![ultra96board](https://github.com/venturezhao/XJTU-Tripler/blob/master/images/fig1_ultra96-front-sd.png)
+![ultra96board](./images/fig1_ultra96-front-sd.png)
 
 Figure 1 Introduction to the FPGA development environment provided by Xilinx
 
@@ -97,7 +97,7 @@ person (29), riding (17), truck (2), wakeboard (4), whale (1) category.
 4) Even if multiple similar targets appear in one test image, the BBox must 
 assigned a fixed target. That is, an appropriate over-fitting is required for training.
 
-![](https://github.com/venturezhao/XJTU-Tripler/blob/master/images/fig2_data_set.png)
+![](./images/fig2_data_set.png)
 
 Figure 2 Part of the picture of the training set
 
@@ -108,7 +108,7 @@ finally selected YOLO as the basic detection algorithm. Replace the feature
 extraction network with the lightweight ShuffleNet V2. As shown in the figure below, 
 we have customized our single target detection network,called ShuffleDet.
 
-![](https://github.com/venturezhao/XJTU-Tripler/blob/master/images/fig3_net_structure.png)
+![](./images/fig3_net_structure.png)
 
 Figure 3 ShuffleDet Structure
 
@@ -132,7 +132,7 @@ is mainly divided into the following steps:
 serious. Therefore, after quantification, you need to fine tune the parameters.
 A schematic diagram of the quantization operation is shown in the figure below.
 
-![](https://github.com/venturezhao/XJTU-Tripler/blob/master/images/fig4_quan.PNG)
+![](./images/fig4_quan.png)
 
 Figure 4 Quantification process of network parameters
 
@@ -153,7 +153,7 @@ characteristics. The HiPU operates at 233MHz and its peak power is 268Gops. With
 C/RISC-V assembly as the programming interface, the convolution efficiency
 averages over 80%.
 
-![](https://github.com/venturezhao/XJTU-Tripler/blob/master/images/fig5_HiPU.png)
+![](./images/fig5_HiPU.png)
 
 Figure 5 HiPU structure block diagram and characteristics
 
@@ -197,7 +197,7 @@ the DDR at the input of each bottleneck. After all the layers are calculated in
 turn, the output feature map is written back to DDR.The following figure shows
 the order of cascading calculation of Module C.
 
-![](https://github.com/venturezhao/XJTU-Tripler/blob/master/images/fig6_module.png)
+![](./images/fig6_module.png)
 
 Figure 6 Module-C uses inter-layer cascade calculation
 
@@ -211,7 +211,7 @@ the input image is expanded from 3 to 9. Eventually, the processing efficiency
 of the first layer was increased from 0.38 to 0.56, and the conversion diagram
 is shown in the figure below.
 
-![](https://github.com/venturezhao/XJTU-Tripler/blob/master/images/fig7_channel_reoder.png)
+![](./images/fig7_channel_reoder.png)
 
 Figure 7 Conversion of the input image in the row direction
 ###  3.3 System optimization design
@@ -226,11 +226,11 @@ the overall detection frame rate from 30.3 Hz to 50.9 Hz.
 The figure below shows a schematic diagram of parallelization of image decoding
 and convolutional neural networks.
 
-![](https://github.com/venturezhao/XJTU-Tripler/blob/master/images/fig8_a_serial.png)
+![](./images/fig8_a_serial.png)
 
 (a) Workflow before parallelization
 
-![](https://github.com/venturezhao/XJTU-Tripler/blob/master/images/fig8_b_para.png)
+![](./images/fig8_b_para.png)
 
 (b) Workflow after parallelization
 
