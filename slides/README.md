@@ -1,5 +1,5 @@
 This is the presentation slides of XJTU-Tripler on the DAC19 SDC setion.
-Sine the video demos are too large, we do not upload them on github.
+Since the video demos are too large, we do not upload them on github.
 You can find our demo with below link:
 
 [Dual-channel real time detection with DAC19 training set](https://www.bilibili.com/video/av55982436/)
