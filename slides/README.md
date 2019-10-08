@@ -8,4 +8,4 @@ You can find our demo with below link:
 
 [Cooperative navigation of UAV and UGV](https://www.bilibili.com/video/av55966162/)
 
-[Cooperative topological navigationsystem of UAV and UGV](https://www.bilibili.com/video/av55972226/)
+[Cooperative topological navigation system of UAV and UGV](https://www.bilibili.com/video/av55972226/)
