@@ -1,4 +1,4 @@
-This is the presentation slides of XJTU-Tripler on the DAC19 SDC setion.
+This is the presentation slides of XJTU-Tripler on the DAC19 SDC section.
 Since the video demos are too large, we do not upload them on github.
 You can find our demo with below link:
 
