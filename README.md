@@ -317,7 +317,7 @@ Our demos have been uploaded to video repository. You can find them from below l
 
 ## 6.Citation
 
-Our HiPU series publications are listed as below, anyone who wants to learn our HIPU, is welcome to cite them.
+Our HiPU series publications are listed as below. Anyone who wants to learn our HIPU, is welcome to cite them.
 
 [1] Zhao W, Yang G, Xia T, et al. HIPU: A Hybrid Intelligent Processing Unit With Fine-Grained ISA for Real-Time Deep Neural Network Inference Applications[J]. IEEE Transactions on Very Large Scale Integration (VLSI) Systems, 2023, 31(12): 1980-1993.
 ```
