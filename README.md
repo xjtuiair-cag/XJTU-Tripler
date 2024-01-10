@@ -263,7 +263,7 @@ solution time matching to become unfixed; when the HiPU processing image time is
 shorter than the image solving time, the HiPU will waste energy by "running
 empty".
 
-4.Analysis of competition results
+## 4.Analysis of competition results
 ----------------------------------
 
 The following table shows the results of the DAC19 competition. A total of 58
@@ -302,7 +302,7 @@ Performance comparison of ShuffleDet on TX2 and Ultra96 FPGA platforms
 | Ultra96      | 50.91   | 0.615   | 9537          |
 
 
-5.Demos
+## 5.Demos
 --------------------------------
 
 Our demos have been uploaded to video repository. You can find them from below link:
@@ -314,3 +314,21 @@ Our demos have been uploaded to video repository. You can find them from below l
 [Cooperative navigation of UAV and UGV](https://www.bilibili.com/video/av55966162/)
 
 [Cooperative topological navigationsystem of UAV and UGV](https://www.bilibili.com/video/av55972226/)
+
+## 6.Citation
+
+Our HiPU series publications are listed as below, anyone who wants to learn our HIPU, is welcome to cite them.
+
+[1] Zhao W, Yang G, Xia T, et al. HIPU: A Hybrid Intelligent Processing Unit With Fine-Grained ISA for Real-Time Deep Neural Network Inference Applications[J]. IEEE Transactions on Very Large Scale Integration (VLSI) Systems, 2023, 31(12): 1980-1993.
+```
+@article{zhao2023hipu,
+  title={HIPU: A Hybrid Intelligent Processing Unit With Fine-Grained ISA for Real-Time Deep Neural Network Inference Applications},
+  author={Zhao, Wenzhe and Yang, Guoming and Xia, Tian and Chen, Fei and Zheng, Nanning and Ren, Pengju},
+  journal={IEEE Transactions on Very Large Scale Integration (VLSI) Systems},
+  volume={31},
+  number={12},
+  pages={1980--1993},
+  year={2023},
+  publisher={IEEE}
+}
+```
